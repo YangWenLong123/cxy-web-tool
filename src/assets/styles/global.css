@@ -4,6 +4,15 @@
 }
 
 html {
-  background-color: #1c1e21;
   color: #fff;
+  height: 100%;
+}
+
+#app {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #1c1e21;
 }

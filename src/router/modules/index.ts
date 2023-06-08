@@ -1,4 +1,4 @@
-import userRouteModules from './user.modules'
-import commonRouteModules from './common.modules'
+import userRouteModules from './user.modules';
+import commonRouteModules from './common.modules';
 
-export default [...commonRouteModules, ...userRouteModules]
+export default [...commonRouteModules, ...userRouteModules];

@@ -1,10 +1,10 @@
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
 
 const useUserStore = defineStore('user', {
   state () {
     return {
 
-    }
+    };
   },
   getters: {
 
@@ -12,6 +12,6 @@ const useUserStore = defineStore('user', {
   actions: {
 
   }
-})
+});
 
-export default useUserStore
+export default useUserStore;

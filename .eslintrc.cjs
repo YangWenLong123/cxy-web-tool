@@ -1,3 +1,11 @@
+/*
+ * @Author: along
+ * @Description:
+ * @Date: 2023-05-30 21:31:24
+ * @LastEditors: along
+ * @LastEditTime: 2023-06-08 21:00:34
+ * @FilePath: /cxy-web-tool/.eslintrc.cjs
+ */
 module.exports = {
   env: {
     browser: true,
@@ -22,6 +30,9 @@ module.exports = {
       {
         ignores: ['index']
       }
-    ]
+    ],
+    indent: 'off',
+    semi: [2, 'always'],
+    quotes: [0, 'single']
   }
-}
+};
