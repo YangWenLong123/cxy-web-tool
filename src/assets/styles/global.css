@@ -14,5 +14,5 @@ html {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background-color: #1c1e21;
+  color: #fff;
 }

@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-08 21:00:34
+ * @LastEditTime: 2023-06-09 16:34:29
  * @FilePath: /cxy-web-tool/.eslintrc.cjs
  */
 module.exports = {
@@ -33,6 +33,7 @@ module.exports = {
     ],
     indent: 'off',
     semi: [2, 'always'],
-    quotes: [0, 'single']
+    quotes: [0, 'single'],
+    "import/no-duplicates": ["error", { considerQueryString: true }]
   }
 };
