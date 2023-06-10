@@ -1,17 +1,20 @@
-import { defineStore } from 'pinia';
-
-const useUserStore = defineStore('user', {
-  state () {
-    return {
-
-    };
-  },
-  getters: {
-
-  },
+import { defineStore } from 'pinia'
+export const useUserStore = defineStore({
+  id: 'app-user',
+  state: (): UserState => ({
+    token: '',
+    userInfo: null,
+  }),
   actions: {
-
-  }
-});
-
-export default useUserStore;
+    // setToken
+    setToken(token: string) {
+      this.token = token
+    },
+    // setUserInfo
+    setUserInfo(userInfo: UserInfo) {
+      this.userInfo = userInfo
+    },
+  },
+  // 设置为true，缓存state
+  persist: true,
+})

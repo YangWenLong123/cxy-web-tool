@@ -1,3 +1,4 @@
-# eslint 忽略检查 (根据项目需要自行添加)
-node_modules
+
+// .eslintignore 配置, 防止校验打包的产物
 dist
+node_modules

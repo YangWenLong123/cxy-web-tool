@@ -6,31 +6,31 @@
     "moduleResolution": "Node",
     "strict": true,
     "jsx": "preserve",
-    "sourceMap": true,
+    "allowJs": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
-    "lib": [
-      "ESNext",
-      "DOM"
-    ],
+    "lib": ["ESNext", "DOM"],
     "skipLibCheck": true,
-    "baseUrl": ".",
+    "noEmit": true,
+    "types": [
+      "element-plus/global",
+      "node",
+      "unplugin-vue-define-options/macros-global"
+    ],
+    "baseUrl": "./",
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    }
+      "@/*": ["src/*"]
+    },
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "vite.config.ts"
   ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
+  "exclude": ["node_modules", "dist", "**/*.js"]
+  // "references": [{ "path": "./tsconfig.node.json" }]
 }

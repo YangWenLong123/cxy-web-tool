@@ -3,7 +3,7 @@
  * @Description: 程序员盒子布局入口
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-09 17:00:08
+ * @LastEditTime: 2023-06-10 20:48:26
  * @FilePath: /cxy-web-tool/src/components/layout/index.vue
 -->
 <template>
@@ -15,8 +15,8 @@
 
 <script lang='ts' setup>
   import { onMounted } from "vue";
-  import CxyMenu from "./cxy-menu/index.vue";
-  import CxyContent from "./cxy-content/index.vue";
+  import CxyMenu from "@/components/layout/cxy-menu/index.vue";
+  import CxyContent from "@/components/layout/cxy-content/index.vue";
 
   onMounted(() => {});
 </script>

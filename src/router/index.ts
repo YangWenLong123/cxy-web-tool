@@ -3,16 +3,16 @@
  * @Description:
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-05-30 21:52:10
+ * @LastEditTime: 2023-06-10 20:34:49
  * @FilePath: /cxy-web-tool/src/router/index.ts
  */
-import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router';
-import routes from './modules';
+import { createRouter, createWebHistory } from 'vue-router'
+import routes from './modules'
 
 const router = createRouter({
   history: createWebHistory(),
   // mode: 'history',
-  routes
-});
+  routes,
+})
 
-export default router;
+export default router

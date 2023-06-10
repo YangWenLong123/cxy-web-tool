@@ -1,5 +1,8 @@
-import useUserStore from './modules/user';
+import { createPinia } from 'pinia'
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
-export {
-  useUserStore
-};
+const pinia = createPinia()
+// piniaPersist(持久化)
+pinia.use(piniaPluginPersistedstate)
+
+export default pinia

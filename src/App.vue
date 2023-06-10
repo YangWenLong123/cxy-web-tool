@@ -1,16 +1,16 @@
 <!--
  * @Author: along
- * @Description: 程序员盒子页面入口
- * @Date: 2023-05-30 21:31:24
+ * @Description:
+ * @Date: 2023-05-31 10:31:46
  * @LastEditors: along
- * @LastEditTime: 2023-06-09 16:43:47
- * @FilePath: /cxy-web-tool/src/App.vue
+ * @LastEditTime: 2023-06-10 21:36:00
+ * @FilePath: /vue3-template-main/src/App.vue
 -->
 <template>
-  <keep-alive>
-    <router-view />
-  </keep-alive>
+  <router-view></router-view>
 </template>
+
+<script setup lang="ts"></script>
 
 <style lang="scss">
   @import url('@/assets/styles/iconfont.css');
