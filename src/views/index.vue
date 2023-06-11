@@ -3,8 +3,8 @@
  * @Description: 程序员盒子首页
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-10 21:41:03
- * @FilePath: /vue3-template-main/src/views/index.vue
+ * @LastEditTime: 2023-06-11 17:24:18
+ * @FilePath: /cxy-web-tool/src/views/index.vue
 -->
 <template>
   <CxyLayout />

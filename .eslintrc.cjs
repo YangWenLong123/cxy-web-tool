@@ -1,3 +1,11 @@
+/*
+ * @Author: along
+ * @Description:
+ * @Date: 2023-05-31 10:31:46
+ * @LastEditors: along
+ * @LastEditTime: 2023-06-11 17:23:30
+ * @FilePath: /cxy-web-tool/.eslintrc.cjs
+ */
 module.exports = {
   env: {
     browser: true,
@@ -34,6 +42,7 @@ module.exports = {
    * "error" 或 2  ==>  规则作为一个错误（代码不能执行，界面报错）
    */
   rules: {
+    '@typescript-eslint/no-empty-function': ['off'], // 关闭空函数警告
     // eslint（https://eslint.bootcss.com/docs/rules/）
     // 'no-var': 'error', // 要求使用 let 或 const 而不是 var
     // 'no-multiple-empty-lines': ['warn', { max: 1 }], // 不允许多个空行
@@ -53,5 +62,6 @@ module.exports = {
     // 'vue/script-setup-uses-vars': 'error', // 防止<script setup>使用的变量<template>被标记为未使用
     // 'vue/no-mutating-props': 'off', // 不允许组件 prop的改变
     // 'vue/attribute-hyphenation': 'off', // 对模板中的自定义组件强制执行属性命名样式
+
   },
 }

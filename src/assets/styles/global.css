@@ -8,11 +8,16 @@ html {
   height: 100%;
 }
 
+
 #app {
   width: 100%;
   height: 100vh;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   color: #fff;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
 }
