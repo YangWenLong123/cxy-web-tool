@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2023-05-31 10:31:46
  * @LastEditors: along
- * @LastEditTime: 2023-06-11 17:23:30
+ * @LastEditTime: 2023-06-12 22:29:46
  * @FilePath: /cxy-web-tool/.eslintrc.cjs
  */
 module.exports = {
@@ -43,6 +43,7 @@ module.exports = {
    */
   rules: {
     '@typescript-eslint/no-empty-function': ['off'], // 关闭空函数警告
+    "@typescript-eslint/no-explicit-any": ["off"]
     // eslint（https://eslint.bootcss.com/docs/rules/）
     // 'no-var': 'error', // 要求使用 let 或 const 而不是 var
     // 'no-multiple-empty-lines': ['warn', { max: 1 }], // 不允许多个空行
