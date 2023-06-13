@@ -3,49 +3,67 @@
  * @Description: 程序员盒子搜索组件
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-12 22:39:04
+ * @LastEditTime: 2023-06-13 21:32:13
  * @FilePath: /cxy-web-tool/src/components/keyword/index.vue
 -->
 <template>
   <div class="CxyKeywordComponents">
     <img
-      src="@/assets/images/keyword.png"
+      src="@/assets/images/bg.png"
       class="logo"
     >
     <div class="box">
-      <div class="type">
-        <a-dropdown>
-          <a
-            class="ant-dropdown-link"
-            @click.prevent
-          >
-            <span class="type_name">{{ state.typeName  }}</span>
-            <i class="iconfont icon-xiajiantou"></i>
-          </a>
-          <template #overlay>
-            <a-menu @click="selectType">
-              <a-menu-item
-                v-for="(record) in state.keywordList[state.category]"
-                :key="record"
-              >
-                <a href="javascript:;">{{ record }}</a>
-              </a-menu-item>
-            </a-menu>
-          </template>
-        </a-dropdown>
+      <div class="boxFlex">
+        <div class="type">
+          <a-dropdown>
+            <a
+              class="ant-dropdown-link"
+              @click.prevent
+            >
+              <span class="type_name">{{ state.typeName  }}</span>
+              <i class="iconfont icon-xiajiantou"></i>
+            </a>
+            <template #overlay>
+              <a-menu @click="selectType">
+                <a-menu-item
+                  v-for="(record) in state.keywordList[state.category]"
+                  :key="record"
+                >
+                  <a href="javascript:;">{{ record }}</a>
+                </a-menu-item>
+              </a-menu>
+            </template>
+          </a-dropdown>
+        </div>
+        <a-input
+          v-model:value="state.value"
+          placeholder="Web Box 内容搜索，更快，更方便"
+          @pressEnter="searchKeyword(state.value)"
+          @change="changeValue()"
+          id="cxyInput"
+        />
+        <div
+          class="search"
+          @click="searchKeyword(state.value)"
+        >
+          搜索
+        </div>
       </div>
-      <a-input
-        v-model:value="state.value"
-        placeholder="Web Box 内容搜索，更快，更方便"
-        @pressEnter="searchKeyword()"
-        @change="changeValue()"
-        id="cxyInput"
-      />
       <div
-        class="search"
-        @click="searchKeyword()"
+        class="searchBox"
+        v-if="state.value && state.suggestions.length"
       >
-        搜索
+        <div
+          v-for="(value, index) in state.suggestions"
+          :key="index"
+          class="searchItems"
+          @click="() => {
+            state.value = '';
+            searchKeyword(value)
+          }"
+        >
+          {{ value }}
+        </div>
       </div>
     </div>
     <div class="category">
@@ -63,9 +81,9 @@
       </div>
     </div>
 
-    <div>
+    <!-- <div>
       {{  state.suggestions  }}
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -73,7 +91,7 @@
   import { onMounted, reactive } from "vue";
 
   const state = reactive({
-    value: "",
+    value: ``,
     category: 0,
     categoryList: ["搜索", "技术", "图片", "生活"],
     typeName: "百度",
@@ -94,9 +112,54 @@
     state.typeName = key;
   };
 
-  const searchKeyword = () => {
+  const searchKeyword = (value: any) => {
     if (state.typeName === "百度") {
-      window.open("https://www.baidu.com/s?wd=" + state.value);
+      window.open("https://www.baidu.com/s?wd=" + value);
+    } else if (state.typeName === "Google") {
+      window.open("https://www.google.com/search?q=" + value);
+    } else if (state.typeName === "必应") {
+      window.open("https://cn.bing.com/search?q=" + value);
+    } else if (state.typeName === "开发者搜索") {
+      window.open("https://kaifa.baidu.com/searchPage?wd=" + value);
+    } else if (state.typeName === "头条") {
+      window.open(
+        `https://so.toutiao.com/search?wid_ct=${Date.now()}&dvpf=pc&source=input&keyword=1` +
+          value
+      );
+    } else if (state.typeName === "perplexity") {
+      window.open(`https://www.perplexity.ai/search?q=${value}&focus=internet`);
+    } else if (state.typeName === "GitHub") {
+      window.open(`https://github.com/search?q=` + value);
+    } else if (state.typeName === "CSDN") {
+      window.open(`https://so.csdn.net/so/search/all?q=` + value);
+    } else if (state.typeName === "知乎") {
+      window.open(`https://www.zhihu.com/search?type=content&q=` + value);
+    } else if (state.typeName === "产品经理") {
+      window.open(`http://api.woshipm.com/search/list.html?key=` + value);
+    } else if (state.typeName === "掘金") {
+      window.open(`https://juejin.cn/search?query=${value}&type=0`);
+    } else if (state.typeName === "和鲸") {
+      window.open(`https://www.heywhale.com/home/global?search=` + value);
+    } else if (state.typeName === "文心一格") {
+      window.open(`https://yige.baidu.com/search/` + value);
+    } else if (state.typeName === "花瓣AI圈") {
+      window.open(`https://huaban.com/search?q=${value}&type=aigc`);
+    } else if (state.typeName === "Civitai") {
+      window.open(`https://civitai.com/?query=` + value);
+    } else if (state.typeName === "Lexica") {
+      window.open(`https://lexica.art/?q=` + value);
+    } else if (state.typeName === "网易云音乐") {
+      window.open(`https://music.163.com/#/search/m/?s=` + value);
+    } else if (state.typeName === "淘宝") {
+      window.open(`https://s.taobao.com/search?q=` + value);
+    } else if (state.typeName === "京东") {
+      window.open(`https://search.jd.com/Search?keyword=` + value);
+    } else if (state.typeName === "下厨房") {
+      window.open(`https://www.xiachufang.com/search/?keyword=` + value);
+    } else if (state.typeName === "12306") {
+      window.open(`https://www.12306.cn?` + value);
+    } else if (state.typeName === "快递100") {
+      window.open(`https://www.kuaidi100.com/?` + value);
     }
     console.log(state.typeName, state.value);
   };
@@ -117,13 +180,9 @@
   };
 
   const changeValue = async () => {
-    if (state.typeName === "百度") {
-      const { s }: any = await jsonp(
-        `https://www.baidu.com/su?wd=${state.value}`
-      );
-      state.suggestions = s;
-      console.log("百度", state.suggestions);
-    }
+    const { s }: any = await jsonp(`https://www.baidu.com/su?wd=${state.value}`);
+    state.suggestions = s;
+    console.log("百度", state.suggestions);
   };
 </script>
 
@@ -147,43 +206,72 @@
       border: 2px #9aeecd solid;
       display: flex;
       align-items: center;
-      .type {
-        min-width: 130px;
-        color: #000;
+      position: relative;
+      flex-direction: column;
+      .boxFlex {
         display: flex;
         align-items: center;
-        .type_name {
-          padding: 0 20px 0 30px;
-          color: #000;
-          white-space: nowrap;
-        }
-        .icon-xiajiantou {
-          color: #000;
-          position: relative;
-          top: 2px;
-        }
-      }
-      .ant-input {
-        height: 46px;
-        background-color: #f5f7f8;
-        border: none;
-        flex: 1;
-      }
-      .ant-input:focus {
-        border: none;
-        box-shadow: none;
-      }
-      .search {
-        width: 100px;
+        width: 700px;
         height: 50px;
-        text-align: center;
-        line-height: 50px;
-        color: #ffffff;
-        border: 0 6px 6px 0;
-        font-size: 20px;
-        font-weight: bold;
-        background-color: #9aeecd;
-        cursor: pointer;
+        overflow: hidden;
+        .type {
+          min-width: 130px;
+          color: #000;
+          display: flex;
+          align-items: center;
+          .type_name {
+            padding: 0 20px 0 30px;
+            color: #000;
+            white-space: nowrap;
+          }
+          .icon-xiajiantou {
+            color: #000;
+            position: relative;
+            top: 2px;
+          }
+        }
+        .ant-input {
+          height: 46px;
+          // background-color: #f5f7f8;
+          border: none;
+          flex: 1;
+        }
+        .ant-input:focus {
+          border: none;
+          box-shadow: none;
+        }
+        .search {
+          width: 100px;
+          height: 50px;
+          text-align: center;
+          line-height: 50px;
+          color: #ffffff;
+          border: 0 6px 6px 0;
+          font-size: 20px;
+          font-weight: bold;
+          background-color: #9aeecd;
+          cursor: pointer;
+          position: relative;
+          top: -2px;
+        }
+      }
+      .searchBox {
+        width: 700px;
+        position: absolute;
+        top: 48px;
+        box-sizing: border-box;
+        padding-left: 20px;
+        background: #ffffff;
+        border: 2px #9aeecd solid;
+        border-top: none;
+        .searchItems {
+          height: 32px;
+          line-height: 32px;
+          cursor: pointer;
+          &:hover {
+            color: #9aeecd;
+          }
+        }
       }
     }
     .category {

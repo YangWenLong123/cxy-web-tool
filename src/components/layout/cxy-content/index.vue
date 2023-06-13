@@ -3,7 +3,7 @@
  * @Description: 程序员盒子布局
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-12 20:16:23
+ * @LastEditTime: 2023-06-13 19:57:42
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-content/index.vue
 -->
 <template>
@@ -23,7 +23,7 @@
 <style lang="scss">
   .cxyContent {
     flex: 1;
-    background-color: #f5f7f8;
+    background-color: #ffffff;
     overflow: hidden;
     display: flex;
     flex-direction: column;
