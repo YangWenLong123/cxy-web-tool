@@ -3,7 +3,7 @@
  * @Description: 程序员盒子搜索组件
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-13 21:32:13
+ * @LastEditTime: 2023-06-13 22:37:48
  * @FilePath: /cxy-web-tool/src/components/keyword/index.vue
 -->
 <template>
@@ -41,6 +41,7 @@
           @pressEnter="searchKeyword(state.value)"
           @change="changeValue()"
           id="cxyInput"
+          allowClear
         />
         <div
           class="search"
@@ -81,9 +82,17 @@
       </div>
     </div>
 
-    <!-- <div>
-      {{  state.suggestions  }}
-    </div> -->
+    <div class="recommend">
+      <div
+        v-for="(name, index) in state.recommend"
+        :key="index"
+        class="recommend_items"
+        @click="builtHref(index, name)"
+      >
+        <div>{{ name  }}</div>
+        <i class="iconfont icon-youjiantou"></i>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -97,11 +106,19 @@
     typeName: "百度",
     keywordList: [
       ["百度", "Google", "必应", "开发者搜索", "头条", "perplexity"],
-      ["GitHub", "CSDN", "知乎", "产品经理", "掘金", "和鲸"],
+      ["GitHub", "CSDN", "知乎", "产品经理", "掘金", "和鲸", "语雀"],
       ["文心一格", "花瓣AI圈", "Civitai", "Lexica"],
       ["网易云音乐", "淘宝", "京东", "下厨房", "12306", "快递100"],
     ],
     suggestions: [],
+    recommend: [
+      "axios详解",
+      "JavaScript的防抖与节流",
+      "Vue3项目",
+      "我想要五彩斑斓的黑",
+      "想听海阔天空",
+      "我想买一件宽松的T恤",
+    ],
   });
 
   onMounted(() => {
@@ -138,6 +155,10 @@
       window.open(`http://api.woshipm.com/search/list.html?key=` + value);
     } else if (state.typeName === "掘金") {
       window.open(`https://juejin.cn/search?query=${value}&type=0`);
+    } else if (state.typeName === "语雀") {
+      window.open(
+        `https://www.yuque.com/search?q=${value}&type=content&scope=%2F&tab=related&p=1&sence=modal`
+      );
     } else if (state.typeName === "和鲸") {
       window.open(`https://www.heywhale.com/home/global?search=` + value);
     } else if (state.typeName === "文心一格") {
@@ -184,6 +205,22 @@
     state.suggestions = s;
     console.log("百度", state.suggestions);
   };
+
+  const builtHref = (index: number, value: string) => {
+    if (index === 0) {
+      window.open("https://www.baidu.com/s?wd=" + value);
+    } else if (index === 1) {
+      window.open("https://kaifa.baidu.com/searchPage?wd=" + value);
+    } else if (index === 2) {
+      window.open(`https://github.com/search?q=` + value);
+    } else if (index === 3) {
+      window.open(`https://yige.baidu.com/search/` + value);
+    } else if (index === 4) {
+      window.open(`https://music.163.com/#/search/m/?s=` + value);
+    } else if (index === 5) {
+      window.open(`https://s.taobao.com/search?q=` + value);
+    }
+  };
 </script>
 
 <style lang="scss">
@@ -215,7 +252,7 @@
         height: 50px;
         overflow: hidden;
         .type {
-          min-width: 130px;
+          min-width: 140px;
           color: #000;
           display: flex;
           align-items: center;
@@ -239,6 +276,13 @@
         .ant-input:focus {
           border: none;
           box-shadow: none;
+        }
+        .ant-input-affix-wrapper-focused {
+          border: none;
+          box-shadow: none;
+        }
+        .ant-input-affix-wrapper {
+          border: none;
         }
         .search {
           width: 100px;
@@ -264,6 +308,7 @@
         background: #ffffff;
         border: 2px #9aeecd solid;
         border-top: none;
+        z-index: 999;
         .searchItems {
           height: 32px;
           line-height: 32px;
@@ -282,6 +327,34 @@
       .category_items {
         margin-right: 14px;
         cursor: pointer;
+      }
+    }
+    .recommend {
+      width: 920px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 32px;
+      .recommend_items {
+        width: 280px;
+        height: 60px;
+        background: #f9f9fa;
+        box-sizing: border-box;
+        padding: 20px;
+        border-radius: 6px;
+        margin: 12px;
+        border: 1px #f9f9fa solid;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        position: relative;
+        &:hover {
+          border: 1px #9aeecd solid;
+        }
+        .icon-youjiantou {
+          position: absolute;
+          right: 24px;
+          top: 18px;
+        }
       }
     }
   }

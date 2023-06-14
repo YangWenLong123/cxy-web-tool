@@ -3,7 +3,7 @@
  * @Description: 程序员盒子菜单
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-11 23:17:54
+ * @LastEditTime: 2023-06-13 22:11:13
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-menu/index.vue
 -->
 <template>
@@ -126,10 +126,12 @@
       .cxyLogo {
         width: 140px;
         margin-left: 50px;
+        cursor: pointer;
       }
       .cxyLogoSmall {
         width: 70px;
         margin-top: 20px;
+        cursor: pointer;
       }
       .cxyFlex {
         display: flex;
