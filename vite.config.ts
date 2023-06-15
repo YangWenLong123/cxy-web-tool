@@ -3,7 +3,7 @@
  * @Autor: codeBo
  * @Date: 2023-03-16 10:35:43
  * @LastEditors: along
- * @LastEditTime: 2023-06-10 21:51:59
+ * @LastEditTime: 2023-06-15 11:11:03
  */
 import { defineConfig, loadEnv, splitVendorChunkPlugin } from "vite";
 import vue from "@vitejs/plugin-vue";
@@ -17,6 +17,8 @@ import commpressPlugin from "vite-plugin-compression";
 export default defineConfig((config) => {
   const { mode } = config;
   const env = loadEnv(mode, process.cwd());
+
+  console.log("env", env);
 
   return {
     base: "./",
@@ -53,7 +55,7 @@ export default defineConfig((config) => {
     },
     server: {
       host: "0.0.0.0",
-      port: 8888,
+      port: env.VITE_APP_PORT,
       open: true,
     },
     build: {

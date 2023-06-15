@@ -3,7 +3,7 @@
  * @Description: 程序员盒子菜单
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-13 22:11:13
+ * @LastEditTime: 2023-06-15 16:07:42
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-menu/index.vue
 -->
 <template>
@@ -118,6 +118,7 @@
     position: relative;
     background-color: #1c1e21;
     transition: all 0.2s;
+    color: #fff;
     .cxyBox {
       width: 100%;
       flex: 1;

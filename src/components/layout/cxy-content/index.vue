@@ -3,11 +3,12 @@
  * @Description: 程序员盒子布局
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-13 19:57:42
+ * @LastEditTime: 2023-06-15 09:56:38
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-content/index.vue
 -->
 <template>
   <div class="cxyContent">
+    <CxyHeader ref="CxyHeader" />
     <div class="cxyView">
       <router-view />
     </div>
@@ -16,6 +17,7 @@
 
 <script lang='ts' setup>
   import { onMounted } from "vue";
+  import CxyHeader from "@/components/layout/cxy-header/index.vue";
 
   onMounted(() => {});
 </script>
