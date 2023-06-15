@@ -3,7 +3,7 @@
  * @Description: 程序员盒子布局
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-15 09:56:38
+ * @LastEditTime: 2023-06-15 21:53:12
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-content/index.vue
 -->
 <template>
@@ -30,7 +30,7 @@
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    padding: 20px 44px;
+    padding: 20px 0 20px 44px;
     .cxyView {
       widows: 100%;
       flex: 1;

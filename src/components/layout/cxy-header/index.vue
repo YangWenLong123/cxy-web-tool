@@ -3,7 +3,7 @@
  * @Description: 程序员盒子头部icon
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-15 15:45:39
+ * @LastEditTime: 2023-06-15 21:54:06
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-header/index.vue
 -->
 <template>
@@ -77,6 +77,8 @@
     height: 32px;
     display: flex;
     justify-content: flex-end;
+    box-sizing: border-box;
+    padding-right: 32px;
     .iconfont {
       margin-left: 20px;
       font-size: 18px;
