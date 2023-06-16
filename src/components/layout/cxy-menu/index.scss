@@ -1,0 +1,69 @@
+.cxyMenu {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #1c1e21;
+    transition: all 0.2s;
+    color: #fff;
+    .cxyBox {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      .cxyLogo {
+        width: 140px;
+        margin-left: 50px;
+        cursor: pointer;
+      }
+      .cxyLogoSmall {
+        width: 70px;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+      .cxyFlex {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        height: 50px;
+        .cxyIconfont {
+          // color: #fff;
+          font-size: 18px;
+          padding-left: 25px;
+          padding-right: 30px;
+        }
+        .cxyItems {
+          flex: 1;
+          height: 50px;
+          box-sizing: border-box;
+          line-height: 50px;
+        }
+        &:hover {
+          .cxyIconfont,
+          .cxyItems {
+            color: #6ee7b7 !important;
+          }
+        }
+      }
+    }
+  }
+  .collapse {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    background-color: #1c1e21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    .icon-zuojiantou {
+      font-size: 22px;
+      position: relative;
+      right: -2px;
+    }
+    &:hover {
+      color: #6ee7b7;
+    }
+  }

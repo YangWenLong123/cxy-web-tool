@@ -3,7 +3,7 @@
  * @Description: 程序员盒子内容搜索
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-12 19:45:57
+ * @LastEditTime: 2023-06-16 17:00:44
  * @FilePath: /cxy-web-tool/src/views/keyword/index.vue
 -->
 <template>
@@ -20,11 +20,5 @@
 </script>
 
 <style lang="scss">
-  .CxyKeyword {
-    width: 100%;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  @import "./index.scss";
 </style>

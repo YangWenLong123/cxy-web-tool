@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 4114096 */
-  src: url('//at.alicdn.com/t/c/font_4114096_7z90amp9nb.woff2?t=1686837023384') format('woff2'),
-       url('//at.alicdn.com/t/c/font_4114096_7z90amp9nb.woff?t=1686837023384') format('woff'),
-       url('//at.alicdn.com/t/c/font_4114096_7z90amp9nb.ttf?t=1686837023384') format('truetype');
+  src: url('//at.alicdn.com/t/c/font_4114096_qrda9uskvx.woff2?t=1686902136384') format('woff2'),
+       url('//at.alicdn.com/t/c/font_4114096_qrda9uskvx.woff?t=1686902136384') format('woff'),
+       url('//at.alicdn.com/t/c/font_4114096_qrda9uskvx.ttf?t=1686902136384') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,82 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-API:before {
+  content: "\e68c";
+}
+
+.icon-json:before {
+  content: "\e685";
+}
+
+.icon-APIguanli:before {
+  content: "\e65f";
+}
+
+.icon-APIjieru:before {
+  content: "\ec16";
+}
+
+.icon-jQuery:before {
+  content: "\e79a";
+}
+
+.icon-rongheCDN:before {
+  content: "\e67a";
+}
+
+.icon-pcdnPCDN:before {
+  content: "\e6f2";
+}
+
+.icon-icon_mock4:before {
+  content: "\e768";
+}
+
+.icon-virus-covid:before {
+  content: "\e8c1";
+}
+
+.icon-huatu:before {
+  content: "\e766";
+}
+
+.icon--_sucaiku:before {
+  content: "\e643";
+}
+
+.icon-git:before {
+  content: "\e68f";
+}
+
+.icon-zuobiruanjian-:before {
+  content: "\e7c9";
+}
+
+.icon-yingyong:before {
+  content: "\e64f";
+}
+
+.icon-zhengshu:before {
+  content: "\e61d";
+}
+
+.icon-zhifu:before {
+  content: "\e70f";
+}
+
+.icon-neiwangDNS:before {
+  content: "\e6c8";
+}
+
+.icon-zitidaxiao-:before {
+  content: "\e63f";
+}
+
+.icon-qiatongxingxiang:before {
+  content: "\e63e";
 }
 
 .icon-sousuo1:before {

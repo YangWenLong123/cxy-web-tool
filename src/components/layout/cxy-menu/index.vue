@@ -3,7 +3,7 @@
  * @Description: 程序员盒子菜单
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-15 16:07:42
+ * @LastEditTime: 2023-06-16 16:56:21
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-menu/index.vue
 -->
 <template>
@@ -49,7 +49,7 @@
           :style="{
             color: state.path === record.path ? '#6ee7b7' : '#ffffff'
           }"
-        ></i>
+        />
         <div
           v-if="state.collapse"
           class="cxyItems"
@@ -67,8 +67,13 @@
 <script lang='ts' setup>
   import { onMounted, reactive, ref } from "vue";
   import { useRouter } from "vue-router";
+  import { appCxyStore } from "@/store/modules/cxy";
+  import { storeToRefs } from "pinia";
 
   const router = useRouter();
+  const store = appCxyStore();
+
+  const { collapse } = storeToRefs(store);
 
   const menuList = ref([
     { title: "内容搜索", path: "/keyword", icon: "icon-sousuo" },
@@ -87,7 +92,7 @@
   ]);
 
   const state = reactive({
-    collapse: true,
+    collapse: collapse,
     path: location.pathname,
   });
 
@@ -96,7 +101,7 @@
   });
 
   const isCollapse = () => {
-    state.collapse = !state.collapse;
+    store.setCollapse(!state.collapse);
   };
 
   const goHome = () => {
@@ -112,73 +117,5 @@
 </script>
 
 <style lang="scss">
-  .cxyMenu {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    background-color: #1c1e21;
-    transition: all 0.2s;
-    color: #fff;
-    .cxyBox {
-      width: 100%;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      .cxyLogo {
-        width: 140px;
-        margin-left: 50px;
-        cursor: pointer;
-      }
-      .cxyLogoSmall {
-        width: 70px;
-        margin-top: 20px;
-        cursor: pointer;
-      }
-      .cxyFlex {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        height: 50px;
-        .cxyIconfont {
-          // color: #fff;
-          font-size: 18px;
-          padding-left: 25px;
-          padding-right: 30px;
-        }
-        .cxyItems {
-          flex: 1;
-          height: 50px;
-          box-sizing: border-box;
-          line-height: 50px;
-        }
-        &:hover {
-          .cxyIconfont,
-          .cxyItems {
-            color: #6ee7b7 !important;
-          }
-        }
-      }
-    }
-  }
-  .collapse {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    background-color: #1c1e21;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.2s;
-    .icon-zuojiantou {
-      font-size: 22px;
-      position: relative;
-      right: -2px;
-    }
-    &:hover {
-      color: #6ee7b7;
-    }
-  }
+  @import "./index.scss";
 </style>

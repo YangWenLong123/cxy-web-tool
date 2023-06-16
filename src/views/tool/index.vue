@@ -3,7 +3,7 @@
  * @Description: 程序员盒子常用工具
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-15 21:57:34
+ * @LastEditTime: 2023-06-16 17:00:00
  * @FilePath: /cxy-web-tool/src/views/tool/index.vue
 -->
 <template>
@@ -17,7 +17,8 @@
         <i
           class="iconfont tool_title_icon"
           :class="record.icon"
-        ></i>
+          :style="{color: randomColor()}"
+        />
         <div class="tool_title">{{ record.title }}</div>
       </div>
 
@@ -34,7 +35,7 @@
                 class="iconfont"
                 :class="option.icon"
                 :style="{color: randomColor()}"
-              ></i>
+              />
               <div class="label">{{ option.label }}</div>
             </div>
             <div class="desc">{{  option.desc  }}</div>
@@ -312,11 +313,17 @@
             icon: "icon-icon-",
             desc: "常用的小工具",
           },
+          {
+            label: "字体包转CSS",
+            url: "https://www.fontke.com/tool/fontface/",
+            icon: "icon-zitidaxiao-",
+            desc: "字体包在线生成font-face",
+          },
         ],
       },
       {
         title: "常用资源",
-        icon: "icon-ziyuan2",
+        icon: "icon-qiatongxingxiang",
         list: [
           {
             label: "盒子网盘",
@@ -324,17 +331,125 @@
             icon: "icon-sousuo2",
             desc: "盒子网盘内容搜索",
           },
+          {
+            label: "签名证书生成",
+            url: "https://www.yunedit.com/update/ioszhengshu/list",
+            icon: "icon-zhengshu",
+            desc: "证书生成，应用内测，应用上传",
+          },
+          {
+            label: "fir.im",
+            url: "http://betaqr.com/",
+            icon: "icon-yingyong",
+            desc: "应用内测托管",
+          },
+          {
+            label: "PayPal",
+            url: "https://developer.paypal.com/demo/checkout/#/pattern/client",
+            icon: "icon-zhifu",
+            desc: "PayPal支付接入流程代码",
+          },
+          {
+            label: "NATApp",
+            url: "https://natapp.cn/",
+            icon: "icon-neiwangDNS",
+            desc: "开启您的内网穿透之旅",
+          },
+          {
+            label: "yungouos",
+            url: "https://www.yungouos.com/#/demo",
+            icon: "icon-zhifu",
+            desc: "支持 微信 扫码支付、付款码支付、公众号支付、小程序支付、H5支付、APP支付",
+          },
+          {
+            label: "红海pro",
+            url: "https://good.honghai.org/#/login",
+            icon: "icon-zuobiruanjian-",
+            desc: "好用的翻墙软件",
+          },
+          {
+            label: "Gogs",
+            url: "https://gogs.io/",
+            icon: "icon-git",
+            desc: "Git服务器搭建",
+          },
+          {
+            label: "美叶",
+            url: "https://www.meiye.art/web/1/1",
+            icon: "icon--_sucaiku",
+            desc: "前端页面素材，插画素材",
+          },
+          {
+            label: "pddon",
+            url: "https://www.pddon.com/",
+            icon: "icon-huatu",
+            desc: "免费多功能专业在线画图(Low Code)工具",
+          },
         ],
       },
       {
         title: "常用代码工具",
-        icon: "icon-daima",
+        icon: "icon-mogui",
         list: [
           {
             label: "iconfont",
             url: "https://www.iconfont.cn/",
             icon: "icon-tubiaozhizuomoban-",
             desc: "阿里巴巴图标矢量库",
+          },
+          {
+            label: "Apifox",
+            url: "https://app.apifox.com/main",
+            icon: "icon-APIguanli",
+            desc: "支持接口调用，自动化测试",
+          },
+          {
+            label: "VirAPI",
+            url: "https://console.virapi.com/",
+            icon: "icon-APIjieru",
+            desc: "虚拟数据云接口在线使用",
+          },
+          {
+            label: "crudapi",
+            url: "https://help.crudapi.cn/helloworld.html",
+            icon: "icon-pcdnPCDN",
+            desc: "通过配置实现CRUD RESTful API",
+          },
+          {
+            label: "Easy Mock",
+            url: "https://mock.mengxuegu.com/",
+            icon: "icon-virus-covid",
+            desc: "mock接口测试使用",
+          },
+          {
+            label: "jsonplaceholder",
+            url: "http://jsonplaceholder.typicode.com/",
+            icon: "icon-rongheCDN",
+            desc: "Free fake API for testing and prototyping.",
+          },
+          {
+            label: "API大全",
+            url: "https://www.showapi.com/apiShow/apiMap",
+            icon: "icon-json",
+            desc: "万维易源-连接一切数据",
+          },
+          {
+            label: "BootCDN",
+            url: "https://www.bootcdn.cn/",
+            icon: "icon-rongheCDN",
+            desc: "稳定、快速、免费的前端开源项目 CDN 加速服务",
+          },
+          {
+            label: "cdnjs",
+            url: "https://cdnjs.com/",
+            icon: "icon-API",
+            desc: "稳定、快速、免费的前端开源项目 CDN 加速服务",
+          },
+          {
+            label: "jquery插件库",
+            url: "https://www.jq22.com/daima",
+            icon: "icon-jQuery",
+            desc: "好用的jquery插件库工具",
           },
         ],
       },
@@ -353,56 +468,5 @@
 </script>
 
 <style lang="scss">
-  .CxyTool {
-    .tool_header {
-      display: flex;
-      align-items: center;
-      .tool_title_icon {
-        color: chocolate;
-        font-size: 20px;
-      }
-      .tool_title {
-        margin-left: 12px;
-      }
-    }
-    .tool_wrap {
-      display: flex;
-      flex-wrap: wrap;
-      margin-bottom: 32px;
-      .toolItems {
-        width: 200px;
-        height: 64px;
-        display: flex;
-        flex-direction: column;
-        box-sizing: border-box;
-        padding: 10px;
-        background: rgba(244, 242, 242, 1);
-        border-radius: 4px;
-        margin: 5px 10px;
-        cursor: pointer;
-        border: 1px rgba(244, 242, 242, 1) solid;
-        &:hover {
-          border: 1px chocolate solid;
-          opacity: 0.8;
-        }
-        .header {
-          display: flex;
-          align-items: center;
-          .label {
-            color: rgba(67, 67, 67, 1);
-            margin-left: 10px;
-            font-size: 16px;
-          }
-        }
-        .desc {
-          color: rgba(160, 160, 160, 1);
-          font-size: 12px;
-          width: 180px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-      }
-    }
-  }
+  @import "./index.scss";
 </style>

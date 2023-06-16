@@ -3,7 +3,7 @@
  * @Description: 程序员盒子头部icon
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-15 21:54:06
+ * @LastEditTime: 2023-06-16 16:57:24
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-header/index.vue
 -->
 <template>
@@ -63,7 +63,7 @@
       store.setPopup({
         showPopup: true,
         popup_type: "1",
-        popup_mode: ["WeChat", "Side"],
+        popup_mode: ["WeChat"],
       });
     } else {
       location.href = link;
@@ -72,21 +72,5 @@
 </script>
 
 <style lang="scss">
-  .cxyHeaderComponents {
-    color: #000;
-    height: 32px;
-    display: flex;
-    justify-content: flex-end;
-    box-sizing: border-box;
-    padding-right: 32px;
-    .iconfont {
-      margin-left: 20px;
-      font-size: 18px;
-      cursor: pointer;
-      color: rgba(93, 93, 93, 1);
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-  }
+  @import "./index.scss";
 </style>

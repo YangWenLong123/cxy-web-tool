@@ -1,0 +1,17 @@
+.cxyHeaderComponents {
+    color: #000;
+    height: 32px;
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding-right: 32px;
+    .iconfont {
+      margin-left: 20px;
+      font-size: 18px;
+      cursor: pointer;
+      color: rgba(93, 93, 93, 1);
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
