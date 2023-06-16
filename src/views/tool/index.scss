@@ -4,10 +4,12 @@
     align-items: center;
     .tool_title_icon {
       // color: chocolate;
-      font-size: 20px;
+      font-size: 22px;
     }
     .tool_title {
       margin-left: 12px;
+      font-size: 16px;
+      font-weight: bold;
     }
   }
   .tool_wrap {
@@ -21,12 +23,11 @@
       flex-direction: column;
       box-sizing: border-box;
       padding: 10px;
-      // background: rgba(244, 242, 242, 1);
-      background: #e9f1f6;
-      // background-image: linear-gradient(to right, #e0eafc, #cfdef3);
+      background: rgba(249,249,249,1);
       border-radius: 4px;
       margin: 5px 10px;
       cursor: pointer;
+      color: #3C3C43;
       border: 1px #e9f1f6 solid;
       &:hover {
         border: 1px #2add9c solid;
@@ -42,7 +43,7 @@
         }
       }
       .desc {
-        color: rgba(160, 160, 160, 1);
+        color: #6C6C71;
         font-size: 12px;
         width: 180px;
         white-space: nowrap;

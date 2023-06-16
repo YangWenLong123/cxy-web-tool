@@ -3,7 +3,7 @@
  * @Description: 程序员盒子常用工具
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-16 17:00:00
+ * @LastEditTime: 2023-06-16 17:26:25
  * @FilePath: /cxy-web-tool/src/views/tool/index.vue
 -->
 <template>
@@ -385,6 +385,12 @@
             icon: "icon-huatu",
             desc: "免费多功能专业在线画图(Low Code)工具",
           },
+          {
+            label: "测网速",
+            url: "https://www.speedtest.cn/",
+            icon: "icon-zuobiruanjian-",
+            desc: "免费在线测网速",
+          },
         ],
       },
       {
@@ -450,6 +456,42 @@
             url: "https://www.jq22.com/daima",
             icon: "icon-jQuery",
             desc: "好用的jquery插件库工具",
+          },
+          {
+            label: "正则校验",
+            url: "https://regexr.com/",
+            icon: "",
+            desc: "正则在线校验",
+          },
+          {
+            label: "正则可视化",
+            url: "https://jex.im/regulex/#!flags=&re=%5E(a%7Cb)*%3F%24",
+            icon: "icon-regularExpression-o",
+            desc: "好用的正则可视化工具",
+          },
+          {
+            label: "Linux命令",
+            url: "https://man.niaoge.com/",
+            icon: "icon-ziyuan1",
+            desc: "常用的linux命令",
+          },
+          {
+            label: "进制转换",
+            url: "https://tool.lu/hexconvert/",
+            icon: "icon-zhuanhuan",
+            desc: "进制转换工具",
+          },
+          {
+            label: "加密解密",
+            url: "https://tool.lu/encdec/",
+            icon: "icon-agora_AIzhinengjiangzao-zaoyinxiaochu",
+            desc: "加密解密工具",
+          },
+          {
+            label: "nginx配置",
+            url: "https://www.codejie.net/nginxconfig/?global.app.lang=zhCN",
+            icon: "icon-gongju",
+            desc: "配置高性能、安全、稳定的NGINX服务器的最简单方法。",
           },
         ],
       },
