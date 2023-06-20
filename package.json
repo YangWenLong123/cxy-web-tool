@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite --mode development",
-    "dev:pro": "vite --mode production",
+    "dev:prod": "vite --mode production",
     "build": "vite build --mode development",
-    "build:pro": "vite build --mode production",
+    "build:prod": "vite build --mode production",
     "preview": "vite preview",
     "lint": "eslint src",
     "fix": "eslint src --fix",
