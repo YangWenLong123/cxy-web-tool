@@ -1,18 +1,17 @@
 /*
  * @Author: along
- * @Description:
+ * @Description: 程序员盒子路由配置
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-10 20:34:49
+ * @LastEditTime: 2023-06-21 15:40:17
  * @FilePath: /cxy-web-tool/src/router/index.ts
  */
-import { createRouter, createWebHistory } from 'vue-router'
-import routes from './modules'
+import { createRouter, createWebHistory } from "vue-router";
+import routes from "./modules";
 
 const router = createRouter({
   history: createWebHistory(),
-  // mode: 'history',
   routes,
-})
+});
 
-export default router
+export default router;

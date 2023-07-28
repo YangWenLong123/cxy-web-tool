@@ -1,9 +1,9 @@
 /*
  * @Description:配置
- * @Autor: codeBo
+ * @Autor: along
  * @Date: 2023-03-16 10:35:43
  * @LastEditors: along
- * @LastEditTime: 2023-06-19 15:40:52
+ * @LastEditTime: 2023-07-09 11:21:28
  */
 import { defineConfig, loadEnv, splitVendorChunkPlugin } from "vite";
 import vue from "@vitejs/plugin-vue";

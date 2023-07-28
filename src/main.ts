@@ -3,7 +3,7 @@
  * @Description: 项目资源加载入口
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-15 14:41:07
+ * @LastEditTime: 2023-06-21 15:44:28
  * @FilePath: /cxy-web-tool/src/main.ts
  */
 import { createApp } from "vue";
@@ -13,6 +13,7 @@ import { createPinia } from "pinia";
 import "ant-design-vue/dist/antd.css";
 import antDesignVue from "ant-design-vue";
 import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
+import "./premission";
 
 (async () => {
   const app = createApp(App);

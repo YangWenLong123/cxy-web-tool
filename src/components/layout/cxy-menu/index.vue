@@ -3,7 +3,7 @@
  * @Description: 程序员盒子菜单
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-16 16:56:21
+ * @LastEditTime: 2023-07-26 09:42:59
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-menu/index.vue
 -->
 <template>
@@ -78,6 +78,7 @@
   const menuList = ref([
     { title: "内容搜索", path: "/keyword", icon: "icon-sousuo" },
     { title: "常用工具", path: "/tool", icon: "icon-xiumeigongju-" },
+    { title: "GPT", path: "/gpt", icon: "icon-wuguan" },
     {
       title: "技术社区",
       path: "/community",
@@ -105,7 +106,7 @@
   };
 
   const goHome = () => {
-    location.href = "http://www.alongweb.top";
+    location.href = "http://www.zxxweb.top";
   };
 
   const replacePath = (path: string) => {

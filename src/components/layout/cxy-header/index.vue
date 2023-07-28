@@ -3,7 +3,7 @@
  * @Description: 程序员盒子头部icon
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-16 16:57:24
+ * @LastEditTime: 2023-07-09 11:14:46
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-header/index.vue
 -->
 <template>
@@ -36,7 +36,7 @@
       {
         icon: "icon-shouye",
         tooltip: "盒子首页",
-        link: "http://www.alongweb.top",
+        link: "http://www.zxxweb.top",
       },
       {
         icon: "icon-navicon-wzgl",

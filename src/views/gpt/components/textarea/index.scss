@@ -1,0 +1,44 @@
+.CxyTextArea{
+  height: 100px;
+  border-top: 1px #eee solid;
+  margin-right: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .input-box {
+    width: 890px;
+    height: 60px;
+    background-color: #26282d;
+    box-shadow: 0px 0px 5px #1e1717;
+    border: 1px solid #0e1013;
+    border-radius: 5px;
+    position: relative;
+    .input {
+      position: absolute;
+      left: 24px;
+      top: 5px;
+      height: 50px;
+      width: 832px;
+      background-color: transparent;
+      border: none !important;
+      text-indent: 20px;
+      color: white;
+      font-family: inherit;
+      font-size: inherit;
+      font-style: inherit;
+      font-weight: inherit;
+      outline: 0;
+      box-shadow: none !important;
+    }
+    img {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      height: 20px;
+      cursor: pointer;
+      &:active {
+        opacity: .5;
+      }
+    }
+  }
+}

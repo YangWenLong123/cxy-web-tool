@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-11 22:50:51
+ * @LastEditTime: 2023-07-26 09:39:24
  * @FilePath: /cxy-web-tool/src/router/modules/common.modules.ts
  */
 import type { RouteRecordRaw } from "vue-router";
@@ -25,6 +25,11 @@ const routes: RouteRecordRaw[] = [
         path: "/tool",
         name: "CxyTool",
         component: () => import("@/views/tool/index.vue"),
+      },
+      {
+        path: "/gpt",
+        name: "GPT",
+        component: () => import("@/views/gpt/index.vue"),
       },
       {
         path: "/community",
