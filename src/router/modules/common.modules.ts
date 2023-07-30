@@ -1,9 +1,9 @@
 /*
  * @Author: along
- * @Description:
+ * @Description: 路由配置
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-07-26 09:39:24
+ * @LastEditTime: 2023-07-28 18:03:34
  * @FilePath: /cxy-web-tool/src/router/modules/common.modules.ts
  */
 import type { RouteRecordRaw } from "vue-router";

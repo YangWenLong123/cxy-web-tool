@@ -1,0 +1,15 @@
+.CxyListComponents {
+  flex: 1;
+  overflow: hidden;
+  // border: 1px #fff solid;
+  margin: 0 32px 32px 32px;
+  display: flex;
+  flex-wrap: wrap;
+  .image-cove {
+    width: 120px;
+    height: 120px;
+    margin: 12px;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+}

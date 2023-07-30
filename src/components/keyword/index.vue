@@ -3,7 +3,7 @@
  * @Description: 程序员盒子搜索组件
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-16 16:58:35
+ * @LastEditTime: 2023-07-28 20:36:25
  * @FilePath: /cxy-web-tool/src/components/keyword/index.vue
 -->
 <template>
@@ -41,6 +41,7 @@
           @pressEnter="searchKeyword(state.value)"
           @change="changeValue()"
           id="cxyInput"
+          autocomplete="off"
           allowClear
         />
         <div
