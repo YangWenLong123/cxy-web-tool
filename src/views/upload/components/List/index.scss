@@ -1,15 +1,112 @@
 .CxyListComponents {
-  flex: 1;
   overflow: hidden;
+  flex: 1;
   // border: 1px #fff solid;
   margin: 0 32px 32px 32px;
   display: flex;
-  flex-wrap: wrap;
-  .image-cove {
-    width: 120px;
-    height: 120px;
-    margin: 12px;
-    box-sizing: border-box;
-    padding: 10px 0;
+  flex-direction: column;
+  // overflow-y: auto;
+  cursor: pointer;
+  position: relative;
+
+  .flexWrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+  .imagesWrap {
+    // flex: 1;
+    overflow: hidden;
+    // border: 1px #fff solid;
+    margin: 0 32px 32px 32px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    cursor: pointer;
+    position: relative;
+
+    .ImagesMain {
+      width: 120px;
+      height: 120px;
+      margin: 12px;
+      overflow: hidden;
+      padding: 10px;
+      box-sizing: border-box;
+      position: relative;
+      background-color: rgb(49, 49, 54);
+      border-radius: 6px;
+
+      &:hover {
+        .ImagesOprate {
+          display: flex;
+        }
+      }
+    }
+
+    .image-cove {
+      width: 100px;
+      height: 100px;
+    }
+
+    .ImagesOprate {
+      width: 120px;
+      height: 120px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, .6);
+      align-items: center;
+      justify-content: center;
+      display: none;
+
+      i {
+        color: #fff;
+        font-size: 20px;
+
+        &:active {
+          opacity: .6;
+        }
+      }
+    }
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+    button {
+      background-color: rgb(49, 49, 54) !important;
+      color: #fff;
+    }
+    .ant-pagination-item-active, .ant-pagination-item {
+      background-color: rgb(49, 49, 54) !important;
+      border-color: #fff;
+    }
+    .ant-select-selector {
+      background-color: rgb(49, 49, 54) !important;
+      color: #fff;
+    }
+    .ant-pagination-total-text {
+      color: #fff;
+    }
+    .ant-pagination-item-active a {
+      color: #9AEECD !important;
+    }
+    .ant-pagination-item a {
+      color: #fff;
+    }
+    .ant-pagination-options-quick-jumper input {
+      background-color: rgb(49, 49, 54) !important;
+      color: #fff;
+    }
+    .ant-pagination-options-quick-jumper, .ant-select-selection-item{
+      color: #fff;
+    }
+     .ant-select-selector::after, .anticon {
+      color: #fff;
+     }
   }
 }

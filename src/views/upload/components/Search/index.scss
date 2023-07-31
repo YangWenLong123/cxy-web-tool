@@ -7,7 +7,7 @@
   box-sizing: border-box;
   padding: 0 32px;
   .button-primary {
-    width: 64px;
+    width: 96px;
     height: 32px;
     border-radius: 3px;
     text-align: center;
@@ -19,5 +19,11 @@
     &:active {
       background: rgba(49,49,54,.6);;
     }
+  }
+  .ant-btn {
+    padding: 0;
+  }
+  .ant-upload-list {
+    display: none;
   }
 }

@@ -3,7 +3,7 @@
  * @Description: 项目资源加载入口
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-21 15:44:28
+ * @LastEditTime: 2023-07-31 15:26:58
  * @FilePath: /cxy-web-tool/src/main.ts
  */
 import { createApp } from "vue";
