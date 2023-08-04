@@ -3,7 +3,7 @@
  * @Description: 标题
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-07-31 17:52:58
+ * @LastEditTime: 2023-08-04 13:45:48
  * @FilePath: /cxy-web-tool/src/views/upload/components/Head/index.vue
 -->
 <template>
@@ -12,21 +12,22 @@
       <img
         src="@/assets/images/logo.png"
         :style="{width: '90px'}"
-        @click="onBackHome('http://www.alongweb.top/')"
+        @click="onBackHome(1)"
       >
       <img
         src="http://cdn.alongweb.top/images/webbox/upload-title.jpg"
         :style="{width: '364px'}"
+        @click="onBackHome(1)"
       >
     </div>
     <div class="flexWrap">
       <i
         class="iconfont icon-shouye"
-        @click="onBackHome('http://www.alongweb.top/')"
+        @click="onBackHome(1)"
       ></i>
       <i
         class="iconfont icon-gongju"
-        @click="onBackHome('http://xyz.alongweb.top/')"
+        @click="onBackHome(2)"
       ></i>
       <i
         class="iconfont icon-kefu"
@@ -44,8 +45,12 @@
 
   onMounted(() => {});
 
-  const onBackHome = (url: any) => {
-    location.href = url;
+  const onBackHome = (type: number) => {
+    if (type === 1) {
+      location.href = import.meta.env.VITE_APP_HOME_API;
+    } else if (type === 2) {
+      location.href = import.meta.env.VITE_APP_TOOL_API;
+    }
   };
 
   const changeRouter = () => {

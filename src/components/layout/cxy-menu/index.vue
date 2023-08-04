@@ -3,7 +3,7 @@
  * @Description: 程序员盒子菜单
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-07-31 14:34:09
+ * @LastEditTime: 2023-08-04 13:43:25
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-menu/index.vue
 -->
 <template>
@@ -106,7 +106,7 @@
   };
 
   const goHome = () => {
-    location.href = "http://www.zxxweb.top";
+    location.href = import.meta.env.VITE_APP_HOME_API;
   };
 
   const replacePath = (path: string) => {

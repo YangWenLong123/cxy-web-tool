@@ -3,7 +3,7 @@
  * @Description: 程序员盒子头部icon
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-07-09 11:14:46
+ * @LastEditTime: 2023-08-04 13:42:36
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-header/index.vue
 -->
 <template>
@@ -36,12 +36,12 @@
       {
         icon: "icon-shouye",
         tooltip: "盒子首页",
-        link: "http://www.zxxweb.top",
+        link: import.meta.env.VITE_APP_HOME_API,
       },
       {
         icon: "icon-navicon-wzgl",
         tooltip: "小册",
-        link: import.meta.env.VITE_APP_BASE_API + "/book",
+        link: import.meta.env.VITE_APP_TOOL_API + "/book",
       },
       {
         icon: "icon-kefu",
@@ -51,7 +51,7 @@
       {
         icon: "icon-yu",
         tooltip: "摸鱼社区",
-        link: import.meta.env.VITE_APP_BASE_API + "/lazy",
+        link: import.meta.env.VITE_APP_TOOL_API + "/lazy",
       },
     ],
   });
