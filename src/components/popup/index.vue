@@ -3,7 +3,7 @@
  * @Description: 程序员盒子全局弹窗
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-20 21:54:30
+ * @LastEditTime: 2023-08-11 15:11:04
  * @FilePath: /cxy-web-tool/src/components/popup/index.vue
 -->
 <template>
@@ -57,7 +57,7 @@
       WeChat: [
         {
           title: "客服微信",
-          url: "http://cdn.alongweb.top/images/zxx.png",
+          url: "http://cdn.alongweb.top/images/webbox/wx_code.png",
         },
       ],
       Side: [
