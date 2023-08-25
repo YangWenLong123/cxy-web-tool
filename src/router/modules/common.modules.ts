@@ -3,7 +3,7 @@
  * @Description: 路由配置
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-07-28 18:03:34
+ * @LastEditTime: 2023-08-25 10:48:34
  * @FilePath: /cxy-web-tool/src/router/modules/common.modules.ts
  */
 import type { RouteRecordRaw } from "vue-router";
@@ -37,9 +37,9 @@ const routes: RouteRecordRaw[] = [
         component: () => import("@/views/community/index.vue"),
       },
       {
-        path: "/team",
+        path: "/ai",
         name: "CxyTeam",
-        component: () => import("@/views/team/index.vue"),
+        component: () => import("@/views/ai/index.vue"),
       },
       {
         path: "/platform",

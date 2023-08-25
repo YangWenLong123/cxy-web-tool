@@ -3,7 +3,7 @@
  * @Description: 程序员盒子菜单
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-08-04 13:43:25
+ * @LastEditTime: 2023-08-25 11:25:01
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-menu/index.vue
 -->
 <template>
@@ -84,12 +84,12 @@
       path: "/community",
       icon: "icon-shequ-weijihuo",
     },
-    { title: "技术团队", path: "/team", icon: "icon-tuandui" },
+    { title: "AI社区", path: "/ai", icon: "icon-tuandui" },
     { title: "学习平台", path: "/platform", icon: "icon-ziyuan1" },
-    { title: "资源下载", path: "/resources", icon: "icon-ziyuan" },
-    { title: "Chrome插件", path: "/chrome", icon: "icon-wulianwang-" },
-    { title: "vue社区", path: "/vue", icon: "icon-vue" },
-    { title: "react社区", path: "/react", icon: "icon-react" },
+    // { title: "资源下载", path: "/resources", icon: "icon-ziyuan" },
+    // { title: "Chrome插件", path: "/chrome", icon: "icon-wulianwang-" },
+    // { title: "vue社区", path: "/vue", icon: "icon-vue" },
+    // { title: "react社区", path: "/react", icon: "icon-react" },
   ]);
 
   const state = reactive({

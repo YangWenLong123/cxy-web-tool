@@ -3,51 +3,18 @@
  * @Description: 程序员盒子常用工具
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-06-16 17:26:25
+ * @LastEditTime: 2023-08-25 10:37:37
  * @FilePath: /cxy-web-tool/src/views/tool/index.vue
 -->
 <template>
   <div class="CxyTool">
-    <div
-      v-for="(record, index) in state.tool"
-      :key="index"
-      class="toolBox"
-    >
-      <div class="tool_header">
-        <i
-          class="iconfont tool_title_icon"
-          :class="record.icon"
-          :style="{color: randomColor()}"
-        />
-        <div class="tool_title">{{ record.title }}</div>
-      </div>
-
-      <template v-if="record.list.length">
-        <div class="tool_wrap">
-          <div
-            v-for="(option, idx) in record.list"
-            :key="idx"
-            class="toolItems"
-            @click="goPage(option.url)"
-          >
-            <div class="header">
-              <i
-                class="iconfont"
-                :class="option.icon"
-                :style="{color: randomColor()}"
-              />
-              <div class="label">{{ option.label }}</div>
-            </div>
-            <div class="desc">{{  option.desc  }}</div>
-          </div>
-        </div>
-      </template>
-    </div>
+    <CardBox :tool="state.tool" />
   </div>
 </template>
 
 <script lang='ts' setup>
   import { onMounted, reactive } from "vue";
+  import CardBox from "@/components/card/index.vue";
 
   const state = reactive({
     tool: [
@@ -499,14 +466,6 @@
   });
 
   onMounted(() => {});
-
-  const randomColor = () => {
-    return "#" + (((1 << 24) * Math.random()) | 0).toString(16).padStart(6, "0");
-  };
-
-  const goPage = (url: string) => {
-    window.open(url);
-  };
 </script>
 
 <style lang="scss">
