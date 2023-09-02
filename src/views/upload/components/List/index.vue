@@ -3,7 +3,7 @@
  * @Description: 图片列表
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-07-31 18:01:07
+ * @LastEditTime: 2023-08-25 18:06:09
  * @FilePath: /cxy-web-tool/src/views/upload/components/List/index.vue
 -->
 <template>
@@ -60,8 +60,8 @@
         @showSizeChange="onShowSizeChange"
       >
         <template #buildOptionText="props">
-          <span v-if="props.value !== '50'">{{ props.value }}条/页</span>
-          <span v-else>全部</span>
+          <span>{{ props.value }}条/页</span>
+          <!-- <span v-else>全部</span> -->
         </template>
       </a-pagination>
     </div>
