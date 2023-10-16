@@ -9,14 +9,14 @@
 <template>
   <div class="CxyListComponents">
     <div class="flexWrap">
-      <a-spin
-        size="large"
-        :spinning="state.spinning"
-      >
+      <a-spin size="large" :spinning="state.spinning">
         <div class="imagesWrap">
           <div
             class="ImagesMain"
-            v-for="(record, index) in state.imgList.slice((state.current - 1) * state.pageSize, state.current  * state.pageSize)"
+            v-for="(record, index) in state.imgList.slice(
+              (state.current - 1) * state.pageSize,
+              state.current * state.pageSize
+            )"
             :key="index"
           >
             <div
@@ -26,19 +26,13 @@
               class="image-cove"
             >
               <div class="ImagesOprate">
-                <i
-                  class="iconfont icon-yulan"
-                  @click="onPreview(index)"
-                ></i>
+                <i class="iconfont icon-yulan" @click="onPreview(index)"></i>
                 <i
                   class="iconfont icon-fuzhilianjie"
-                  :style="{margin: '0 14px'}"
+                  :style="{ margin: '0 14px' }"
                   @click="onCopyUrl(record.url)"
                 ></i>
-                <i
-                  class="iconfont icon-xiazai"
-                  @click="onDownLoad(record)"
-                ></i>
+                <i class="iconfont icon-xiazai" @click="onDownLoad(record)"></i>
               </div>
             </div>
           </div>
@@ -55,7 +49,7 @@
         show-quick-jumper
         show-size-changer
         show-less-items
-        :show-total="total => `共 ${total} 条`"
+        :show-total="(total) => `共 ${total} 条`"
         @change="onChange"
         @showSizeChange="onShowSizeChange"
       >
@@ -68,81 +62,81 @@
   </div>
 </template>
 
-<script lang='ts' setup>
-  import { message } from "ant-design-vue";
-  import { onMounted, ref, reactive } from "vue";
-  import { getImagesList } from "@/api/upload";
-  import { v3ImgPreviewFn } from "v3-img-preview";
-  import useClipboard from "vue-clipboard3";
+<script lang="ts" setup>
+import { message } from "ant-design-vue";
+import { onMounted, ref, reactive } from "vue";
+import { getImagesList } from "@/api/upload";
+import { v3ImgPreviewFn } from "v3-img-preview";
+import useClipboard from "vue-clipboard3";
 
-  const { toClipboard } = useClipboard();
-  const pageSizeOptions = ref<string[]>(["30", "50", "80", "100"]);
-  const state = reactive({
-    imgList: [] as any,
-    current: 1,
-    total: 0,
-    pageSize: 30,
-    spinning: true,
-  });
+const { toClipboard } = useClipboard();
+const pageSizeOptions = ref<string[]>(["30", "50", "80", "100"]);
+const state = reactive({
+  imgList: [] as any,
+  current: 1,
+  total: 0,
+  pageSize: 30,
+  spinning: true,
+});
 
-  onMounted(async () => {
-    state.spinning = true;
-    init();
-  });
+onMounted(async () => {
+  state.spinning = true;
+  init();
+});
 
-  const init = async () => {
-    const { data }: any = await getImagesList();
+const init = async () => {
+  const { data }: any = await getImagesList();
 
-    state.imgList = data.list || [];
-    state.total = data.list.length;
-    state.spinning = false;
-  };
+  state.imgList = data.list || [];
+  state.total = data.list.length;
+  state.spinning = false;
+};
 
-  const onPreview = (index: number) => {
-    const images = state.imgList.map((item) => item.url);
+const onPreview = (index: number) => {
+  const images = state.imgList.map((item) => item.url);
 
-    v3ImgPreviewFn({ images, index });
-  };
+  v3ImgPreviewFn({ images, index });
+};
 
-  const onCopyUrl = async (url: any) => {
-    try {
-      await toClipboard(url);
+const onCopyUrl = async (url: any) => {
+  try {
+    await toClipboard(url);
 
-      message.success("复制成功");
-    } catch (error) {
-      message.warning("复制失败");
-    }
-  };
+    message.success("复制成功");
+  } catch (error) {
+    message.warning("复制失败");
+  }
+};
 
-  const onDownLoad = async (record: any) => {
-    const a = document.createElement("a");
-    fetch(record.url)
-      .then((res) => {
-        return res.blob();
-      })
-      .then((blob) => {
-        a.href = URL.createObjectURL(blob);
-        a.download = record.name.split(".")[0];
-        document.body.appendChild(a);
-        a.click();
-      });
-  };
+const onDownLoad = async (record: any) => {
+  const a = document.createElement("a");
+  fetch(record.url)
+    .then((res) => {
+      return res.blob();
+    })
+    .then((blob) => {
+      a.href = URL.createObjectURL(blob);
+      a.download = record.name.split(".")[0];
+      document.body.appendChild(a);
+      a.click();
+    });
+};
 
-  const showLoading = () => {
-    state.spinning = true;
-  };
+const showLoading = () => {
+  state.spinning = true;
+};
 
-  const onShowSizeChange = (current: number, pageSize: number) => {
-    state.pageSize = pageSize;
-  };
+const onShowSizeChange = (current: number, pageSize: number) => {
+  state.pageSize = pageSize;
+};
 
-  const onChange = (page: number) => {
-    state.page = page;
-  };
+const onChange = (page: number) => {
+  state.page = page;
+};
 
-  defineExpose({ init, showLoading });
+defineExpose({ init, showLoading });
 </script>
 
 <style lang="scss">
-  @import "./index.scss";
+@import "./index.scss";
 </style>

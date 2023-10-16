@@ -3,7 +3,7 @@
  * @Description: 路由配置
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-08-25 10:48:34
+ * @LastEditTime: 2023-10-13 17:40:38
  * @FilePath: /cxy-web-tool/src/router/modules/common.modules.ts
  */
 import type { RouteRecordRaw } from "vue-router";
@@ -65,6 +65,16 @@ const routes: RouteRecordRaw[] = [
         path: "/react",
         name: "CxyReact",
         component: () => import("@/views/react/index.vue"),
+      },
+      {
+        path: "/case",
+        name: "CxyCase",
+        component: () => import("@/views/case/index.vue"),
+      },
+      {
+        path: "/contextMenu",
+        name: "ContextMenu",
+        component: () => import("@/views/components/context-menu/index.vue"),
       },
     ],
   },

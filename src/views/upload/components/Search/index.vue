@@ -3,7 +3,7 @@
  * @Description: 操作
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-07-31 17:18:42
+ * @LastEditTime: 2023-09-04 13:20:34
  * @FilePath: /cxy-web-tool/src/views/upload/components/Search/index.vue
 -->
 <template>
@@ -20,38 +20,41 @@
   </div>
 </template>
 
-<script lang='ts' setup>
-  import { onMounted, reactive } from "vue";
-  import { uploadImageFile } from "@/api/upload";
-  import { message } from "ant-design-vue";
+<script lang="ts" setup>
+import { onMounted, reactive } from "vue";
+import { uploadImageFile } from "@/api/upload";
+import { message } from "ant-design-vue";
 
-  const state = reactive({
-    fileList: [],
+const state = reactive({
+  fileList: [],
+});
+
+onMounted(() => {});
+
+const emit = defineEmits(["click", "loading"]);
+
+const onCustomRequest = (e: any) => {
+  const formData = new FormData();
+
+  formData.append("file", e.file);
+
+  console.log("====e====", e);
+  console.log("====formData====", formData);
+
+  emit("loading");
+
+  uploadImageFile(formData).then((resp) => {
+    if (resp.data.code === 1) {
+      console.log(resp);
+
+      emit("click");
+
+      message.success("上传成功");
+    }
   });
-
-  onMounted(() => {});
-
-  const emit = defineEmits(["click", "loading"]);
-
-  const onCustomRequest = (e: any) => {
-    const formData = new FormData();
-
-    formData.append("file", e.file);
-
-    emit("loading");
-
-    uploadImageFile(formData).then((resp) => {
-      if (resp.data.code === 1) {
-        console.log(resp);
-
-        emit("click");
-
-        message.success("上传成功");
-      }
-    });
-  };
+};
 </script>
 
 <style lang="scss">
-  @import "./index.scss";
+@import "./index.scss";
 </style>

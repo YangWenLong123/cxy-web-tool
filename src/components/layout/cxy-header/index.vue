@@ -25,52 +25,52 @@
   </div>
 </template>
 
-<script lang='ts' setup>
-  import { onMounted, reactive } from "vue";
-  import { usePopupStore } from "@/store/modules/popup";
+<script lang="ts" setup>
+import { onMounted, reactive } from "vue";
+import { usePopupStore } from "@/store/modules/popup";
 
-  const store = usePopupStore();
+const store = usePopupStore();
 
-  const state = reactive({
-    iconList: [
-      {
-        icon: "icon-shouye",
-        tooltip: "盒子首页",
-        link: import.meta.env.VITE_APP_HOME_API,
-      },
-      {
-        icon: "icon-navicon-wzgl",
-        tooltip: "小册",
-        link: import.meta.env.VITE_APP_TOOL_API + "/book",
-      },
-      {
-        icon: "icon-kefu",
-        tooltip: "联系客服",
-        link: "popup",
-      },
-      {
-        icon: "icon-yu",
-        tooltip: "摸鱼社区",
-        link: import.meta.env.VITE_APP_TOOL_API + "/lazy",
-      },
-    ],
-  });
+const state = reactive({
+  iconList: [
+    {
+      icon: "icon-shouye",
+      tooltip: "盒子首页",
+      link: import.meta.env.VITE_APP_HOME_API,
+    },
+    {
+      icon: "icon-navicon-wzgl",
+      tooltip: "小册",
+      link: import.meta.env.VITE_APP_TOOL_API + "/book",
+    },
+    {
+      icon: "icon-kefu",
+      tooltip: "联系客服",
+      link: "popup",
+    },
+    {
+      icon: "icon-yu",
+      tooltip: "摸鱼社区",
+      link: import.meta.env.VITE_APP_TOOL_API + "/lazy",
+    },
+  ],
+});
 
-  onMounted(() => {});
+onMounted(() => {});
 
-  const changeRouter = (link: string) => {
-    if (link === "popup") {
-      store.setPopup({
-        showPopup: true,
-        popup_type: "1",
-        popup_mode: ["WeChat"],
-      });
-    } else {
-      location.href = link;
-    }
-  };
+const changeRouter = (link: string) => {
+  if (link === "popup") {
+    store.setPopup({
+      showPopup: true,
+      popup_type: "1",
+      popup_mode: ["WeChat"],
+    });
+  } else {
+    location.href = link;
+  }
+};
 </script>
 
 <style lang="scss">
-  @import "./index.scss";
+@import "./index.scss";
 </style>
