@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 4114096 */
-  src: url('//at.alicdn.com/t/c/font_4114096_e4r1ihvgxh.woff2?t=1690790308698') format('woff2'),
-       url('//at.alicdn.com/t/c/font_4114096_e4r1ihvgxh.woff?t=1690790308698') format('woff'),
-       url('//at.alicdn.com/t/c/font_4114096_e4r1ihvgxh.ttf?t=1690790308698') format('truetype');
+  src: url('//at.alicdn.com/t/c/font_4114096_lbn2d6ogkhk.woff2?t=1697611833147') format('woff2'),
+       url('//at.alicdn.com/t/c/font_4114096_lbn2d6ogkhk.woff?t=1697611833147') format('woff'),
+       url('//at.alicdn.com/t/c/font_4114096_lbn2d6ogkhk.ttf?t=1697611833147') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,30 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+  content: "\e85a";
+}
+
+.icon-jiantou-right-top:before {
+  content: "\e620";
+}
+
+.icon-bilibili-fill:before {
+  content: "\e66b";
+}
+
+.icon-sanxianglogo:before {
+  content: "\e650";
+}
+
+.icon-huanjiaozhongxin02:before {
+  content: "\e8f1";
+}
+
+.icon-form:before {
+  content: "\e626";
 }
 
 .icon-fuzhilianjie:before {
@@ -416,3 +440,4 @@
 .icon-zuojiantou:before {
   content: "\e607";
 }
+

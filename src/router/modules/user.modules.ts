@@ -3,7 +3,7 @@
  * @Description: 页面路由挂载
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-08-11 16:01:26
+ * @LastEditTime: 2023-10-18 16:00:19
  * @FilePath: /cxy-web-tool/src/router/modules/user.modules.ts
  */
 import type { RouteRecordRaw } from "vue-router";
@@ -27,8 +27,21 @@ const routes: RouteRecordRaw[] = [
   {
     path: "/swagger",
     name: "Swagger",
+    redirect: "/swagger-api",
     component: () => import("@/views/swagger/index.vue"),
     meta: {},
+    children: [
+      {
+        path: "/swagger-api",
+        name: "Swaggerindex",
+        component: () => import("@/views/swagger/api/index.vue"),
+      },
+      {
+        path: "/swagger-aigc",
+        name: "SwaggerAigc",
+        component: () => import("@/views/swagger/aigc/index.vue"),
+      },
+    ],
   },
   {
     path: "/404",

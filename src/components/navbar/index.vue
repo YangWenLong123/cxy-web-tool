@@ -1,17 +1,108 @@
+<!--
+ * @Author: along
+ * @Description: 
+ * @Date: 2023-08-11 15:14:59
+ * @LastEditors: along
+ * @LastEditTime: 2023-10-18 17:46:06
+ * @FilePath: /cxy-web-tool/src/components/navbar/index.vue
+-->
 <template>
-  <div class="navbarComponents">
-    <img src="@/assets/images/logo.png">
+  <div
+    class="navbarComponents"
+    :style="{ border: showBottom ? '1px #000000 solid' : '' }"
+  >
+    <div class="left" @click="onGoHome()">
+      <img src="http://www.alongweb.top/image/logo.svg" alt="" />
+      <div class="left_title">Web Box</div>
+    </div>
+
+    <div class="right">
+      <div
+        class="items"
+        v-for="(record, index) in state.iconList"
+        :key="index"
+        @click="opNextUrl(record)"
+      >
+        <div class="item">
+          <div class="item_text" :class="path === record.link ? 'active' : ''">
+            {{ record.tooltip }}
+          </div>
+          <i class="iconfont" :class="record.icon"></i>
+        </div>
+      </div>
+      <div class="lines"></div>
+      <div @click="onGitHub()">
+        <i class="iconfont icon-github"></i>
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-  import { reactive } from "vue";
+import { reactive, ref, onMounted, watch, nextTick } from "vue";
+import router from "@/router";
+import { useRouter } from "vue-router";
 
-  const state = reactive({
-    utils: [],
+const routers = useRouter();
+const path = ref();
+const showBottom = ref(true);
+const state = reactive({
+  iconList: [
+    {
+      icon: "icon-jiantou-right-top",
+      tooltip: "盒子首页",
+      type: "outside",
+      link: import.meta.env.VITE_APP_HOME_API,
+    },
+    {
+      icon: "",
+      tooltip: "开放API",
+      type: "station",
+      link: "/swagger-api",
+    },
+    {
+      icon: "",
+      tooltip: "API在线调试",
+      type: "station",
+      link: "/swagger-aigc",
+    },
+  ],
+});
+
+onMounted(() => {
+  nextTick(() => {
+    // const dom = document.querySelector(".cxyView") as any;
+    // dom.addEventListener("scroll", (e: any) => {
+    //   showBottom.value = e.target?.scrollTop > 10 ? true : false;
+    // });
   });
+});
+
+watch(
+  () => routers.currentRoute.value,
+  (newValue: any) => {
+    path.value = newValue?.path;
+  },
+  { immediate: true }
+);
+
+const onGoHome = () => {
+  window.location.href = import.meta.env.VITE_APP_HOME_API;
+};
+
+const onGitHub = () => {
+  window.location.href = "https://github.com/YangWenLong123";
+};
+
+const opNextUrl = (record: any) => {
+  if (record.type === "outside") {
+    window.location.href = record.link;
+  } else if (record.type === "station") {
+    router.push({ path: record.link });
+  }
+};
 </script>
 
 <style lang="scss" scoped>
-  @import "./index.scss";
+@import "./index.scss";
 </style>

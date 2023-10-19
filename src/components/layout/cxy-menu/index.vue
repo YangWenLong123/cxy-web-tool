@@ -3,7 +3,7 @@
  * @Description: 程序员盒子菜单
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-10-13 17:24:29
+ * @LastEditTime: 2023-10-17 13:14:12
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-menu/index.vue
 -->
 <template>
@@ -83,9 +83,9 @@ const menuList = ref([
   },
   { title: "AI社区", path: "/ai", icon: "icon-tuandui" },
   { title: "学习平台", path: "/platform", icon: "icon-ziyuan1" },
-  { title: "常用案例", path: "/case", icon: "icon-ziyuan1" },
+  // { title: "常用案例", path: "/case", icon: "icon-ziyuan1" },
   // { title: "资源下载", path: "/resources", icon: "icon-ziyuan" },
-  // { title: "Chrome插件", path: "/chrome", icon: "icon-wulianwang-" },
+  { title: "Chrome插件", path: "/chrome", icon: "icon-wulianwang-" },
   // { title: "vue社区", path: "/vue", icon: "icon-vue" },
   // { title: "react社区", path: "/react", icon: "icon-react" },
 ]);

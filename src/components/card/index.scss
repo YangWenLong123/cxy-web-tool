@@ -1,53 +1,54 @@
 .tool_header {
-    display: flex;
-    align-items: center;
-    .tool_title_icon {
-      // color: chocolate;
-      font-size: 22px;
-    }
-    .tool_title {
-      margin-left: 12px;
-      font-size: 16px;
-      font-weight: bold;
-    }
+  display: flex;
+  align-items: center;
+  .tool_title_icon {
+    // color: chocolate;
+    font-size: 22px;
   }
-  .tool_wrap {
+  .tool_title {
+    margin-left: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(235, 235, 245, 0.6);
+  }
+}
+.tool_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  .toolItems {
+    width: 200px;
+    height: 64px;
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 32px;
-    .toolItems {
-      width: 200px;
-      height: 64px;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px;
+    background: #252529;
+    border-radius: 12px;
+    margin: 5px 10px;
+    cursor: pointer;
+    color: #3c3c43;
+    border: 1px #252529 solid;
+    &:hover {
+      border: 1px #2add9c solid;
+      opacity: 0.8;
+    }
+    .header {
       display: flex;
-      flex-direction: column;
-      box-sizing: border-box;
-      padding: 10px;
-      background: rgba(249,249,249,1);
-      border-radius: 4px;
-      margin: 5px 10px;
-      cursor: pointer;
-      color: #3C3C43;
-      border: 1px #e9f1f6 solid;
-      &:hover {
-        border: 1px #2add9c solid;
-        opacity: 0.8;
-      }
-      .header {
-        display: flex;
-        align-items: center;
-        .label {
-          color: rgba(67, 67, 67, 1);
-          margin-left: 10px;
-          font-size: 15px;
-        }
-      }
-      .desc {
-        color: #6C6C71;
-        font-size: 12px;
-        width: 180px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+      align-items: center;
+      .label {
+        color: #e2e2d9;
+        margin-left: 10px;
+        font-size: 15px;
       }
     }
+    .desc {
+      color: rgba(235, 235, 245, 0.6);
+      font-size: 12px;
+      width: 180px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
+}

@@ -1,19 +1,21 @@
 .cxyContent {
+  flex: 1;
+  background-color: #1c1e21;
+  // background-color: #1c1e21;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0px 0 20px 44px;
+  .cxyView {
+    widows: 100%;
     flex: 1;
-    background-color: #ffffff;
-    // background-color: #1c1e21;
     overflow: hidden;
+    overflow-y: auto;
+    color: #333;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    padding: 20px 0 20px 44px;
-    .cxyView {
-      widows: 100%;
-      flex: 1;
-      overflow: hidden;
-      overflow-y: auto;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-    }
+    padding-top: 20px;
   }
+}
