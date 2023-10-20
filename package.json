@@ -10,7 +10,7 @@
     "build:prod": "vite build --mode production",
     "preview": "vite preview",
     "lint": "eslint src",
-    "fix": "eslint src --fix",
+    "fix": "eslint --fix",
     "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
     "lint:eslint": "eslint src/**/*.{ts,vue} --cache --fix",
     "lint:style": "stylelint src/**/*.{css,less,scss,vue,postcss} --cache --fix",
@@ -23,8 +23,7 @@
     "**/*.{js,jsx,ts,tsx,vue}": [
       "eslint --fix",
       "stylelint --fix",
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ],
     "*.{scss,less,styl,html}": [
       "stylelint --fix",
@@ -56,6 +55,8 @@
     "@typescript-eslint/parser": "^5.49.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "codemirror": "^5.65.13",
+    "codemirror-editor-vue3": "^2.3.0",
     "eslint": "^8.33.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-import": "^2.27.5",

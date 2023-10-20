@@ -1,35 +1,41 @@
 .CxyHeadComponents {
-  width: 100%;
-  height: 63px;
-  border-bottom: 1px rgba(0,0,0,.4) solid;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  height: 63px;
+  border-bottom: 1px rgb(0 0 0 / 40%) solid;
+
   .head {
-    display: flex;
-    height: 63px;
-    align-items: center;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: 63px;
     padding: 0 32px;
+
     img {
       cursor: pointer;
     }
   }
+
   .flexWrap {
     display: flex;
     align-items: center;
     margin-right: 32px;
+
     i {
-      color: #9AEECD;
-      font-size: 18px;
       margin-right: 16px;
+      font-size: 18px;
+      color: #9AEECD;
       cursor: pointer;
+
       &:active {
         opacity: .6;
       }
     }
+
     i:last-child {
-      margin-right: 0px;
+      margin-right: 0;
     }
   }
 }

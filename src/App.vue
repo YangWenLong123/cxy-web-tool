@@ -12,16 +12,16 @@
 </template>
 
 <script setup lang="ts">
-  import CxyPopup from "@/components/popup/index.vue"; //全局弹窗通知
-  import { storeToRefs } from "pinia";
-  import { usePopupStore } from "@/store/modules/popup";
+import CxyPopup from "@/components/popup/index.vue"; //全局弹窗通知
+import { storeToRefs } from "pinia";
+import { usePopupStore } from "@/store/modules/popup";
 
-  const store = usePopupStore();
+const store = usePopupStore();
 
-  const { showPopup } = storeToRefs(store);
+const { showPopup } = storeToRefs(store);
 </script>
 
 <style lang="scss">
-  @import url("@/assets/styles/iconfont.css");
-  @import url("@/assets/styles/global.css");
+@import url("@/assets/styles/iconfont.css");
+@import url("@/assets/styles/global.css");
 </style>

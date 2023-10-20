@@ -16,33 +16,30 @@
         @onSearch="onSearch"
         @onPressEnter="onSearch"
       />
-      <img
-        src="@/assets/images/search.png"
-        @click="onSearch"
-      >
+      <img src="@/assets/images/search.png" @click="onSearch" />
     </div>
   </div>
 </template>
 
-<script lang='ts' setup>
-  import { onMounted, reactive } from "vue";
-  import { appGptStore } from "@/store/modules/gpt";
+<script lang="ts" setup>
+import { onMounted, reactive } from "vue";
+import { appGptStore } from "@/store/modules/gpt";
 
-  const store = appGptStore();
+const store = appGptStore();
 
-  const state = reactive({
-    keyword: "",
-  });
+const state = reactive({
+  keyword: "",
+});
 
-  onMounted(() => {});
+onMounted(() => {});
 
-  const onSearch = () => {
-    console.log(state.keyword);
-    store.setKeyword(state.keyword);
-    state.keyword = "";
-  };
+const onSearch = () => {
+  console.log(state.keyword);
+  store.setKeyword(state.keyword);
+  state.keyword = "";
+};
 </script>
 
 <style lang="scss">
-  @import "./index.scss";
+@import "./index.scss";
 </style>

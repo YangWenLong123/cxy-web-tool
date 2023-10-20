@@ -7,16 +7,13 @@
  * @FilePath: /cxy-web-tool/src/views/react/index.vue
 -->
 <template>
-  <div class="">
-    react
-  </div>
+  <div class="">react</div>
 </template>
 
-<script lang='ts' setup>
-  import { onMounted } from "vue";
+<script lang="ts" setup>
+import { onMounted } from "vue";
 
-  onMounted(() => {});
+onMounted(() => {});
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

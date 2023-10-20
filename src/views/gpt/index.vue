@@ -13,14 +13,14 @@
   </div>
 </template>
 
-<script lang='ts' setup>
-  import { onMounted } from "vue";
-  import View from "./components/view/view.vue";
-  import TextArea from "./components/textarea/textarea.vue";
+<script lang="ts" setup>
+import { onMounted } from "vue";
+import View from "./components/view/view.vue";
+import TextArea from "./components/textarea/textarea.vue";
 
-  onMounted(() => {});
+onMounted(() => {});
 </script>
 
 <style lang="scss">
-  @import "./index.scss";
+@import "./index.scss";
 </style>

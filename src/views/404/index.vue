@@ -8,20 +8,19 @@
 -->
 <template>
   <div class="page">
-    <img src="http://cdn.alongweb.top/images/404.png">
+    <img src="http://cdn.alongweb.top/images/404.png" />
     <div style="color: #999">页面跑丢了～</div>
   </div>
 </template>
 
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss" scoped>
-  .page {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
+.page {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 </style>

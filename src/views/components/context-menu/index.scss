@@ -1,17 +1,18 @@
 .CxyContextMenu {
-  flex: 1;
   display: flex;
+  flex: 1;
   flex-direction: column;
+
   .nav {
     display: flex;
     align-items: center;
-    color: rgb(110, 231, 183);
+    color: rgb(110 231 183);
     cursor: pointer;
   }
 
   .box {
     flex: 1;
-    border: 1px red dashed;
     margin-top: 20px;
+    border: 1px red dashed;
   }
 }

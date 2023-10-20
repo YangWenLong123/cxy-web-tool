@@ -1,42 +1,49 @@
 .cxyMenu {
+    position: relative;
     display: flex;
     flex-direction: column;
-    position: relative;
+    color: #fff;
     background-color: #1c1e21;
     transition: all 0.2s;
-    color: #fff;
+
     .cxyBox {
-      width: 100%;
-      flex: 1;
       display: flex;
+      flex: 1;
       flex-direction: column;
+      width: 100%;
+
       .cxyLogo {
         width: 140px;
         margin-left: 50px;
         cursor: pointer;
       }
+
       .cxyLogoSmall {
         width: 70px;
         margin-top: 20px;
         cursor: pointer;
       }
+
       .cxyFlex {
         display: flex;
         align-items: center;
-        cursor: pointer;
         height: 50px;
+        cursor: pointer;
+
         .cxyIconfont {
+          padding-right: 30px;
+          padding-left: 25px;
           // color: #fff;
           font-size: 18px;
-          padding-left: 25px;
-          padding-right: 30px;
         }
+
         .cxyItems {
+          box-sizing: border-box;
           flex: 1;
           height: 50px;
-          box-sizing: border-box;
           line-height: 50px;
         }
+
         &:hover {
           .cxyIconfont,
           .cxyItems {
@@ -46,23 +53,26 @@
       }
     }
   }
+
   .collapse {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
     position: absolute;
     top: 50%;
-    background-color: #1c1e21;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
+    background-color: #1c1e21;
+    border-radius: 50%;
     transition: all 0.2s;
+
     .icon-zuojiantou {
-      font-size: 22px;
       position: relative;
       right: -2px;
+      font-size: 22px;
     }
+
     &:hover {
       color: #6ee7b7;
     }

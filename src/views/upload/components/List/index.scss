@@ -1,41 +1,45 @@
 .CxyListComponents {
-  overflow: hidden;
-  flex: 1;
-  // border: 1px #fff solid;
-  margin: 0 32px 32px 32px;
+  position: relative;
   display: flex;
+  flex: 1;
   flex-direction: column;
+
+  // border: 1px #fff solid;
+  margin: 0 32px 32px;
+  overflow: hidden;
+
   // overflow-y: auto;
   cursor: pointer;
-  position: relative;
 
   .flexWrap {
-    flex: 1;
     display: flex;
+    flex: 1;
     flex-direction: column;
     overflow: hidden;
     overflow-y: auto;
   }
+
   .imagesWrap {
-    // flex: 1;
-    overflow: hidden;
-    // border: 1px #fff solid;
-    margin: 0 32px 32px 32px;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
+
+    // border: 1px #fff solid;
+    margin: 0 32px 32px;
+    // flex: 1;
+    overflow: hidden;
     overflow-y: auto;
     cursor: pointer;
-    position: relative;
 
     .ImagesMain {
+      position: relative;
+      box-sizing: border-box;
       width: 120px;
       height: 120px;
+      padding: 10px;
       margin: 12px;
       overflow: hidden;
-      padding: 10px;
-      box-sizing: border-box;
-      position: relative;
-      background-color: rgb(49, 49, 54);
+      background-color: rgb(49 49 54);
       border-radius: 6px;
 
       &:hover {
@@ -51,20 +55,20 @@
     }
 
     .ImagesOprate {
-      width: 120px;
-      height: 120px;
       position: absolute;
-      left: 0;
       top: 0;
+      left: 0;
       z-index: 1;
-      background-color: rgba(0, 0, 0, .6);
+      display: none;
       align-items: center;
       justify-content: center;
-      display: none;
+      width: 120px;
+      height: 120px;
+      background-color: rgb(0 0 0 / 60%);
 
       i {
-        color: #fff;
         font-size: 20px;
+        color: #fff;
 
         &:active {
           opacity: .6;
@@ -77,34 +81,43 @@
     display: flex;
     justify-content: flex-end;
     margin-top: 24px;
+
     button {
-      background-color: rgb(49, 49, 54) !important;
       color: #fff;
+      background-color: rgb(49 49 54) !important;
     }
+
     .ant-pagination-item-active, .ant-pagination-item {
-      background-color: rgb(49, 49, 54) !important;
+      background-color: rgb(49 49 54) !important;
       border-color: #fff;
     }
+
     .ant-select-selector {
-      background-color: rgb(49, 49, 54) !important;
       color: #fff;
+      background-color: rgb(49 49 54) !important;
     }
+
     .ant-pagination-total-text {
       color: #fff;
     }
+
     .ant-pagination-item-active a {
       color: #9AEECD !important;
     }
+
     .ant-pagination-item a {
       color: #fff;
     }
+
     .ant-pagination-options-quick-jumper input {
-      background-color: rgb(49, 49, 54) !important;
+      color: #fff;
+      background-color: rgb(49 49 54) !important;
+    }
+
+    .ant-pagination-options-quick-jumper, .ant-select-selection-item {
       color: #fff;
     }
-    .ant-pagination-options-quick-jumper, .ant-select-selection-item{
-      color: #fff;
-    }
+
      .ant-select-selector::after, .anticon {
       color: #fff;
      }

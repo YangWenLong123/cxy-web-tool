@@ -2,35 +2,40 @@
   display: flex;
   flex-wrap: wrap;
   padding-top: 40px;
+
   .chrome_box {
-    width: 24%;
-    min-height: 170px;
-    background-color: #292a2d;
-    border-radius: 8px;
     box-sizing: border-box;
-    padding: 16px 20px;
-    margin: 0 1% 24px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 24%;
+    min-height: 170px;
+    padding: 16px 20px;
+    margin: 0 1% 24px 0;
+    background-color: #292a2d;
+    border-radius: 8px;
+
     .nav {
       display: flex;
       align-items: start;
+
       .img {
         width: 36px;
         height: 36px;
         border-radius: 6px;
       }
+
       .text {
-        margin-left: 24px;
-        display: flex;
-        flex-direction: column;
         position: relative;
         top: -6px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 24px;
 
         .title {
           color: #fff;
         }
+
         .desc {
           color: #989ea4;
         }
@@ -46,23 +51,25 @@
         display: flex;
         align-items: center;
       }
+
       .label_text {
-        color: #fff;
         height: 24px;
-        border-radius: 4px;
         padding: 0 8px;
         margin-right: 8px;
+        color: #fff;
+        border-radius: 4px;
       }
 
       .button {
         width: 66px;
         height: 32px;
-        border: 1px rgba(95, 99, 104, 1) solid;
-        border-radius: 4px;
-        text-align: center;
         line-height: 32px;
-        color: rgba(138, 180, 248, 1);
+        color: rgb(138 180 248 / 100%);
+        text-align: center;
         cursor: pointer;
+        border: 1px rgb(95 99 104 / 100%) solid;
+        border-radius: 4px;
+
         &:active {
           opacity: 0.6;
         }

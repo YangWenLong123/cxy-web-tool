@@ -1,4 +1,12 @@
+###
+ # @Author: along
+ # @Description: 
+ # @Date: 2023-05-31 10:31:46
+ # @LastEditors: along
+ # @LastEditTime: 2023-10-20 13:04:39
+ # @FilePath: /cxy-web-tool/.husky/pre-commit
+### 
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npx --no-install lint-staged
+# npx --no-install lint-staged

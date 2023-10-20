@@ -1,144 +1,169 @@
 .CxyKeywordComponents {
-  width: 100%;
-  flex: 1;
-  overflow: hidden;
-  overflow-y: auto;
+
   // border: 1px red solid;
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   margin-top: 60px;
+  overflow: hidden;
+  overflow-y: auto;
+
   .logo {
     transform: translateX(120px);
   }
+
   .box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 700px;
     height: 50px;
-    border-radius: 6px;
+    background-color: rgb(255 255 255 / 100%);
     border: 2px #12a272 solid;
-    display: flex;
-    align-items: center;
-    position: relative;
-    flex-direction: column;
-    background-color: rgba(255, 255, 255, 1);
+    border-radius: 6px;
+
     .boxFlex {
       display: flex;
       align-items: center;
       width: 700px;
       height: 50px;
       overflow: hidden;
+
       .type {
-        min-width: 140px;
-        color: #000;
         display: flex;
         align-items: center;
+        min-width: 140px;
+        color: #000;
+
         .type_name {
           padding: 0 20px 0 30px;
           color: #000;
           white-space: nowrap;
         }
+
         .icon-xiajiantou {
-          color: #000;
           position: relative;
           top: 2px;
+          color: #000;
         }
       }
+
       .ant-input {
+        flex: 1;
         height: 46px;
+
         // background-color: #f5f7f8;
         border: none;
-        flex: 1;
       }
+
       .ant-input:focus {
         border: none;
         box-shadow: none;
       }
+
       .ant-input-affix-wrapper-focused {
         border: none;
         box-shadow: none;
       }
+
       .ant-input-affix-wrapper {
         border: none;
       }
+
       .search {
-        width: 100px;
-        height: 50px;
-        text-align: center;
-        line-height: 50px;
-        color: #ffffff;
-        border: 0 6px 6px 0;
-        font-size: 20px;
-        font-weight: bold;
-        background-color: #12a272;
-        cursor: pointer;
         position: relative;
         top: -2px;
+        width: 100px;
+        height: 50px;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 50px;
+        color: #fff;
+        text-align: center;
+        cursor: pointer;
+        background-color: #12a272;
+        border: 0 6px 6px 0;
+
         &:hover {
           opacity: 0.8;
         }
       }
     }
+
     .searchBox {
-      width: 700px;
       position: absolute;
       top: 48px;
+      z-index: 999;
       box-sizing: border-box;
+      width: 700px;
       padding-left: 20px;
-      background: #ffffff;
+      background: #fff;
       border: 2px #12a272 solid;
       border-top: none;
-      z-index: 999;
+
       .searchItems {
         height: 32px;
         line-height: 32px;
         cursor: pointer;
+
         &:hover {
           color: #9aeecd;
         }
       }
     }
   }
+
   .category {
-    width: 700px;
     display: flex;
     align-items: center;
+    width: 700px;
     height: 40px;
+
     .category_items {
       margin-right: 14px;
       cursor: pointer;
     }
   }
+
   .recommend {
-    width: 920px;
     display: flex;
     flex-wrap: wrap;
+    width: 920px;
     margin-top: 32px;
+
     .recommend_items {
-      width: 280px;
-      height: 60px;
-      background: rgba(249, 249, 249, 1);
+      position: relative;
       box-sizing: border-box;
-      padding: 20px;
-      border-radius: 6px;
-      margin: 12px;
-      border: 1px #f9f9fa solid;
-      cursor: pointer;
       display: flex;
       align-items: center;
-      position: relative;
+      width: 280px;
+      height: 60px;
+      padding: 20px;
+      margin: 12px;
+      cursor: pointer;
+      background: rgb(249 249 249 / 100%);
+      border: 1px #f9f9fa solid;
+      border-radius: 6px;
+
       &:hover {
         border: 1px #12a272 solid;
+
         div {
           opacity: 0.9;
         }
       }
+
       div {
         color: #333;
       }
+
       .icon-youjiantou {
         position: absolute;
-        right: 24px;
         top: 18px;
+        right: 24px;
       }
     }
   }

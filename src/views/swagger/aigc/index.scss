@@ -1,0 +1,45 @@
+.CxySwaggerAigc {
+  box-sizing: border-box;
+  height: 800px;
+  padding: 30px 80px;
+  margin: 32px auto;
+  background-color: #252529;
+  border: 2px linear-gradient(to right, #8360c3, #2ebf91) solid;
+  border-radius: 12px;
+
+  .nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 32px;
+
+    .ant-input-affix-wrapper {
+      border-radius: 0 !important;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 40px;
+      color: #fff;
+      cursor: pointer;
+      background-color: #2ebf91;
+
+      .iconfont {
+        margin-right: 6px;
+        font-size: 20px;
+      }
+
+      &:active {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .code,
+  .CodeMirror {
+    width: 930px !important;
+  }
+}

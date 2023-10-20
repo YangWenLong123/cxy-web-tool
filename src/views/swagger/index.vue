@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2023-08-07 14:44:13
  * @LastEditors: along
- * @LastEditTime: 2023-10-18 16:03:29
+ * @LastEditTime: 2023-10-19 09:55:53
  * @FilePath: /cxy-web-tool/src/views/swagger/index.vue
 -->
 <template>
@@ -24,5 +24,6 @@ import navbar from "@/components/navbar/index.vue";
   flex-direction: column;
   overflow: hidden;
   background: #1e1e20;
+  overflow-y: auto;
 }
 </style>

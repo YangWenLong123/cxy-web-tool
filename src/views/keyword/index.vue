@@ -12,13 +12,13 @@
   </div>
 </template>
 
-<script lang='ts' setup>
-  import { onMounted } from "vue";
-  import KeywordComponents from "@/components/keyword/index.vue";
+<script lang="ts" setup>
+import { onMounted } from "vue";
+import KeywordComponents from "@/components/keyword/index.vue";
 
-  onMounted(() => {});
+onMounted(() => {});
 </script>
 
 <style lang="scss">
-  @import "./index.scss";
+@import "./index.scss";
 </style>

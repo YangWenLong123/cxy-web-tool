@@ -11,57 +11,48 @@
     <div class="head">
       <img
         src="@/assets/images/logo.png"
-        :style="{width: '90px'}"
+        :style="{ width: '90px' }"
         @click="onBackHome(1)"
-      >
+      />
       <img
         src="http://cdn.alongweb.top/images/webbox/upload-title.jpg"
-        :style="{width: '364px'}"
+        :style="{ width: '364px' }"
         @click="onBackHome(1)"
-      >
+      />
     </div>
     <div class="flexWrap">
-      <i
-        class="iconfont icon-shouye"
-        @click="onBackHome(1)"
-      ></i>
-      <i
-        class="iconfont icon-gongju"
-        @click="onBackHome(2)"
-      ></i>
-      <i
-        class="iconfont icon-kefu"
-        @click="changeRouter()"
-      ></i>
+      <i class="iconfont icon-shouye" @click="onBackHome(1)"></i>
+      <i class="iconfont icon-gongju" @click="onBackHome(2)"></i>
+      <i class="iconfont icon-kefu" @click="changeRouter()"></i>
     </div>
   </div>
 </template>
 
-<script lang='ts' setup>
-  import { onMounted } from "vue";
-  import { usePopupStore } from "@/store/modules/popup";
+<script lang="ts" setup>
+import { onMounted } from "vue";
+import { usePopupStore } from "@/store/modules/popup";
 
-  const store = usePopupStore();
+const store = usePopupStore();
 
-  onMounted(() => {});
+onMounted(() => {});
 
-  const onBackHome = (type: number) => {
-    if (type === 1) {
-      location.href = import.meta.env.VITE_APP_HOME_API;
-    } else if (type === 2) {
-      location.href = import.meta.env.VITE_APP_TOOL_API;
-    }
-  };
+const onBackHome = (type: number) => {
+  if (type === 1) {
+    location.href = import.meta.env.VITE_APP_HOME_API;
+  } else if (type === 2) {
+    location.href = import.meta.env.VITE_APP_TOOL_API;
+  }
+};
 
-  const changeRouter = () => {
-    store.setPopup({
-      showPopup: true,
-      popup_type: "1",
-      popup_mode: ["WeChat"],
-    });
-  };
+const changeRouter = () => {
+  store.setPopup({
+    showPopup: true,
+    popup_type: "1",
+    popup_mode: ["WeChat"],
+  });
+};
 </script>
 
 <style lang="scss">
-  @import "./index.scss";
+@import "./index.scss";
 </style>

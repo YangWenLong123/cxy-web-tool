@@ -13,10 +13,10 @@
 <script lang="ts"></script>
 
 <script lang="ts" setup>
-  import { onMounted } from "vue";
-  import CxyLayout from "@/components/layout/index.vue";
+import { onMounted } from "vue";
+import CxyLayout from "@/components/layout/index.vue";
 
-  onMounted(() => {});
+onMounted(() => {});
 </script>
 
 <style lang="scss"></style>
