@@ -3,7 +3,7 @@
  * @Description: 
  * @Date: 2023-08-11 15:14:59
  * @LastEditors: along
- * @LastEditTime: 2023-10-18 17:46:06
+ * @LastEditTime: 2024-03-29 10:11:10
  * @FilePath: /cxy-web-tool/src/components/navbar/index.vue
 -->
 <template>
@@ -19,7 +19,7 @@
     <div class="right">
       <div
         class="items"
-        v-for="(record, index) in state.iconList"
+        v-for="(record, index) in props.customNav"
         :key="index"
         @click="opNextUrl(record)"
       >
@@ -39,35 +39,27 @@
 </template>
 
 <script lang="ts" setup>
-import { reactive, ref, onMounted, watch, nextTick } from "vue";
+import {
+  reactive,
+  ref,
+  onMounted,
+  watch,
+  nextTick,
+  defineProps,
+  withDefaults,
+} from "vue";
 import router from "@/router";
 import { useRouter } from "vue-router";
 
 const routers = useRouter();
 const path = ref();
 const showBottom = ref(true);
-const state = reactive({
-  iconList: [
-    {
-      icon: "icon-jiantou-right-top",
-      tooltip: "盒子首页",
-      type: "outside",
-      link: import.meta.env.VITE_APP_HOME_API,
-    },
-    {
-      icon: "",
-      tooltip: "开放API",
-      type: "station",
-      link: "/swagger-api",
-    },
-    {
-      icon: "",
-      tooltip: "API在线调试",
-      type: "station",
-      link: "/swagger-aigc",
-    },
-  ],
-});
+
+type Props = {
+  customNav: any;
+};
+
+const props = withDefaults(defineProps<Props>(), {});
 
 onMounted(() => {
   nextTick(() => {
