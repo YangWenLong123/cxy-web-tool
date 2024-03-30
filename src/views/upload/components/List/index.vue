@@ -3,7 +3,7 @@
  * @Description: 图片列表
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-08-25 18:06:09
+ * @LastEditTime: 2024-03-29 15:36:47
  * @FilePath: /cxy-web-tool/src/views/upload/components/List/index.vue
 -->
 <template>
@@ -68,6 +68,7 @@ import { onMounted, ref, reactive } from "vue";
 import { getImagesList } from "@/api/upload";
 import { v3ImgPreviewFn } from "v3-img-preview";
 import useClipboard from "vue-clipboard3";
+import moment from "moment";
 
 const { toClipboard } = useClipboard();
 const pageSizeOptions = ref<string[]>(["30", "50", "80", "100"]);
@@ -88,6 +89,15 @@ const init = async () => {
   const { data }: any = await getImagesList();
 
   state.imgList = data.list || [];
+
+  if (state.imgList?.length) {
+    state.imgList = state.imgList.sort((a, b) => {
+      return (
+        new Date(b.create_time).getTime() - new Date(a.create_time).getTime()
+      );
+    });
+  }
+
   state.total = data.list.length;
   state.spinning = false;
 };
