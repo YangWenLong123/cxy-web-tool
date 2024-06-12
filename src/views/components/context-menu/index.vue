@@ -3,12 +3,12 @@
  * @Description: 
  * @Date: 2023-10-13 17:35:11
  * @LastEditors: along
- * @LastEditTime: 2023-10-13 18:00:07
+ * @LastEditTime: 2024-06-12 14:37:52
  * @FilePath: /cxy-web-tool/src/views/components/context-menu/index.vue
 -->
 <template>
   <div class="CxyContextMenu">
-    <div class="nav" @click="onBack()">返回</div>
+    <div class="nav" @click="onBack()">返回1</div>
     <div class="box" @click.native.right="onNativeRight()"></div>
   </div>
 
