@@ -8,7 +8,7 @@
 -->
 <template>
   <div class="CxyContextMenu">
-    <div class="nav" @click="onBack()">返回1</div>
+    <div class="nav" @click="onBack()">返回</div>
     <div class="box" @click.native.right="onNativeRight()"></div>
   </div>
 
