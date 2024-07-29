@@ -3,7 +3,7 @@
  * @Description: 程序员盒子技术社区
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-08-25 10:25:08
+ * @LastEditTime: 2024-07-25 14:25:30
  * @FilePath: /cxy-web-tool/src/views/community/index.vue
 -->
 <template>
@@ -25,19 +25,19 @@ const state = reactive({
         {
           label: "博客园",
           url: "https://www.cnblogs.com/",
-          icon: "https://qiqihao.oss-cn-beijing.aliyuncs.com/static/coderutil/icon/cnblogs.png",
+          icon: "http://cdn.alongweb.top/images/bokeyuan.png",
           desc: "开发者的网上家园",
         },
         {
           label: "CSDN",
           url: "https://www.csdn.net",
-          icon: "https://qiqihao.oss-cn-beijing.aliyuncs.com/static/coderutil/icon/csdn.png",
+          icon: "http://cdn.alongweb.top/images/csdn.png",
           desc: "中文最大的技术社区",
         },
         {
           label: "开源中国",
           url: "https://www.oschina.net",
-          icon: "https://qiqihao.oss-cn-beijing.aliyuncs.com/static/coderutil/icon/oschina.ico",
+          icon: "http://cdn.alongweb.top/images/origin.png",
           desc: "目前国内最大的开源技术社区",
         },
         {
@@ -49,49 +49,49 @@ const state = reactive({
         {
           label: "掘金",
           url: "https://juejin.cn",
-          icon: "https://qiqihao.oss-cn-beijing.aliyuncs.com/static/coderutil/icon/juejin.png",
+          icon: "http://cdn.alongweb.top/images/juejin.png",
           desc: "一个帮助开发者成长的社区",
         },
         {
           label: "51CTO",
           url: "https://www.51cto.com/",
-          icon: "https://qiqihao.oss-cn-beijing.aliyuncs.com/static/coderutil/icon/51.ico",
+          icon: "http://cdn.alongweb.top/images/51cto.png",
           desc: "中国领先的IT技术网站",
         },
         {
           label: "开发者头条",
           url: "https://toutiao.io",
-          icon: "https://qiqihao.oss-cn-beijing.aliyuncs.com/static/coderutil/icon/toutiao.png",
+          icon: "http://cdn.alongweb.top/images/icon_jd_kaifa.png",
           desc: "程序员分享平台",
         },
         {
           label: "InfoQ",
           url: "https://xie.infoq.cn",
-          icon: "https://qiqihao.oss-cn-beijing.aliyuncs.com/static/coderutil/icon/InfoQ.jpg",
+          icon: "http://cdn.alongweb.top/images/question.png",
           desc: "一个实践驱动的技术社区资讯站点",
         },
         {
           label: "StackOverflow",
           url: "https://stackoverflow.com",
-          icon: "https://qiqihao.oss-cn-beijing.aliyuncs.com/static/coderutil/icon/stackoverflow.svg",
+          icon: "http://cdn.alongweb.top/images/stackoverflow.png",
           desc: "全球最大的技术问答社区",
         },
         {
           label: "ChinaUnix",
           url: "http://www.chinaunix.net",
-          icon: "https://qiqihao.oss-cn-beijing.aliyuncs.com/static/coderutil/icon/cu.png",
+          icon: "http://cdn.alongweb.top/images/B-1.png",
           desc: "中国最大的Linux/Unix技术社区",
         },
         {
           label: "Ruby china",
           url: "https://ruby-china.org",
-          icon: "https://qiqihao.oss-cn-beijing.aliyuncs.com/static/coderutil/icon/ruby.png",
+          icon: "http://cdn.alongweb.top/images/rbb.png",
           desc: "国内最权威的 Ruby 社区",
         },
         {
           label: "Golang中文社区",
           url: "https://studygolang.com",
-          icon: "https://qiqihao.oss-cn-beijing.aliyuncs.com/static/coderutil/icon/golang.ico",
+          icon: "http://cdn.alongweb.top/images/golang1.png",
           desc: "Go语言爱好者的学习家园",
         },
         {
@@ -103,7 +103,7 @@ const state = reactive({
         {
           label: "菜鸟教程",
           url: "https://www.runoob.com",
-          icon: "https://static.runoob.com/images/favicon.ico",
+          icon: "http://cdn.alongweb.top/images/cainiao.png",
           desc: "学的不仅是技术，更是梦想",
         },
         {

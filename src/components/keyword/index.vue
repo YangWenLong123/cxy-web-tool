@@ -3,7 +3,7 @@
  * @Description: 程序员盒子搜索组件
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-10-18 15:12:03
+ * @LastEditTime: 2024-07-25 15:04:51
  * @FilePath: /cxy-web-tool/src/components/keyword/index.vue
 -->
 <template>
@@ -62,7 +62,7 @@
         class="category_items"
         v-for="(option, index) in state.categoryList"
         :key="index"
-        :style="{ color: state.category === index ? '#9aeecd' : '#fff' }"
+        :style="{ color: state.category === index ? '#12a272' : '#333' }"
         @click="
           () => {
             state.category = index;

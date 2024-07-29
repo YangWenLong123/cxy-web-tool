@@ -6,9 +6,9 @@
   height: 62px;
   padding: 0 64px;
   color: #000;
-  background-color: #1e1e20;
+  // background-color: #1e1e20;
 
-  // border-bottom: 1px #000000 solid;
+  border-bottom: 1px #eee solid;
   .left {
     display: flex;
     align-items: center;
@@ -22,7 +22,9 @@
 
     .left_title {
       font-size: 16px;
-      color: rgb(255 255 245 / 86%);
+      // color: rgb(255 255 245 / 86%);
+      color: #333;
+
       white-space: nowrap;
     }
   }
@@ -42,7 +44,9 @@
         cursor: pointer;
 
         .item_text {
-          color: rgb(255 255 245 / 86%);
+          // color: rgb(255 255 245 / 86%);
+
+          color: #333;
 
           // font-size: 13px;
           white-space: nowrap;
@@ -74,7 +78,9 @@
 
     .icon-github {
       font-size: 20px;
-      color: #dfdfd6;
+      // color: #dfdfd6;
+      color: #333;
+
       cursor: pointer;
     }
   }

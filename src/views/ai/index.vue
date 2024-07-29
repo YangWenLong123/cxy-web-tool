@@ -3,7 +3,7 @@
  * @Description: 技术博客
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2023-08-25 11:02:45
+ * @LastEditTime: 2024-07-25 14:58:57
  * @FilePath: /cxy-web-tool/src/views/ai/index.vue
 -->
 <template>
@@ -25,11 +25,11 @@ const state = reactive({
         {
           label: "phind",
           url: "https://www.phind.com/",
-          icon: "https://www.phind.com/_next/static/media/phind_square.38930863.svg",
+          icon: "http://cdn.alongweb.top/images/phind.png",
           desc: "Your AI search engine and pair programmer.",
         },
         {
-          label: "文学一言",
+          label: "文心一言",
           url: "https://yiyan.baidu.com/",
           icon: "icon-qiatongxingxiang",
           desc: "百度全新一代知识增强大语言模型",
@@ -43,7 +43,7 @@ const state = reactive({
         {
           label: "poe",
           url: "https://poe.com/Assistant?handle=sage",
-          icon: "https://psc2.cf2.poecdn.net/7c541a4db20c256ff69f219e9d7dcaffc3a2ebf3/_next/static/media/openAIBlue.915c0399.png",
+          icon: "http://cdn.alongweb.top/images/poe.png",
           desc: "Ai对话机器人",
         },
         {
@@ -61,8 +61,68 @@ const state = reactive({
         {
           label: "imgcook",
           url: "https://www.imgcook.com/",
-          icon: "icon-Pixabay",
+          icon: "http://cdn.alongweb.top/images/imgcook.png",
           desc: "设计稿智能生成代码",
+        },
+        {
+          label: "智能工具图谱",
+          url: "https://www.coderutil.com/graph/ai",
+          icon: "http://cdn.alongweb.top/images/ai.ico",
+          desc: "链接全球智能ai产品",
+        },
+        {
+          label: "办公小浣熊",
+          url: "https://raccoon.sensetime.com/login?utm_source=bljuly15",
+          icon: "https://raccoon-sta.sensetime.com/assets/web/logo.svg",
+          desc: "AI数据分析助手",
+        },
+        {
+          label: "白日梦",
+          url: "https://aibrm.com/",
+          icon: "http://cdn.alongweb.top/images/bairimeng.png",
+          desc: "一款好玩的ai生成视频产品",
+        },
+        {
+          label: "Kimi智能助手",
+          url: "https://kimi.moonshot.cn/",
+          icon: "https://statics.moonshot.cn/kimi-chat/favicon.ico",
+          desc: "当前最火的的ai助手",
+        },
+        {
+          label: "D-ID",
+          url: "https://studio.d-id.com/",
+          icon: "https://studio.d-id.com/favicon/apple-icon-120x120.png",
+          desc: "静态人像图开口说话",
+        },
+        {
+          label: "weeklyreport",
+          url: "https://weeklyreport.avemaria.fun/zh",
+          icon: "https://weeklyreport.avemaria.fun/icon.svg",
+          desc: "周报生成器",
+        },
+        {
+          label: "免费ChatGPT",
+          url: "https://www.uyanai.com/",
+          icon: "https://www.uyanai.com/images/web_logo.svg",
+          desc: "免费chatgpt、多模态、MJ绘画",
+        },
+        {
+          label: "agentgpt",
+          url: "https://agentgpt.reworkd.ai/zh",
+          icon: "http://cdn.alongweb.top/images/agent.png",
+          desc: "自主人工智能开源项",
+        },
+        {
+          label: "包阅Ai",
+          url: "https://baoyueai.com/channel",
+          icon: "https://coderutil.oss-cn-beijing.aliyuncs.com/bbs-image/file_ad9f775dec8a4a26bdffa8eb41ec6288.png",
+          desc: "你的智能Ai阅读助手",
+        },
+        {
+          label: "Web3导航",
+          url: "https://web3.yunyingbiji.cn/",
+          icon: "https://web3.yunyingbiji.cn/wp-content/uploads/2022/10/ac1v2-lsg7h-001.ico",
+          desc: "全网web3热门工具集",
         },
       ],
     },
