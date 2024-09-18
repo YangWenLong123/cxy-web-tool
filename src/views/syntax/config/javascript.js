@@ -1059,31 +1059,31 @@ export const javascript = [
         children: [
           {
             title: "click",
-            path: "https://developer.mozilla.org/en-US/Mozilla_event_reference/click",
+            url: "https://developer.mozilla.org/en-US/Mozilla_event_reference/click",
           },
           {
             title: "dblclick",
-            path: "https://developer.mozilla.org/en-US/Mozilla_event_reference/dblclick",
+            url: "https://developer.mozilla.org/en-US/Mozilla_event_reference/dblclick",
           },
           {
             title: "mousedown",
-            path: "https://developer.mozilla.org/en-US/Mozilla_event_reference/mousedown",
+            url: "https://developer.mozilla.org/en-US/Mozilla_event_reference/mousedown",
           },
           {
             title: "mousemove",
-            path: "https://developer.mozilla.org/en-US/Mozilla_event_reference/mousemove",
+            url: "https://developer.mozilla.org/en-US/Mozilla_event_reference/mousemove",
           },
           {
             title: "mouseover",
-            path: "https://developer.mozilla.org/en-US/Mozilla_event_reference/mouseover",
+            url: "https://developer.mozilla.org/en-US/Mozilla_event_reference/mouseover",
           },
           {
             title: "mouseout",
-            path: "https://developer.mozilla.org/en-US/Mozilla_event_reference/mouseout",
+            url: "https://developer.mozilla.org/en-US/Mozilla_event_reference/mouseout",
           },
           {
             title: "mouseup",
-            path: "https://developer.mozilla.org/en-US/Mozilla_event_reference/mouseup",
+            url: "https://developer.mozilla.org/en-US/Mozilla_event_reference/mouseup",
           },
         ],
       },
@@ -1092,15 +1092,15 @@ export const javascript = [
         children: [
           {
             title: "keydown",
-            path: "https://developer.mozilla.org/en-US/Mozilla_event_reference/keydown",
+            url: "https://developer.mozilla.org/en-US/Mozilla_event_reference/keydown",
           },
           {
             title: "keypress",
-            path: "https://developer.mozilla.org/en-US/Mozilla_event_reference/keypress",
+            url: "https://developer.mozilla.org/en-US/Mozilla_event_reference/keypress",
           },
           {
             title: "keyup",
-            path: "https://developer.mozilla.org/en-US/Mozilla_event_reference/keyup",
+            url: "https://developer.mozilla.org/en-US/Mozilla_event_reference/keyup",
           },
         ],
       },
@@ -1109,15 +1109,15 @@ export const javascript = [
         children: [
           {
             title: "load",
-            path: "https://developer.mozilla.org/en-US/Mozilla_event_reference/load",
+            url: "https://developer.mozilla.org/en-US/Mozilla_event_reference/load",
           },
           {
             title: "resize",
-            path: "https://developer.mozilla.org/en-US/Mozilla_event_reference/resize",
+            url: "https://developer.mozilla.org/en-US/Mozilla_event_reference/resize",
           },
           {
             title: "unload",
-            path: "https://developer.mozilla.org/en-US/Mozilla_event_reference/unload",
+            url: "https://developer.mozilla.org/en-US/Mozilla_event_reference/unload",
           },
         ],
       },
@@ -1126,19 +1126,19 @@ export const javascript = [
         children: [
           {
             title: "blur",
-            path: "https://developer.mozilla.org/en-US/docs/Mozilla_event_reference/blur_(event)",
+            url: "https://developer.mozilla.org/en-US/docs/Mozilla_event_reference/blur_(event)",
           },
           {
             title: "change",
-            path: "https://developer.mozilla.org/en-US/Mozilla_event_reference/change",
+            url: "https://developer.mozilla.org/en-US/Mozilla_event_reference/change",
           },
           {
             title: "focus",
-            path: "https://developer.mozilla.org/en-US/docs/Mozilla_event_reference/focus_(event)",
+            url: "https://developer.mozilla.org/en-US/docs/Mozilla_event_reference/focus_(event)",
           },
           {
             title: "select",
-            path: "https://developer.mozilla.org/en-US/Mozilla_event_reference/select",
+            url: "https://developer.mozilla.org/en-US/Mozilla_event_reference/select",
           },
         ],
       },
@@ -1147,27 +1147,27 @@ export const javascript = [
         children: [
           {
             title: "bubbles",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/event.bubbles",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/event.bubbles",
           },
           {
             title: "cancelable",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/event.cancelable",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/event.cancelable",
           },
           {
             title: "currentTarget",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/event.currentTarget",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/event.currentTarget",
           },
           {
             title: "target",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/event.target",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/event.target",
           },
           {
             title: "timeStamp",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/event.timeStamp",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/event.timeStamp",
           },
           {
             title: "type",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/event.type",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/event.type",
           },
         ],
       },
@@ -1176,43 +1176,43 @@ export const javascript = [
         children: [
           {
             title: "altKey",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/event.altKey",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/event.altKey",
           },
           {
             title: "button",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/event.button",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/event.button",
           },
           {
             title: "clientX",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/event.clientX",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/event.clientX",
           },
           {
             title: "clientY",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/event.clientY",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/event.clientY",
           },
           {
             title: "ctrlKey",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/event.ctrlKey",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/event.ctrlKey",
           },
           {
             title: "metaKey",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/event.metaKey",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/event.metaKey",
           },
           {
             title: "relatedTarget",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/event.relatedTarget",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/event.relatedTarget",
           },
           {
             title: "screenX",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/event.screenX",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/event.screenX",
           },
           {
             title: "screenY",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/event.screenY",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/event.screenY",
           },
           {
             title: "shiftKey",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/event.shiftKey",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/event.shiftKey",
           },
         ],
       },
@@ -1227,67 +1227,67 @@ export const javascript = [
         children: [
           {
             title: "attributes",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.attributes",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.attributes",
           },
           {
             title: "baseURI",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.baseURI",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.baseURI",
           },
           {
             title: "childNodes",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.childNodes",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.childNodes",
           },
           {
             title: "firstChild",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.firstChild",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.firstChild",
           },
           {
             title: "lastChild",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.lastChild",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.lastChild",
           },
           {
             title: "localName",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.localName",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.localName",
           },
           {
             title: "namespaceURI",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.namespaceURI",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.namespaceURI",
           },
           {
             title: "nextSibling",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.nextSibling",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.nextSibling",
           },
           {
             title: "nodeName",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.nodeName",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.nodeName",
           },
           {
             title: "nodeType",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.nodeType",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.nodeType",
           },
           {
             title: "nodeValue",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.nodeValue",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.nodeValue",
           },
           {
             title: "ownerDocument",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.ownerDocument",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.ownerDocument",
           },
           {
             title: "parentNode",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.parentNode",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.parentNode",
           },
           {
             title: "prefix",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.prefix",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.prefix",
           },
           {
             title: "previousSibling",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.previousSibling",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.previousSibling",
           },
           {
             title: "textContent",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.textContent",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.textContent",
           },
         ],
       },
@@ -1296,63 +1296,63 @@ export const javascript = [
         children: [
           {
             title: "appendChild()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.appendChild",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.appendChild",
           },
           {
             title: "cloneNode()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.cloneNode",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.cloneNode",
           },
           {
             title: "compareDocumentPosition()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.compareDocumentPosition",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.compareDocumentPosition",
           },
           {
             title: "hasAttributes()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.hasAttributes",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.hasAttributes",
           },
           {
             title: "hasChildNodes()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.hasChildNodes",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.hasChildNodes",
           },
           {
             title: "insertBefore()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.insertBefore",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.insertBefore",
           },
           {
             title: "isDefaultNamespace()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.isDefaultNamespace",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.isDefaultNamespace",
           },
           {
             title: "isEqualNode()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.isEqualNode",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.isEqualNode",
           },
           {
             title: "isSameNode()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.isSameNode",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.isSameNode",
           },
           {
             title: "isSupported()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.isSupported",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.isSupported",
           },
           {
             title: "lookupNamespaceURI()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.lookupNamespaceURI",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.lookupNamespaceURI",
           },
           {
             title: "lookupPrefix()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.lookupPrefix",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.lookupPrefix",
           },
           {
             title: "normalize()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.normalize",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.normalize",
           },
           {
             title: "removeChild()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.removeChild",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.removeChild",
           },
           {
             title: "replaceChild()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Node.replaceChild",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Node.replaceChild",
           },
         ],
       },
@@ -1367,7 +1367,7 @@ export const javascript = [
         children: [
           {
             title: "length",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/NodeList#Properties",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/NodeList#Properties",
           },
         ],
       },
@@ -1376,7 +1376,7 @@ export const javascript = [
         children: [
           {
             title: "item()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/NodeList.item",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/NodeList.item",
           },
         ],
       },
@@ -1385,7 +1385,7 @@ export const javascript = [
         children: [
           {
             title: "length",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/NamedNodeMap#Properties",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/NamedNodeMap#Properties",
           },
         ],
       },
@@ -1394,19 +1394,19 @@ export const javascript = [
         children: [
           {
             title: "getNamedItem()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/NamedNodeMap#Methods",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/NamedNodeMap#Methods",
           },
           {
             title: "item()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/NamedNodeMap#Methods",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/NamedNodeMap#Methods",
           },
           {
             title: "removeNamedItem()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/NamedNodeMap#Methods",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/NamedNodeMap#Methods",
           },
           {
             title: "setNamedItem()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/NamedNodeMap#Methods",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/NamedNodeMap#Methods",
           },
         ],
       },
@@ -1415,31 +1415,31 @@ export const javascript = [
         children: [
           {
             title: "doctype",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/document.doctype",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/document.doctype",
           },
           {
             title: "documentElement",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/document.documentElement",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/document.documentElement",
           },
           {
             title: "documentURI",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/document.documentURI",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/document.documentURI",
           },
           {
             title: "implementation",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/document.implementation",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/document.implementation",
           },
           {
             title: "inputEncoding",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/document.inputEncoding",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/document.inputEncoding",
           },
           {
             title: "xmlEncoding",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/document.xmlEncoding",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/document.xmlEncoding",
           },
           {
             title: "xmlVersion",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/document.xmlVersion",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/document.xmlVersion",
           },
         ],
       },
@@ -1448,59 +1448,59 @@ export const javascript = [
         children: [
           {
             title: "createAttribute()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/document.createAttribute",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/document.createAttribute",
           },
           {
             title: "createCDATASection()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/document.createCDATASection",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/document.createCDATASection",
           },
           {
             title: "createComment()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/document.createComment",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/document.createComment",
           },
           {
             title: "createDocumentFragment()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/document.createDocumentFragment",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/document.createDocumentFragment",
           },
           {
             title: "createElement()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/document.createElement",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/document.createElement",
           },
           {
             title: "createEntityReference()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/document.createEntityReference",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/document.createEntityReference",
           },
           {
             title: "createTextNode()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/document.createTextNode",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/document.createTextNode",
           },
           {
             title: "getElementById()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/document.getElementById",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/document.getElementById",
           },
           {
             title: "getElementsByTagName()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/document.getElementsByTagName",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/document.getElementsByTagName",
           },
           {
             title: "getElementsByName()",
-            path: "https://developer.mozilla.org/en-US/docs/Web/API/document.getElementsByName",
+            url: "https://developer.mozilla.org/en-US/docs/Web/API/document.getElementsByName",
           },
           {
             title: "querySelectorAll()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Document.querySelectorAll",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Document.querySelectorAll",
           },
           {
             title: "querySelector()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Document.querySelector",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Document.querySelector",
           },
           {
             title: "getElementsByTagNameNS()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/document.getElementsByTagNameNS",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/document.getElementsByTagNameNS",
           },
           {
             title: "importNode()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/document.importNode",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/document.importNode",
           },
         ],
       },
@@ -1509,7 +1509,7 @@ export const javascript = [
         children: [
           {
             title: "tagName",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/element.tagName",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/element.tagName",
           },
         ],
       },
@@ -1518,63 +1518,63 @@ export const javascript = [
         children: [
           {
             title: "getAttribute()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/element.getAttribute",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/element.getAttribute",
           },
           {
             title: "getAttributeNS()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/element.getAttributeNS",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/element.getAttributeNS",
           },
           {
             title: "getAttributeNode()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/element.getAttributeNode",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/element.getAttributeNode",
           },
           {
             title: "getAttributeNodeNS()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/element.getAttributeNodeNS",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/element.getAttributeNodeNS",
           },
           {
             title: "getElementsByTagName()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/element.getElementsByTagName",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/element.getElementsByTagName",
           },
           {
             title: "getElementsByTagNameNS()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/element.getElementsByTagNameNS",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/element.getElementsByTagNameNS",
           },
           {
             title: "hasAttribute()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/element.hasAttribute",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/element.hasAttribute",
           },
           {
             title: "hasAttributeNS()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/element.hasAttributeNS",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/element.hasAttributeNS",
           },
           {
             title: "removeAttribute()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/element.removeAttribute",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/element.removeAttribute",
           },
           {
             title: "removeAttributeNS()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/element.removeAttributeNS",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/element.removeAttributeNS",
           },
           {
             title: "removeAttributeNode()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/element.removeAttributeNode",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/element.removeAttributeNode",
           },
           {
             title: "setAttribute()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/element.setAttribute",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/element.setAttribute",
           },
           {
             title: "setAttributeNS()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/element.setAttributeNS",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/element.setAttributeNS",
           },
           {
             title: "setAttributeNode()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/element.setAttributeNode",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/element.setAttributeNode",
           },
           {
             title: "setAttributeNodeNS()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/element.setAttributeNodeNS",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/element.setAttributeNodeNS",
           },
         ],
       },
@@ -1583,23 +1583,23 @@ export const javascript = [
         children: [
           {
             title: "isId",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Attr#Properties",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Attr#Properties",
           },
           {
             title: "name",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Attr#Properties",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Attr#Properties",
           },
           {
             title: "ownerElement",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Attr#Properties",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Attr#Properties",
           },
           {
             title: "specified",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Attr#Properties",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Attr#Properties",
           },
           {
             title: "value",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/Attr#Properties",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/Attr#Properties",
           },
         ],
       },
@@ -1614,155 +1614,155 @@ export const javascript = [
         children: [
           {
             title: "arc()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#arc()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#arc()",
           },
           {
             title: "arcTo()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#arcTo()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#arcTo()",
           },
           {
             title: "beginPath()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#beginPath()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#beginPath()",
           },
           {
             title: "bezierCurveTo()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#bezierCurveTo()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#bezierCurveTo()",
           },
           {
             title: "clearRect()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#clearRect()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#clearRect()",
           },
           {
             title: "clip()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#clip()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#clip()",
           },
           {
             title: "closePath()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#closePath()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#closePath()",
           },
           {
             title: "createImageData()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#createImageData()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#createImageData()",
           },
           {
             title: "createLinearGradient()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#createLinearGradient()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#createLinearGradient()",
           },
           {
             title: "createPattern()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#createPattern()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#createPattern()",
           },
           {
             title: "createRadialGradient()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#createRadialGradient()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#createRadialGradient()",
           },
           {
             title: "drawCustomFocusRing()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#drawCustomFocusRing()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#drawCustomFocusRing()",
           },
           {
             title: "drawImage()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#drawImage()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#drawImage()",
           },
           {
             title: "drawSystemFocusRing()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#drawSystemFocusRing()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#drawSystemFocusRing()",
           },
           {
             title: "fill()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#fill()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#fill()",
           },
           {
             title: "fillRect()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#fillRect()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#fillRect()",
           },
           {
             title: "fillText()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#fillText()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#fillText()",
           },
           {
             title: "getImageData()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#getImageData()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#getImageData()",
           },
           {
             title: "getLineDash()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#getLineDash()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#getLineDash()",
           },
           {
             title: "isPointInPath()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#isPointInPath()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#isPointInPath()",
           },
           {
             title: "lineTo()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#lineTo()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#lineTo()",
           },
           {
             title: "measureText()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#measureText()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#measureText()",
           },
           {
             title: "moveTo()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#moveTo()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#moveTo()",
           },
           {
             title: "putImageData()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#putImageData()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#putImageData()",
           },
           {
             title: "quadraticCurveTo()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#quadraticCurveTo()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#quadraticCurveTo()",
           },
           {
             title: "rect()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#rect()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#rect()",
           },
           {
             title: "restore()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#restore()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#restore()",
           },
           {
             title: "rotate()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#rotate()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#rotate()",
           },
           {
             title: "save()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#save()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#save()",
           },
           {
             title: "scale()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#scale()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#scale()",
           },
           {
             title: "scrollPathIntoView()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#scrollPathIntoView()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#scrollPathIntoView()",
           },
           {
             title: "setLineDash()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#setLineDash()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#setLineDash()",
           },
           {
             title: "setTransform()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#setTransform()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#setTransform()",
           },
           {
             title: "stroke()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#stroke()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#stroke()",
           },
           {
             title: "strokeRect()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#strokeRect()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#strokeRect()",
           },
           {
             title: "strokeText()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#strokeText()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#strokeText()",
           },
           {
             title: "transform()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#transform()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#transform()",
           },
           {
             title: "translate()",
-            path: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#translate()",
+            url: "https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#translate()",
           },
         ],
       },
