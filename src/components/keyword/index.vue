@@ -3,12 +3,15 @@
  * @Description: 程序员盒子搜索组件
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2024-07-25 15:04:51
+ * @LastEditTime: 2024-10-21 09:19:45
  * @FilePath: /cxy-web-tool/src/components/keyword/index.vue
 -->
 <template>
   <div class="CxyKeywordComponents">
     <!-- <img src="@/assets/images/bg.png" class="logo" /> -->
+
+    <!-- 时间 -->
+    <div class="timeBox"></div>
 
     <div class="box">
       <div class="boxFlex">
@@ -74,7 +77,7 @@
       </div>
     </div>
 
-    <div class="recommend">
+    <!-- <div class="recommend">
       <div
         v-for="(name, index) in state.recommend"
         :key="index"
@@ -84,7 +87,9 @@
         <div>{{ name }}</div>
         <i class="iconfont icon-youjiantou"></i>
       </div>
-    </div>
+    </div> -->
+
+    <div class="main">11</div>
   </div>
 </template>
 
@@ -215,6 +220,6 @@ const builtHref = (index: number, value: string) => {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "./index.scss";
 </style>

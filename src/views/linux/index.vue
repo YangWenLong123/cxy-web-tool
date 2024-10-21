@@ -3,7 +3,7 @@
  * @Description: 程序员盒子liux工具
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2024-09-09 17:07:45
+ * @LastEditTime: 2024-09-18 14:50:39
  * @FilePath: /cxy-web-tool/src/views/linux/index.vue
 -->
 <template>
@@ -48,6 +48,8 @@ import { notification } from "ant-design-vue";
 onMounted(() => {});
 
 const keywords = ref<string>("");
+
+const markdownContent = ref<any>(``);
 
 const onSearchMethod = () => {
   notification["info"]({
