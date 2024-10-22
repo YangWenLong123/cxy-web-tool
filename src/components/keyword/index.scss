@@ -9,13 +9,38 @@
   overflow-y: auto;
   background-color: #fff;
 
-  .timeBox {
-    width: 1300px;
-    border: 1px red solid;
-  }
-
   .logo {
     transform: translateX(120px);
+  }
+
+  .sideBox {
+    display: flex;
+    justify-content: space-between;
+    width: 1300px;
+
+    .timeBox {
+      display: flex;
+      align-items: center;
+    }
+
+    .textBox {
+      display: flex;
+      align-items: center;
+
+      .extend {
+        display: flex;
+        align-items: center;
+        margin-left: 12px;
+        cursor: pointer;
+        &:hover div {
+          color: #12a272;
+        }
+        i {
+          margin-right: 4px;
+          font-size: 12px;
+        }
+      }
+    }
   }
 
   .box {
@@ -175,8 +200,19 @@
     width: 100%;
     flex: 1;
     box-sizing: border-box;
-    // border: 1px red solid;
-    margin-top: 24px;
+    margin-top: 10px;
     background-color: #f7f7f8;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    .mainBox {
+      width: 1300px;
+      overflow: hidden;
+      box-sizing: border-box;
+      padding: 24px 0;
+      display: flex;
+      position: relative;
+    }
   }
 }

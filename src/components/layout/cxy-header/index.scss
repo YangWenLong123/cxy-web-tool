@@ -1,16 +1,20 @@
+.cxyHeaderComponents_top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px #eee solid;
+}
 .cxyHeaderComponents {
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 62px;
+  height: 50px;
   // padding: 0 64px;
-  color: #000;
+  color: #515767;
   // background-color: #1e1e20;
   // border-bottom: 1px #eee solid;
-  width: 1440px;
-  margin-left: 50%;
-  transform: translateX(-50%);
+  width: 1300px;
 
   .flex {
     display: flex;
@@ -35,11 +39,11 @@
     .left_title {
       // font-size: 16px;
       // color: rgb(255 255 245 / 86%);
-      color: #333;
+      color: #515767;
       white-space: nowrap;
       font-weight: bold;
       margin-right: 20px;
-      font-size: 14px;
+      font-size: 16px;
     }
   }
 
@@ -62,7 +66,7 @@
 
           color: #333;
 
-          // font-size: 13px;
+          font-size: 15px;
           white-space: nowrap;
           position: relative;
 

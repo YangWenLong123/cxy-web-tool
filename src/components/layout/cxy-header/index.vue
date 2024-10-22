@@ -3,47 +3,46 @@
  * @Description: 程序员盒子头部icon
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2024-10-21 09:17:46
+ * @LastEditTime: 2024-10-21 15:21:38
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-header/index.vue
 -->
 <template>
-  <div
-    class="cxyHeaderComponents"
-    :style="{ border: showBottom ? '1px #000000 solid' : '' }"
-  >
-    <div class="flex">
-      <div class="left" @click="onGoHome()">
-        <img src="http://www.alongweb.top/image/logo.svg" alt="" />
-        <div class="left_title">
-          <!-- <img src="@/assets/images/logo2.png" style="width: 500px" /> -->
-          程序员盒子
-        </div>
-      </div>
-      <div class="right">
-        <div
-          class="items"
-          v-for="(record, index) in state.iconList"
-          :key="index"
-          @click="opNextUrl(record)"
-        >
-          <div class="item">
-            <div
-              class="item_text"
-              :class="path === record.link ? 'active' : ''"
-            >
-              {{ record.tooltip }}
-            </div>
-            <i class="iconfont" :class="record.icon"></i>
+  <div class="cxyHeaderComponents_top">
+    <div class="cxyHeaderComponents">
+      <div class="flex">
+        <div class="left" @click="onGoHome()">
+          <img src="http://www.alongweb.top/image/logo.svg" alt="" />
+          <div class="left_title">
+            <!-- <img src="@/assets/images/logo2.png" style="width: 500px" /> -->
+            程序员盒子
           </div>
         </div>
-        <!-- <div class="lines"></div>
-        <div @click="onGitHub()">
-          <i class="iconfont icon-github"></i>
-        </div> -->
+        <div class="right">
+          <div
+            class="items"
+            v-for="(record, index) in state.iconList"
+            :key="index"
+            @click="opNextUrl(record)"
+          >
+            <div class="item">
+              <div
+                class="item_text"
+                :class="path === record.link ? 'active' : ''"
+              >
+                {{ record.tooltip }}
+              </div>
+              <i class="iconfont" :class="record.icon"></i>
+            </div>
+          </div>
+          <!-- <div class="lines"></div>
+          <div @click="onGitHub()">
+            <i class="iconfont icon-github"></i>
+          </div> -->
+        </div>
       </div>
-    </div>
-    <div>
-      <img src="@/assets/images/photo.jpeg" alt="" class="touxiang" />
+      <div>
+        <img src="@/assets/images/photo.jpeg" alt="" class="touxiang" />
+      </div>
     </div>
   </div>
 </template>

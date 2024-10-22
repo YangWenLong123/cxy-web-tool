@@ -1,0 +1,255 @@
+.CxyHomeMainComponents {
+  // border: 1px red solid;
+  flex: 1;
+  margin-left: 14px;
+  overflow: hidden;
+  overflow-y: auto;
+
+  .itemBox {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 20px 15px 11px 20px;
+    border-radius: 6px;
+
+    .card {
+      margin-right: 15px;
+      margin-bottom: 4px;
+      a {
+        color: #6b778c;
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+
+  .studyManual,
+  .techCommunity {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 20px 15px 11px 20px;
+    border-radius: 6px;
+    margin: 18px 0;
+    color: #6b778c;
+    // justify-content: space-between;
+
+    .flexRow {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+
+      .name {
+        color: #333;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+    .studyManualCard {
+      width: 24%;
+      display: flex;
+      flex-direction: column;
+      color: #6b778c;
+      background-color: #f7f7f8;
+      border-radius: 5px;
+      border: 1px solid #fff;
+      // box-shadow: 0px 0px 10px 1px rgba(55, 99, 170, 0.1);
+      margin-bottom: 12px;
+      box-sizing: border-box;
+      padding: 6px 12px;
+      margin-right: 1%;
+      .content {
+        font-size: 12px;
+        color: #6b778c;
+        transform: scale(1);
+      }
+      &:hover {
+        border: 1px solid #13a272;
+        background-color: #ebf7f3;
+        .content,
+        .name {
+          color: #13a272;
+        }
+      }
+    }
+
+    .navBar {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin: 0 0 18px 0;
+      color: #666;
+      font-weight: bold;
+      font-size: 15px;
+      img {
+        width: 20px;
+        margin-right: 6px;
+      }
+    }
+  }
+
+  .AIModal {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 20px 15px 11px 20px;
+    border-radius: 6px;
+    margin: 18px 0;
+    color: #6b778c;
+
+    .navBar {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin: 0 0 18px 0;
+      color: #666;
+      font-weight: bold;
+      font-size: 15px;
+      img {
+        width: 20px;
+        margin-right: 6px;
+      }
+    }
+
+    .studyManualCard {
+      width: 100px;
+      margin: 0 18px 16px 0;
+    }
+
+    .flexCum {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        .name {
+          color: #13a272;
+        }
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-bottom: 3px;
+      }
+
+      .name {
+        color: #6b778c;
+      }
+    }
+  }
+
+  .techType {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 20px 15px 11px 20px;
+    border-radius: 6px;
+    margin: 18px 0;
+    color: #6b778c;
+    .navBar {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin: 0 0 18px 0;
+      color: #666;
+      font-weight: bold;
+      font-size: 15px;
+      img {
+        width: 20px;
+        margin-right: 6px;
+      }
+    }
+
+    .studyManualCard {
+      width: 160px;
+      margin: 0 18px 16px 0;
+    }
+
+    .flexCum {
+      display: flex;
+      align-items: center;
+      &:hover {
+        .name {
+          color: #13a272;
+        }
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 6px;
+      }
+
+      .name {
+        color: #6b778c;
+      }
+    }
+  }
+
+  .startup,
+  .slacking {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 20px 15px 11px 20px;
+    border-radius: 6px;
+    margin: 18px 0;
+    color: #6b778c;
+
+    .navBar {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin: 0 0 18px 0;
+      color: #666;
+      font-weight: bold;
+      font-size: 15px;
+      img {
+        width: 20px;
+        margin-right: 6px;
+      }
+    }
+
+    .studyManualCard {
+      width: calc(100% / 9);
+      margin-right: 14px;
+      margin-bottom: 14px;
+      border-radius: 4px;
+      box-sizing: border-box;
+      padding: 2px 4px;
+
+      .flexCum {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+        }
+
+        .name {
+          color: #fff;
+          margin-left: 6px;
+        }
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .studyManualCard:last-child {
+      margin-right: 0px;
+    }
+  }
+}

@@ -3,7 +3,7 @@
  * @Description: 程序员盒子搜索组件
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2024-10-21 09:19:45
+ * @LastEditTime: 2024-10-22 10:06:18
  * @FilePath: /cxy-web-tool/src/components/keyword/index.vue
 -->
 <template>
@@ -11,9 +11,24 @@
     <!-- <img src="@/assets/images/bg.png" class="logo" /> -->
 
     <!-- 时间 -->
-    <div class="timeBox"></div>
+    <!-- <div class="sideBox">
+      <div class="timeBox">
+        <div>{{ getCurrentDate }}</div>
+        <div style="margin-left: 12px">{{ getDayOfWeekValue }}</div>
+      </div>
+      <div class="textBox">
+        <div
+          class="extend"
+          v-for="(item, index) in state.extendedFunction"
+          :key="index"
+        >
+          <i class="iconfont" :class="item.icon"></i>
+          <div>{{ item.name }}</div>
+        </div>
+      </div>
+    </div> -->
 
-    <div class="box">
+    <div class="box" style="margin-top: 20px">
       <div class="boxFlex">
         <div class="type">
           <a-dropdown>
@@ -35,7 +50,7 @@
         </div>
         <a-input
           v-model:value="state.value"
-          placeholder="Web Box 内容搜索，更快，更方便"
+          placeholder="程序员盒子，内容搜索、更快、更方便"
           @pressEnter="searchKeyword(state.value)"
           @change="changeValue()"
           id="cxyInput"
@@ -89,12 +104,22 @@
       </div>
     </div> -->
 
-    <div class="main">11</div>
+    <div class="main">
+      <div class="mainBox">
+        <Menu />
+        <Main />
+        <!-- <Side /> -->
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { onMounted, reactive } from "vue";
+import { onMounted, reactive, ref } from "vue";
+import { getCurrentDateTime, getDayOfWeek } from "@/utils/index";
+import Menu from "./components/Menu/index.vue";
+import Main from "./components/Main/index.vue";
+import Side from "./components/Side/index.vue";
 
 const state = reactive({
   value: ``,
@@ -116,11 +141,35 @@ const state = reactive({
     "想听海阔天空",
     "我想买一件宽松的T恤",
   ],
+  extendedFunction: [
+    {
+      icon: "icon-zanzhujin",
+      name: "赞助榜",
+    },
+    {
+      icon: "icon-rizhi",
+      name: "更新日志",
+    },
+  ],
 });
+
+const getCurrentDate = ref<any>(getCurrentDateTime());
+const getDayOfWeekValue = ref<any>(getDayOfWeek());
 
 onMounted(() => {
   document.getElementById("cxyInput")?.focus();
+
+  // updateTime();
 });
+
+const updateTime = () => {
+  setTimeout(() => {
+    getCurrentDate.value = getCurrentDateTime();
+    updateTime();
+
+    console.log("====", getCurrentDate.value);
+  }, 1000);
+};
 
 const selectType = ({ key }: { key: string }) => {
   state.typeName = key;
