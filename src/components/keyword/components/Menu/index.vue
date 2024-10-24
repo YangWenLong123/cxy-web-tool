@@ -3,7 +3,7 @@
  * @Description: 
  * @Date: 2024-10-21 10:56:20
  * @LastEditors: along
- * @LastEditTime: 2024-10-22 16:31:55
+ * @LastEditTime: 2024-10-24 13:04:20
  * @FilePath: /cxy-web-tool/src/components/keyword/components/Menu/index.vue
 -->
 <template>
@@ -73,18 +73,22 @@ const menuList = ref<any>([
   {
     icon: "icon-qiuzhi",
     name: "求职",
+    id: "worker",
   },
   {
     icon: "icon-bangong",
     name: "协同办公",
+    id: "collabOffice",
   },
   {
     icon: "icon-kecheng",
     name: "精品课程",
+    id: "course",
   },
   {
     icon: "icon-xuexi",
     name: "学习",
+    id: 'study'
   },
 ]);
 

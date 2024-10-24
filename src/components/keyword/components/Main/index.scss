@@ -26,7 +26,10 @@
   }
 
   .studyManual,
-  .techCommunity {
+  .techCommunity,
+  .worker,
+  .collabOffice,
+  .study {
     background-color: #fff;
     display: flex;
     flex-wrap: wrap;
@@ -250,6 +253,50 @@
 
     .studyManualCard:last-child {
       margin-right: 0px;
+    }
+  }
+
+  .course {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 20px 15px 11px 20px;
+    border-radius: 6px;
+    margin: 18px 0;
+    color: #6b778c;
+    .navBar {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin: 0 0 18px 0;
+      color: #666;
+      font-weight: bold;
+      font-size: 15px;
+      img {
+        width: 20px;
+        margin-right: 6px;
+      }
+    }
+
+    .studyManualCard {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      a {
+        width: 24%;
+        margin-right: 1%;
+        margin-bottom: 16px;
+
+        img {
+          width: 100%;
+          border-radius: 6px;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
     }
   }
 }

@@ -3,7 +3,7 @@
  * @Description: 
  * @Date: 2024-10-21 15:01:15
  * @LastEditors: along
- * @LastEditTime: 2024-10-22 16:40:44
+ * @LastEditTime: 2024-10-24 11:31:27
  * @FilePath: /cxy-web-tool/src/components/keyword/components/Main/index.vue
 -->
 <template>
@@ -150,6 +150,99 @@
         </div>
       </a>
     </div>
+
+    <div class="worker" id="worker">
+      <div class="navBar">
+        <img src="http://cdn.alongweb.top/cxy/icon-book.png" alt="" />
+        <div>求职招聘</div>
+      </div>
+      <a
+        class="studyManualCard"
+        v-for="(item, index) in state.worker"
+        :href="item.url"
+        :key="index"
+        target="_blank"
+      >
+        <div class="flexRow">
+          <img
+            v-if="item.icon"
+            :src="item.icon"
+            style="width: 20px; margin-right: 6px"
+          />
+          <div class="name">{{ item.name }}</div>
+        </div>
+
+        <div class="content">{{ item.content }}</div>
+      </a>
+    </div>
+
+    <div class="collabOffice" id="collabOffice">
+      <div class="navBar">
+        <img src="http://cdn.alongweb.top/cxy/icon-book.png" alt="" />
+        <div>协同办公</div>
+      </div>
+      <a
+        class="studyManualCard"
+        v-for="(item, index) in state.collabOffice"
+        :href="item.url"
+        :key="index"
+        target="_blank"
+      >
+        <div class="flexRow">
+          <img
+            v-if="item.icon"
+            :src="item.icon"
+            style="width: 20px; margin-right: 6px"
+          />
+          <div class="name">{{ item.name }}</div>
+        </div>
+
+        <div class="content">{{ item.content }}</div>
+      </a>
+    </div>
+
+    <div class="course" id="course">
+      <div class="navBar">
+        <img src="http://cdn.alongweb.top/cxy/icon-book.png" alt="" />
+        <div>精品课程</div>
+      </div>
+
+      <div class="studyManualCard">
+        <a
+          v-for="(item, index) in state.course"
+          :href="item.url"
+          :key="index"
+          target="_blank"
+        >
+          <img :src="item.icon" />
+        </a>
+      </div>
+    </div>
+
+    <div class="study" id="study">
+      <div class="navBar">
+        <img src="http://cdn.alongweb.top/cxy/icon-book.png" alt="" />
+        <div>学习</div>
+      </div>
+      <a
+        class="studyManualCard"
+        v-for="(item, index) in state.study"
+        :href="item.url"
+        :key="index"
+        target="_blank"
+      >
+        <div class="flexRow">
+          <img
+            v-if="item.icon"
+            :src="item.icon"
+            style="width: 20px; margin-right: 6px"
+          />
+          <div class="name">{{ item.name }}</div>
+        </div>
+
+        <div class="content">{{ item.content }}</div>
+      </a>
+    </div>
   </div>
 </template>
 
@@ -163,6 +256,10 @@ import {
   techType,
   startup,
   slacking,
+  worker,
+  collabOffice,
+  course,
+  study,
 } from "./config";
 
 const state = reactive<any>({
@@ -173,6 +270,10 @@ const state = reactive<any>({
   techType,
   startup,
   slacking,
+  worker,
+  collabOffice,
+  course,
+  study,
 });
 </script>
 

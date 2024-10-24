@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2024-10-21 15:11:00
  * @LastEditors: along
- * @LastEditTime: 2024-10-22 17:07:27
+ * @LastEditTime: 2024-10-24 13:14:35
  * @FilePath: /cxy-web-tool/src/components/keyword/components/Main/config.ts
  */
 import { ref } from "vue";
@@ -574,12 +574,12 @@ export const aiList = ref<any>([
   {
     url: "https://devv.ai/zh",
     name: "devv",
-    icon: "https://devv.ai/favicon-light.png",
+    icon: "http://cdn.alongweb.top/cxy/xt112.png",
   },
   {
     url: "https://www.tiangong.cn/",
     name: "天工AI",
-    icon: "https://static.tiangong.cn/wwwsite/logo.ico",
+    icon: "http://cdn.alongweb.top/cxy/xt113.ico",
   },
   {
     url: "https://yuanbao.tencent.com/chat",
@@ -1014,5 +1014,241 @@ export const slacking = ref<any>([
     url: "https://youquhome.com/",
     name: "有趣网",
     background: "#3490de",
+  },
+]);
+
+export const worker = ref<any>([
+  {
+    url: "https://www.zhipin.com/",
+    name: "Boss直聘",
+    icon: "https://static.zhipin.com/v2/web/geek/images/logo.png",
+    content: "专业的计算机人才招聘平台",
+  },
+  {
+    url: "https://www.lagou.com/wn/",
+    name: "拉勾网",
+    icon: "https://www.lgstatic.com/lg-www-fed/common/static/favicon_faed927.ico",
+    content: "专门为互联网工作者提供工作的平台",
+  },
+  {
+    url: "https://www.nowcoder.com/exam/company",
+    name: "牛客网",
+    icon: "https://static.nowcoder.com/fe/file/images/nowpick/web/www-favicon.ico",
+    content: "笔试面试系统，题库，社区交流",
+  },
+  {
+    url: "https://leetcode.cn/",
+    name: "LeetCode",
+    icon: "https://assets.leetcode.cn/aliyun-lc-upload/users/leetcode-solution/avatar_1582018938.png?x-oss-process=image%2Fformat%2Cwebp",
+    content: "学习、题库、竞赛、算法等",
+  },
+]);
+
+export const collabOffice = ref<any>([
+  {
+    icon: "https://as.smgv.cn/from_qbox/favicon.ico",
+    url: "https://shimo.im/",
+    name: "石墨文档",
+    content: "石墨文档,全新一代云Office办公软件,支持多人在线协同办公.",
+  },
+  {
+    icon: "https://qn.cache.wpscdn.cn/kdocs/mobile/touch/apple-120.png",
+    url: "https://www.kdocs.cn/",
+    name: "金山文档",
+    content: "完全免费，多人实时协作的在线Office",
+  },
+  {
+    icon: "https://saas.bk-cdn.com/193ddf40-81f3-453a-8527-4537633827a5/icon11590542409650.png",
+    url: "https://www.baklib.com/?utm_campaign=1&utm_content=20&utm_term=d2afe4c9-daef-4185-a9fc-77f0aa62c5c9&utm_source=coderutil",
+    name: "Baklib",
+    content: "优雅的云知识库构建平台，基于企业“帮助中心”的全场景解决方案",
+  },
+  {
+    icon: "https://img.weiyun.com/vipstyle/nr/box/img/favicon.ico?max_age=31536000",
+    url: "https://doc.weiyun.com/",
+    name: "微云文档",
+    content: "腾讯公司打造的智能云服务，多人协同编辑，云端办公黑科技",
+  },
+  {
+    icon: "https://note.youdao.com/signIn/images/25d0cb44.loading-pen.gif",
+    url: "https://note.youdao.com/web/",
+    name: "有道云笔记",
+    content: "专注办公提效的笔记软件",
+  },
+  {
+    icon: "https://nd-static.bdstatic.com/m-static/v20-main/favicon-main.ico",
+    url: "https://pan.baidu.com/",
+    name: "百度网盘",
+    content: "文件网络备份、同步和分享服务",
+  },
+  {
+    icon: "https://img.alicdn.com/imgextra/i1/O1CN01JDQCi21Dc8EfbRwvF_!!6000000000236-73-tps-64-64.ico",
+    url: "https://www.aliyundrive.com/",
+    name: "阿里云盘",
+    content: "阿里云盘，不限速",
+  },
+  {
+    icon: "https://mdn.alipayobjects.com/huamei_0prmtq/afts/img/A*sRUdR543RjcAAAAAAAAAAAAADvuFAQ/original",
+    url: "https://www.yuque.com/",
+    name: "语雀",
+    content: "优雅高效在线文档编辑与协同工具",
+  },
+  {
+    icon: "https://www.teambition.com/favicon.ico",
+    url: "https://www.teambition.com/",
+    name: "Teambition",
+    content: "阿里巴巴工作学习套件",
+  },
+  {
+    icon: "http://cdn.alongweb.top/cxy/xt111.png",
+    url: "http://www.mikecrm.com/",
+    name: "麦客",
+    content: "一款在线表单制作工具",
+  },
+  {
+    icon: "https://image.wjx.com/images/newimg/index/navi-wjxlogo@2x.png",
+    url: "https://www.wjx.cn/",
+    name: "问卷星",
+    content: "问卷调查",
+  },
+  {
+    icon: "https://nd-static.bdstatic.com/m-static/v20-main/favicon-main.ico",
+    url: "https://h5.bce.baidu.com/",
+    name: "百度H5",
+    content: "一个在线H5制作平台",
+  },
+  {
+    icon: "https://www.tubiaoxiu.com/landing/img/logo_small16.png",
+    url: "https://www.tubiaoxiu.com/",
+    name: "图表秀",
+    content: "免费的在线图表制作工具",
+  },
+  {
+    icon: "https://xlimage.uzero.cn/shinescan/res/favicon.ico",
+    url: "https://web.baimiaoapp.com/",
+    name: "白描",
+    content: "高效的中文ocr文字识别软件",
+  },
+  {
+    icon: "https://images.modao.cc/images/favicon.ico",
+    url: "https://modao.cc/brand",
+    name: "墨刀",
+    content: "在线产品设计协同一体化",
+  },
+]);
+
+export const course = ref<any>([
+  {
+    url: "https://time.geekbang.org/column/intro/100017301",
+    icon: "http://cdn.alongweb.top/cxy/c1.png",
+  },
+  {
+    url: "https://time.geekbang.org/column/intro/100006701",
+    icon: "http://cdn.alongweb.top/cxy/c2.png",
+  },
+  {
+    url: "https://time.geekbang.org/course/intro/100023501",
+    icon: "http://cdn.alongweb.top/cxy/c3.png",
+  },
+  {
+    url: "https://time.geekbang.org/column/intro/100020801",
+    icon: "http://cdn.alongweb.top/cxy/c4.png",
+  },
+  {
+    url: "https://time.geekbang.org/course/intro/100007001",
+    icon: "http://cdn.alongweb.top/cxy/c5.png",
+  },
+  {
+    url: "https://time.geekbang.org/column/intro/100003101",
+    icon: "http://cdn.alongweb.top/cxy/c6.png",
+  },
+  {
+    url: "https://time.geekbang.org/course/intro/100030501",
+    icon: "http://cdn.alongweb.top/cxy/c7.png",
+  },
+  {
+    url: "https://time.geekbang.org/column/intro/100023201",
+    icon: "http://cdn.alongweb.top/cxy/c8.png",
+  },
+]);
+
+export const study = ref<any>([
+  {
+    icon: "https://static001.geekbang.org/static/time/icon/favicon-32x32.jpg",
+    url: "https://time.geekbang.org",
+    name: "极客时间",
+    content: "轻松学习，高效学习",
+  },
+  {
+    icon: "http://cdn.alongweb.top/cxy/st1.png",
+    url: "https://www.bilibili.com/",
+    name: "B站",
+    content: "哔哩哔哩",
+  },
+  {
+    icon: "http://cdn.alongweb.top/cxy/st2.ico",
+    url: "https://www.runoob.com/",
+    name: "菜鸟教程",
+    content: "学的不仅是技术，更是梦想！",
+  },
+  {
+    icon: "https://www.yiibai.com/static/img/logo.png",
+    url: "https://www.yiibai.com/",
+    name: "易百教程",
+    content: "专注于IT教程和实例",
+  },
+  {
+    icon: "https://www.w3school.com.cn/ui2019/logo-48-red.png",
+    url: "https://www.w3school.com.cn/",
+    name: "W3school",
+    content: "全球最大的中文 Web 技术教程",
+  },
+  {
+    icon: "https://www.imooc.com/static/img/common/touch-icon-ipad-retina.png",
+    url: "https://www.imooc.com/",
+    name: "慕课网",
+    content: "程序员的梦工厂",
+  },
+  {
+    icon: "http://cdn.alongweb.top/cxy/st3.png",
+    url: "https://gitbook.cn/",
+    name: "Gitchat",
+    content: "IT知识分享平台",
+  },
+  {
+    icon: "https://assets.leetcode.cn/aliyun-lc-upload/users/leetcode-solution/avatar_1582018938.png?x-oss-process=image%2Fformat%2Cwebp",
+    url: "https://leetcode-cn.com/",
+    name: "力扣LeetCode",
+    content: "专业的LeetCode分享平台",
+  },
+  {
+    icon: "https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg",
+    url: "https://github.com/",
+    name: "GitHub",
+    content: "世界最大的开源代码共享社区",
+  },
+  {
+    icon: "http://cdn.alongweb.top/cxy/st4.svg",
+    url: "https://gitee.com/",
+    name: "Gitee",
+    content: "中国最大的开源代码共享社区",
+  },
+  {
+    icon: "https://static.zhihu.com/heifetz/assets/apple-touch-icon-152.81060cab.png",
+    url: "https://www.zhihu.com/",
+    name: "知乎",
+    content: "中国最大的问答社区",
+  },
+  {
+    icon: "http://cdn.alongweb.top/cxy/st5.png",
+    url: "https://study.163.com/category/480000003131009",
+    name: "网易云课堂",
+    content: "网易云课堂编程语言频道",
+  },
+  {
+    icon: "https://s0.lgstatic.com/mds-icon-fed/kaiwu/logo@2x.png",
+    url: "https://kaiwu.lagou.com/",
+    name: "拉钩教育",
+    content: "互联网人职场专业能力提升平台",
   },
 ]);

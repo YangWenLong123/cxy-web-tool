@@ -3,14 +3,18 @@
  * @Description: 程序员盒子常用工具
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2024-07-29 14:27:31
+ * @LastEditTime: 2024-10-24 13:17:34
  * @FilePath: /cxy-web-tool/src/views/syntax/index.vue
 -->
 <template>
   <div class="CxySyntax">
     <div id="navbar">
       <div class="logo" @click="goHome">
-        <img src="http://www.alongweb.top/image/logo.svg" class="logo_img" />
+        <img
+          src="http://www.alongweb.top/image/logo.svg"
+          class="logo_img"
+          style="width: 32px"
+        />
         <div class="title">Web Box</div>
       </div>
 

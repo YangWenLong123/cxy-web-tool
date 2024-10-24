@@ -3,7 +3,7 @@
  * @Description: 程序员盒子头部icon
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2024-10-21 15:21:38
+ * @LastEditTime: 2024-10-24 13:16:09
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-header/index.vue
 -->
 <template>
@@ -40,9 +40,9 @@
           </div> -->
         </div>
       </div>
-      <div>
+      <!-- <div>
         <img src="@/assets/images/photo.jpeg" alt="" class="touxiang" />
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -71,12 +71,12 @@ const state = reactive({
       type: "station",
       link: "/home",
     },
-    {
-      icon: "",
-      tooltip: "文章",
-      type: "station",
-      link: "/platform",
-    },
+    // {
+    //   icon: "",
+    //   tooltip: "文章",
+    //   type: "station",
+    //   link: "/platform",
+    // },
     // {
     //   icon: "",
     //   tooltip: "资源网站",
