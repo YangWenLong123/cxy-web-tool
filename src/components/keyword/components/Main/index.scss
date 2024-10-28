@@ -18,8 +18,9 @@
       margin-bottom: 4px;
       a {
         color: #6b778c;
-        &:hover {
-          color: #000;
+        &:hover span {
+          text-decoration: underline;
+          opacity: 0.8;
         }
       }
     }

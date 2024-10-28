@@ -1,0 +1,49 @@
+.CxyHomeMenuComponents {
+  width: 180px;
+  background-color: #fff;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 6px;
+
+  .box {
+    height: 45px;
+    width: 164px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px 17px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(245, 246, 249, 1);
+      i {
+        color: #12a272;
+      }
+      .name {
+        color: #12a272;
+      }
+    }
+
+    i {
+      margin-right: 12px;
+      font-size: 15px;
+      color: #515767;
+    }
+    .name {
+      color: #515767;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
+  .active {
+    background-color: rgba(65, 180, 142, 0.1) !important;
+    i {
+      color: #12a272;
+    }
+    .name {
+      color: #12a272;
+    }
+  }
+}

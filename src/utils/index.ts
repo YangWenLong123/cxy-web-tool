@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2024-10-21 09:19:58
  * @LastEditors: along
- * @LastEditTime: 2024-10-22 10:14:17
+ * @LastEditTime: 2024-10-28 10:26:28
  * @FilePath: /cxy-web-tool/src/utils/index.ts
  */
 export const getCurrentDateTime = () => {
@@ -53,4 +53,13 @@ export const debounce = (func, wait) => {
     clearTimeout(timeout);
     timeout = setTimeout(later, wait);
   };
+};
+
+export const isMorningOrAfternoon = () => {
+  const currentHour = new Date().getHours();
+  if (currentHour >= 12) {
+    return "下午";
+  } else {
+    return "上午";
+  }
 };

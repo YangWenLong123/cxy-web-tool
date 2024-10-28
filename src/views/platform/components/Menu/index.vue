@@ -3,8 +3,8 @@
  * @Description: 
  * @Date: 2024-10-21 10:56:20
  * @LastEditors: along
- * @LastEditTime: 2024-10-24 13:04:20
- * @FilePath: /cxy-web-tool/src/components/keyword/components/Menu/index.vue
+ * @LastEditTime: 2024-10-28 10:17:04
+ * @FilePath: /cxy-web-tool/src/views/platform/components/Menu/index.vue
 -->
 <template>
   <div
@@ -37,88 +37,65 @@ const isFixed = ref<boolean>(false);
 const menuList = ref<any>([
   {
     icon: "icon-zonghe",
-    name: "综合",
+    name: "HTML5",
     id: "itemBox",
   },
   {
     icon: "icon-shiyongshouce",
-    name: "常用手册",
+    name: "CSS3",
     id: "studyManual",
   },
   {
     icon: "icon-AI-money",
-    name: "AI大模型",
+    name: "JavaScript",
     id: "AIModal",
   },
   {
     icon: "icon-shequ",
-    name: "技术社区",
+    name: "设计模式",
     id: "techCommunity",
   },
   {
     icon: "icon-tuandui1",
-    name: "技术团队",
+    name: "TypeScript",
     id: "techType",
   },
   {
     icon: "icon-chuangyejiuye",
-    name: "创业",
+    name: "数据结构",
     id: "startup",
   },
   {
     icon: "icon-a-5b5560fa46f35d0572b18d9c219238c01",
-    name: "摸鱼划水",
+    name: "Vue2",
     id: "slacking",
   },
   {
     icon: "icon-qiuzhi",
-    name: "求职",
+    name: "Vue3",
     id: "worker",
   },
   {
     icon: "icon-bangong",
-    name: "协同办公",
+    name: "react",
     id: "collabOffice",
   },
   {
     icon: "icon-kecheng",
-    name: "精品课程",
+    name: "uniapp",
     id: "course",
   },
   {
     icon: "icon-xuexi",
-    name: "学习",
+    name: "小程序",
     id: "study",
   },
 ]);
 
-onMounted(() => {
-  // const debouncedScroll = debounce(handleScroll, 60);
-
-  document.querySelector(".cxyView").addEventListener("scroll", handleScroll);
-});
-
-const handleScroll = (e: any) => {
-  const { scrollTop } = e.srcElement;
-  console.log("scrollTop>>>>>", scrollTop);
-
-  if (scrollTop >= 135) {
-    isFixed.value = true;
-    document.querySelector(".CxyHomeMenuComponents").style.position = "fixed";
-    document.querySelector(".CxyHomeMenuComponents").style.top = "60px";
-    document.querySelector(".CxyHomeMenuComponents").style.left =
-      (document.querySelector("body").offsetWidth - 1300) / 2 + "px";
-    document.querySelector(".CxyHomeMenuComponents").style.zIndex = "10px";
-  } else {
-    isFixed.value = false;
-    document.querySelector(".CxyHomeMenuComponents").style.position = "";
-  }
-};
+onMounted(() => {});
 
 const onChangeItem = (index: number, item: any) => {
   currentIndex.value = index;
-
-  document.getElementById(item?.id).scrollIntoView({ behavior: "smooth" });
 };
 </script>
 

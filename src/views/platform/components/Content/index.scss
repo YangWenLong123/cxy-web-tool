@@ -1,0 +1,23 @@
+.CxyPlatformMain {
+  width: 720px;
+  margin: 0 20px;
+  background-color: #fff;
+  overflow: hidden;
+  overflow-y: auto;
+  border-radius: 6px;
+
+  .ant-tabs-nav-wrap {
+    padding-left: 20px;
+  }
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #12a272;
+  }
+
+  .ant-tabs-tab-btn:hover {
+    color: #12a272 !important;
+  }
+
+  .ant-tabs-ink-bar {
+    background-color: #12a272;
+  }
+}

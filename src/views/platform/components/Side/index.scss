@@ -1,0 +1,59 @@
+.CxyPlatformSide {
+  width: 256px;
+  overflow: hidden;
+  overflow-y: auto;
+
+  .card {
+    width: 256px;
+    height: 90px;
+    background-color: #ffff;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 6px;
+
+    .card-item {
+      display: flex;
+      flex-direction: column;
+
+      .card-title {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        color: #252932;
+      }
+      .card-desc {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-top: 2px;
+        color: #9ba2ae;
+      }
+    }
+
+    .card-button {
+      border-radius: 4px;
+      height: 36px;
+      width: 74px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #12a272;
+      background-color: rgba(65, 180, 142, 0.1) !important;
+      outline: none;
+      transition: background-color 0.3s, color 0.3s;
+      cursor: pointer;
+      appearance: none;
+      color: #12a272;
+      font-size: 14px;
+      font-weight: 400;
+      white-space: nowrap;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

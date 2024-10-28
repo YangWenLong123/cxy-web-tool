@@ -3,7 +3,7 @@
  * @Description: 程序员盒子常用工具
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2024-10-24 13:17:34
+ * @LastEditTime: 2024-10-24 15:37:19
  * @FilePath: /cxy-web-tool/src/views/syntax/index.vue
 -->
 <template>
@@ -70,6 +70,8 @@ import { javascript } from "./config/javascript";
 import { jquery } from "./config/jquery";
 import { HTML } from "./config/HTML";
 import { CSS } from "./config/css";
+import { NodeJs } from "./config/NodeJs";
+import { Python } from "./config/Python";
 
 const currentIndex = ref<number>(0);
 
@@ -82,10 +84,10 @@ const backgroundList = ref<Array>([
   "rgba(100, 117, 121, 0.25)",
   "rgba(251, 34, 240, 0.25)",
   "rgba(14, 251, 252, 0.25)",
-  "#714AE8",
-  "#4263EB",
-  "#FD836E",
-  "#F6C1C1",
+  "#00CAFE",
+  "#0650B5",
+  "#192E44",
+  "#FF8435",
   "#55262D",
 ]);
 
@@ -105,6 +107,14 @@ const treeList = ref([
   {
     title: "CSS",
     children: [...CSS],
+  },
+  {
+    title: "NodeJs",
+    children: [...NodeJs],
+  },
+  {
+    title: "Python",
+    children: [...Python],
   },
 ]);
 

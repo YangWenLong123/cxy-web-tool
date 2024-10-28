@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2024-10-21 15:11:00
  * @LastEditors: along
- * @LastEditTime: 2024-10-24 13:14:35
+ * @LastEditTime: 2024-10-28 11:33:00
  * @FilePath: /cxy-web-tool/src/components/keyword/components/Main/config.ts
  */
 import { ref } from "vue";
@@ -271,6 +271,201 @@ export const composite = ref<any>([
     url: "https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN",
     name: "Nginx配置在线生成",
     color: ["#ff9999"],
+  },
+  {
+    name: "tools.pdf24 - 免费强大的PDF在线处理工具",
+    url: "https://tools.pdf24.org/zh/",
+    color: [],
+  },
+  {
+    name: "Json格式转换",
+    url: "https://www.bejson.com/",
+    color: ["#ff8c31"],
+  },
+  {
+    name: "Html格式转换",
+    url: "https://tool.lu/html/",
+    color: [],
+  },
+  {
+    name: "Js格式转换",
+    url: "https://tool.lu/js/",
+    color: ["#b25d25"],
+  },
+  {
+    name: "Css格式转换",
+    url: "https://tool.lu/css/",
+    color: ["#00e500"],
+  },
+  {
+    name: "Sql格式转换",
+    url: "https://tool.lu/sql/",
+    color: ["#f9906f"],
+  },
+  {
+    name: "Xml格式转换",
+    url: "https://tool.lu/xml/",
+    color: [],
+  },
+  {
+    name: "在线图片编辑",
+    url: "https://www.iloveimg.com/zh-cn",
+    color: ["#c91f37"],
+  },
+  {
+    name: "图片合并分割",
+    url: "http://www.zuohaotu.com/cut-image.aspx",
+    color: ["#426666"],
+  },
+  {
+    name: "图片加水印",
+    url: "https://www.onlinedo.cn/img-shuiyin",
+    color: ["#44cef6"],
+  },
+  {
+    name: "图片去水印",
+    url: "https://www.apowersoft.cn/image-watermark-remover",
+    color: ["#425066"],
+  },
+  {
+    name: "文件格式转换",
+    url: "https://convertio.co/zh/",
+    color: [],
+  },
+  {
+    name: "图片背景消除",
+    url: "https://www.remove.bg/zh",
+    color: [],
+  },
+  {
+    name: "AI抠图",
+    url: "https://www.6k6k.cn/",
+    color: ["#003371"],
+  },
+  {
+    name: "在线抠图",
+    url: "https://koutu.gaoding.com/",
+    color: ["#b0a4e3", "#cca4e3", "#edd1d8", "#e4c6d0"],
+  },
+  {
+    name: "图片无损压缩",
+    url: "https://tinypng.com/",
+    color: [],
+  },
+  {
+    name: "即时设计",
+    url: "https://js.design/?source=coder&plan=001",
+    color: ["#003371"],
+  },
+  {
+    name: "搞定设计",
+    url: "https://www.gaoding.com/s/newmedia",
+    color: [],
+  },
+  {
+    name: "创可贴",
+    url: "https://www.chuangkit.com/newcustomera",
+    color: [],
+  },
+  {
+    name: "图怪兽",
+    url: "https://818ps.com/",
+    color: [],
+  },
+  {
+    name: "制作Gif图片",
+    url: "https://www.tutieshi.com/",
+    color: [],
+  },
+  {
+    name: "Logo设计",
+    url: "https://www.designevo.com/cn/logo-maker/",
+    color: ["#efcd9a"],
+  },
+  {
+    name: "Gif之家",
+    url: "https://www.tutieshi.com/compose/",
+    color: [],
+  },
+  {
+    name: "生成透明ICO",
+    url: "http://www.ico51.cn/",
+    color: ["#f19072"],
+  },
+  {
+    name: "Pexels",
+    url: "https://www.pexels.com/zh-cn/",
+    color: [],
+  },
+  {
+    name: "pixabay",
+    url: "https://pixabay.com/",
+    color: [],
+  },
+  {
+    name: "Unsplash",
+    url: "https://unsplash.com/",
+    color: [],
+  },
+  {
+    name: "Pxhere",
+    url: "https://pxhere.com/",
+    color: ["#9f563a"],
+  },
+  {
+    name: "百度图片",
+    url: "https://image.baidu.com/",
+    color: ["#ffd460", "#f07b3f", "#ea5455", "#2d4059"],
+  },
+  {
+    name: "发表情",
+    url: "https://www.fabiaoqing.com/",
+    color: ["#e49e61"],
+  },
+  {
+    name: "表情包制作",
+    url: "https://www.dbbqb.com/",
+    color: ["#0095d9"],
+  },
+  {
+    name: "斗图网",
+    url: "https://www.52doutu.cn/",
+    color: ["#95e1d3", "#6639a6", "#fce38a"],
+  },
+  {
+    name: "PDF全能工具",
+    url: "https://www.ilovepdf.com/zh-cn",
+    color: ["#43676b"],
+  },
+  {
+    name: "Light PDF",
+    url: "https://lightpdf.com/zh/",
+    color: ["#333631"],
+  },
+  {
+    name: "PDF2Word",
+    url: "https://pdf2doc.com/zh/",
+    color: ["#69b076"],
+  },
+  {
+    name: "VIP视频解析",
+    url: "http://tool.liumingye.cn/video/",
+    color: [],
+  },
+  {
+    name: "数据可视化",
+    url: "http://data.viggo.site/",
+    color: ["#767c6b"],
+  },
+  {
+    name: "视频素材下载",
+    url: "https://www.videvo.net/",
+    color: [],
+  },
+  {
+    name: "皮卡智能抠图",
+    url: "https://www.tukeli.net/",
+    color: ["#d9a62e"],
   },
 ]);
 
@@ -554,7 +749,7 @@ export const aiList = ref<any>([
   {
     url: "https://preview.devin.ai/",
     name: "Devin",
-    icon: "https://preview.devin.ai/icon.png?84a582a3f16ce6cc",
+    icon: "http://cdn.alongweb.top/cxy/devin.svg",
   },
   {
     url: "https://metaso.cn/",
@@ -1186,12 +1381,6 @@ export const study = ref<any>([
     content: "哔哩哔哩",
   },
   {
-    icon: "http://cdn.alongweb.top/cxy/st2.ico",
-    url: "https://www.runoob.com/",
-    name: "菜鸟教程",
-    content: "学的不仅是技术，更是梦想！",
-  },
-  {
     icon: "https://www.yiibai.com/static/img/logo.png",
     url: "https://www.yiibai.com/",
     name: "易百教程",
@@ -1250,5 +1439,35 @@ export const study = ref<any>([
     url: "https://kaiwu.lagou.com/",
     name: "拉钩教育",
     content: "互联网人职场专业能力提升平台",
+  },
+  {
+    icon: "https://developer.mozilla.org/favicon-48x48.bc390275e955dacb2e65.png",
+    url: "https://developer.mozilla.org/zh-CN/docs/Web",
+    name: "MDN",
+    content: "面向开发者的Web技术",
+  },
+  {
+    icon: "http://cdn.alongweb.top/cxy/universal.ico",
+    url: "https://www.freecodecamp.org/news",
+    name: "freecodecamp",
+    content: "free 3,000-hour curriculum",
+  },
+  {
+    icon: "https://zh.javascript.info/img/favicon/favicon.png",
+    url: "https://zh.javascript.info/",
+    name: "现代 JavaScript 教程",
+    content: "以最新的 JavaScript 标准为基准",
+  },
+  {
+    icon: "https://www.30secondsofcode.org/assets/icons/icon-192x192.png?v=30swp20231218115417",
+    url: "https://www.30secondsofcode.org/js/s/listify/",
+    name: "30secondsofcode",
+    content: "代码片段30秒学习",
+  },
+  {
+    icon: "https://static.sitestack.cn/static/images/logo.png",
+    url: "https://www.bookstack.cn/",
+    name: "书栈网",
+    content: "分享知识，共享智慧",
   },
 ]);
