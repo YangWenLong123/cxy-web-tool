@@ -1,0 +1,31 @@
+.CxyWritingText {
+  .nav {
+    height: 63px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 24px;
+    .ant-input {
+      border: none;
+      outline: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      font-size: 26px;
+      font-weight: bold;
+    }
+  }
+
+  .vditor-preview__action {
+    display: none;
+  }
+
+  .vditor-preview .vditor-reset p img {
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .vditor-preview .vditor-reset img {
+    width: 300px;
+  }
+}

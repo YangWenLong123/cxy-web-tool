@@ -3,7 +3,7 @@
  * @Description:博客
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2024-10-28 11:06:31
+ * @LastEditTime: 2024-11-13 09:08:59
  * @FilePath: /cxy-web-tool/src/views/platform/components/Side/index.vue
 -->
 <template>
@@ -21,18 +21,22 @@
 <script lang="ts" setup>
 import { onMounted, reactive } from "vue";
 import { isMorningOrAfternoon } from "@/utils/index";
-
 import { notification } from "ant-design-vue";
+import router from "@/router";
+import { useRouter } from "vue-router";
 
+const routers = useRouter();
 const state = reactive({});
 
 onMounted(() => {});
 
 const onArticleContent = (type: string) => {
-  notification[type]({
-    message: "提示",
-    description: "正在开发中",
-  });
+  // notification[type]({
+  //   message: "提示",
+  //   description: "正在开发中",
+  // });
+
+  router.push({ path: "/writingText" });
 };
 </script>
 

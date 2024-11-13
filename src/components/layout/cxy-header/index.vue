@@ -3,7 +3,7 @@
  * @Description: 程序员盒子头部icon
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2024-10-28 09:35:10
+ * @LastEditTime: 2024-11-13 14:24:40
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-header/index.vue
 -->
 <template>
@@ -76,6 +76,30 @@ const state = reactive({
       tooltip: "博客",
       type: "station",
       link: "/platform",
+    },
+    {
+      icon: "",
+      tooltip: "工具库",
+      type: "station",
+      link: "/gjk",
+    },
+    {
+      icon: "",
+      tooltip: "面试",
+      type: "station",
+      link: "/ms",
+    },
+    {
+      icon: "",
+      tooltip: "吐槽",
+      type: "station",
+      link: "/tc",
+    },
+    {
+      icon: "",
+      tooltip: "赞助",
+      type: "station",
+      link: "/zz",
     },
     // {
     //   icon: "",

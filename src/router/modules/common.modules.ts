@@ -3,7 +3,7 @@
  * @Description: 路由配置
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2024-10-18 10:16:13
+ * @LastEditTime: 2024-11-13 14:25:07
  * @FilePath: /cxy-web-tool/src/router/modules/common.modules.ts
  */
 import type { RouteRecordRaw } from "vue-router";
@@ -75,6 +75,26 @@ const routes: RouteRecordRaw[] = [
         path: "/contextMenu",
         name: "ContextMenu",
         component: () => import("@/views/components/context-menu/index.vue"),
+      },
+      {
+        path: "/gjk",
+        name: "gjk",
+        component: () => import("@/views/gjk/index.vue"),
+      },
+      {
+        path: "/ms",
+        name: "ms",
+        component: () => import("@/views/ms/index.vue"),
+      },
+      {
+        path: "/tc",
+        name: "tc",
+        component: () => import("@/views/tc/index.vue"),
+      },
+      {
+        path: "/zz",
+        name: "zz",
+        component: () => import("@/views/zz/index.vue"),
       },
     ],
   },
