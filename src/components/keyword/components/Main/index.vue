@@ -3,14 +3,14 @@
  * @Description: 
  * @Date: 2024-10-21 15:01:15
  * @LastEditors: along
- * @LastEditTime: 2024-10-24 11:31:27
+ * @LastEditTime: 2024-11-13 14:48:00
  * @FilePath: /cxy-web-tool/src/components/keyword/components/Main/index.vue
 -->
 <template>
   <div class="CxyHomeMainComponents">
     <div class="itemBox" id="itemBox">
       <div class="card" v-for="(item, index) in state.composite" :key="index">
-        <a :href="item.url">
+        <a target="_blank" :href="item.url">
           <template v-if="item.color.length > 1">
             <span v-for="(v, i) in item.name" :key="i">
               <span :style="{ color: item.color[i] }">{{ v }}</span>

@@ -1,0 +1,22 @@
+.Cxylogin {
+  .loginBox {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      width: 100%;
+      text-align: center;
+      color: #12a272;
+      font-size: 22px;
+      margin-bottom: 24px;
+    }
+    .register {
+      position: relative;
+      left: 94px;
+      top: -12px;
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.85);
+      cursor: pointer;
+    }
+  }
+}

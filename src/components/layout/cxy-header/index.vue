@@ -3,7 +3,7 @@
  * @Description: 程序员盒子头部icon
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2024-11-13 14:24:40
+ * @LastEditTime: 2025-01-07 15:55:05
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-header/index.vue
 -->
 <template>
@@ -40,11 +40,33 @@
           </div> -->
         </div>
       </div>
-      <!-- <div>
-        <img src="@/assets/images/photo.jpeg" alt="" class="touxiang" />
-      </div> -->
+      <div>
+        <!-- <img src="@/assets/images/photo.jpeg" alt="" class="touxiang" /> -->
+        <template v-if="username">
+          <a-dropdown>
+            <a class="ant-dropdown-link">
+              <div class="flexRow">
+                <img src="@/assets/images/pic.png" alt="" class="pic" />
+                <div style="color: #000">{{ username }}</div>
+              </div>
+              <DownOutlined />
+            </a>
+            <template #overlay>
+              <a-menu @click="onkeydown">
+                <a-menu-item :key="1">
+                  <a href="javascript:;">退出登录</a>
+                </a-menu-item>
+              </a-menu>
+            </template>
+          </a-dropdown>
+        </template>
+        <div v-else class="login" type="link" @click="onRegister()">登录</div>
+      </div>
     </div>
   </div>
+
+  <!-- 登录 -->
+  <CxyLogin ref="cxyLoginRef" @refresh="getUserInfo()" />
 </template>
 
 <script lang="ts" setup>
@@ -52,6 +74,21 @@ import { onMounted, reactive, watch, ref, nextTick } from "vue";
 import { usePopupStore } from "@/store/modules/popup";
 import router from "@/router";
 import { useRouter } from "vue-router";
+import CxyLogin from "@/components/login/index.vue";
+import { message } from "ant-design-vue";
+
+const cxyLoginRef = ref<InstanceType<typeof CxyLogin> | null>(null);
+
+const username = ref<string>("");
+
+const getUserInfo = () => {
+  const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+  if (userInfo) {
+    username.value = userInfo.username;
+  } else {
+    username.value = "";
+  }
+};
 
 const store = usePopupStore();
 const routers = useRouter();
@@ -155,6 +192,8 @@ onMounted(() => {
     dom.addEventListener("scroll", (e: any) => {
       showBottom.value = e.target?.scrollTop > 10 ? true : false;
     });
+
+    getUserInfo();
   });
 });
 
@@ -192,6 +231,23 @@ const changeRouter = (link: string) => {
   } else {
     location.href = link;
   }
+};
+
+const onkeydown = (e) => {
+  console.log(e);
+
+  if (e.key === 1) {
+    localStorage.removeItem("access_token");
+    localStorage.removeItem("userInfo");
+    getUserInfo();
+    message.success("退出成功");
+  }
+};
+
+const onRegister = () => {
+  // router.push({ path: "/login" });
+
+  cxyLoginRef.value?.preview();
 };
 </script>
 

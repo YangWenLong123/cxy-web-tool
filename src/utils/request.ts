@@ -3,9 +3,10 @@
  * @Description: axios配置
  * @Date: 2023-06-10 21:26:46
  * @LastEditors: along
- * @LastEditTime: 2023-07-28 22:39:11
+ * @LastEditTime: 2025-01-07 15:56:15
  * @FilePath: /cxy-web-tool/src/utils/request.ts
  */
+import { message } from "ant-design-vue";
 import axios from "axios";
 
 console.log(import.meta.env);
@@ -30,11 +31,19 @@ request.interceptors.response.use(
   function (response) {
     // 2xx 范围内的状态码都会触发该函数。
     // 对响应数据做点什么
-    return response;
+
+    console.log("response", response);
+
+    if (response?.data.code === 1) return response?.data?.data;
+    if (response?.data.code === -1) {
+      message.error(response?.data?.message);
+      return Promise.reject(response?.data?.message);
+    }
   },
   function (error) {
     // 超出 2xx 范围的状态码都会触发该函数。
     // 对响应错误做点什么
+
     return Promise.reject(error);
   }
 );

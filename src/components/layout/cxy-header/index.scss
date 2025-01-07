@@ -113,4 +113,21 @@
       cursor: pointer;
     }
   }
+
+  .login {
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .flexRow {
+    display: flex;
+    align-items: center;
+
+    .pic {
+      width: 30px;
+      margin-right: 14px;
+    }
+  }
 }

@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2024-10-21 15:11:00
  * @LastEditors: along
- * @LastEditTime: 2024-10-28 11:33:00
+ * @LastEditTime: 2024-11-13 14:49:14
  * @FilePath: /cxy-web-tool/src/components/keyword/components/Main/config.ts
  */
 import { ref } from "vue";
@@ -110,16 +110,6 @@ export const composite = ref<any>([
     color: [],
   },
   {
-    url: "/ai",
-    name: "Ai导航",
-    color: [],
-  },
-  {
-    url: "/graph/ai",
-    name: "Ai图谱",
-    color: ["#e8620e"],
-  },
-  {
     url: "https://volctrack.com/w/pqzX5CQU",
     name: "kimi.Ai",
     color: [],
@@ -174,12 +164,6 @@ export const composite = ref<any>([
     name: "aippt",
     color: [],
   },
-  {
-    url: "/star/39",
-    name: "Ai课程",
-    color: ["#4c8dae"],
-  },
-
   {
     url: "https://volctrack.com/w/pqzX5CQU",
     name: "AI助手",
