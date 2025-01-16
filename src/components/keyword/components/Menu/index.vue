@@ -123,5 +123,5 @@ const onChangeItem = (index: number, item: any) => {
 </script>
 
 <style lang="scss" scoped>
-@import "./index.scss";
+@import url("./index.scss");
 </style>

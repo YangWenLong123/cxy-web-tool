@@ -3,7 +3,7 @@
  * @Description: 
  * @Date: 2025-01-07 13:47:24
  * @LastEditors: along
- * @LastEditTime: 2025-01-07 16:04:33
+ * @LastEditTime: 2025-01-15 13:47:39
  * @FilePath: /cxy-web-tool/src/components/login/index.vue
 -->
 <script lang="ts" setup>
@@ -48,6 +48,9 @@ const onFinishFailed = (errorInfo: any) => {
 
 const operate = () => {
   if (type.value === 1) {
+    if (!formState.username) return message.warning("请输入用户名");
+    if (!formState.password) return message.warning("请输入密码");
+
     login({
       username: formState.username,
       password: formState.password,
@@ -60,10 +63,15 @@ const operate = () => {
       localStorage.setItem("userInfo", JSON.stringify(res?.userInfo));
 
       emits("refresh");
+      window.location.reload();
     });
   }
 
   if (type.value === 2) {
+    if (!formState.username) return message.warning("请输入用户名");
+    if (!formState.password) return message.warning("请输入密码");
+    if (formState.password?.length < 6) return message.warning("密码不少于6位");
+
     signup({
       username: formState.username,
       password: formState.password,

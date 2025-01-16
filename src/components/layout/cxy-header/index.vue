@@ -3,7 +3,7 @@
  * @Description: 程序员盒子头部icon
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2025-01-07 15:55:05
+ * @LastEditTime: 2025-01-16 17:43:34
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-header/index.vue
 -->
 <template>
@@ -116,28 +116,55 @@ const state = reactive({
     },
     {
       icon: "",
-      tooltip: "工具库",
+      tooltip: "开发工具",
       type: "station",
       link: "/gjk",
     },
-    {
-      icon: "",
-      tooltip: "面试",
-      type: "station",
-      link: "/ms",
-    },
-    {
-      icon: "",
-      tooltip: "吐槽",
-      type: "station",
-      link: "/tc",
-    },
-    {
-      icon: "",
-      tooltip: "赞助",
-      type: "station",
-      link: "/zz",
-    },
+    // {
+    //   icon: "",
+    //   tooltip: "语法速查表",
+    //   type: "station",
+    //   link: "/syntax",
+    // },
+    // {
+    //   icon: "",
+    //   tooltip: "摸鱼划水",
+    //   type: "station",
+    //   link: "/tc",
+    // },
+    // {
+    //   icon: "",
+    //   tooltip: "面试题",
+    //   type: "station",
+    //   link: "/ms",
+    // },
+
+    // {
+    //   icon: "",
+    //   tooltip: "遇见你",
+    //   type: "station",
+    //   link: "/jy",
+    // },
+    // {
+    //   icon: "",
+    //   tooltip: "插件库",
+    //   type: "station",
+    //   link: "/chrome",
+    // },
+
+    // {
+    //   icon: "",
+    //   tooltip: "代码小抄",
+    //   type: "station",
+    //   link: "/dm",
+    // },
+
+    // {
+    //   icon: "",
+    //   tooltip: "赞助",
+    //   type: "station",
+    //   link: "/zz",
+    // },
     // {
     //   icon: "",
     //   tooltip: "资源网站",
@@ -162,12 +189,7 @@ const state = reactive({
     //   type: "station",
     //   link: "/platform",
     // },
-    // {
-    //   icon: "",
-    //   tooltip: "Chrome插件",
-    //   type: "station",
-    //   link: "/chrome",
-    // },
+
     // {
     //   icon: "icon-jiantou-right-top",
     //   tooltip: "小册",
@@ -240,6 +262,7 @@ const onkeydown = (e) => {
     localStorage.removeItem("access_token");
     localStorage.removeItem("userInfo");
     getUserInfo();
+    window.location.reload();
     message.success("退出成功");
   }
 };
@@ -252,5 +275,5 @@ const onRegister = () => {
 </script>
 
 <style lang="scss">
-@import "./index.scss";
+@import url("./index.scss");
 </style>

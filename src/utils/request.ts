@@ -3,7 +3,7 @@
  * @Description: axios配置
  * @Date: 2023-06-10 21:26:46
  * @LastEditors: along
- * @LastEditTime: 2025-01-07 15:56:15
+ * @LastEditTime: 2025-01-15 10:31:08
  * @FilePath: /cxy-web-tool/src/utils/request.ts
  */
 import { message } from "ant-design-vue";
@@ -18,6 +18,10 @@ const request = axios.create({
 request.interceptors.request.use(
   function (config) {
     // 在发送请求之前做些什么
+    const access_token = localStorage.getItem("access_token");
+    if (access_token)
+      config.headers["Authorization"] = "Bearer " + access_token;
+
     return config;
   },
   function (error) {

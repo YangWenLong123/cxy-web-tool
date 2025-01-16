@@ -3,11 +3,14 @@
  * @Description: 路由配置
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2025-01-07 13:35:19
+ * @LastEditTime: 2025-01-16 14:33:49
  * @FilePath: /cxy-web-tool/src/router/modules/common.modules.ts
  */
 import type { RouteRecordRaw } from "vue-router";
 import Index from "@/views/index.vue";
+
+import QuestionList from "@/views/ms/components/QuestionList.vue";
+import QuestionDetail from "@/views/ms/components/QuestionDetail.vue";
 
 const routes: RouteRecordRaw[] = [
   {
@@ -45,6 +48,12 @@ const routes: RouteRecordRaw[] = [
         path: "/platform",
         name: "CxyPlatform",
         component: () => import("@/views/platform/index.vue"),
+      },
+
+      {
+        path: "/posts",
+        name: "posts",
+        component: () => import("@/views/posts/index.vue"),
       },
       {
         path: "/resources",
@@ -87,6 +96,19 @@ const routes: RouteRecordRaw[] = [
         component: () => import("@/views/ms/index.vue"),
       },
       {
+        path: "/dm",
+        name: "dm",
+        component: () => import("@/views/dm/index.vue"),
+      },
+      {
+        path: "/category/:categoryId",
+        component: QuestionList,
+      },
+      {
+        path: "/question/:questionId",
+        component: QuestionDetail,
+      },
+      {
         path: "/tc",
         name: "tc",
         component: () => import("@/views/tc/index.vue"),
@@ -95,6 +117,16 @@ const routes: RouteRecordRaw[] = [
         path: "/zz",
         name: "zz",
         component: () => import("@/views/zz/index.vue"),
+      },
+      {
+        path: "/jy",
+        name: "jy",
+        component: () => import("@/views/jy/index.vue"),
+      },
+      {
+        path: "/syntax",
+        name: "Syntax",
+        component: () => import("@/views/syntax/index.vue"),
       },
     ],
   },

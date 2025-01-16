@@ -270,5 +270,5 @@ const builtHref = (index: number, value: string) => {
 </script>
 
 <style lang="scss" scoped>
-@import "./index.scss";
+@import url("./index.scss");
 </style>

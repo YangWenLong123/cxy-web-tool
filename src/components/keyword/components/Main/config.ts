@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2024-10-21 15:11:00
  * @LastEditors: along
- * @LastEditTime: 2024-11-13 14:49:14
+ * @LastEditTime: 2025-01-09 09:11:27
  * @FilePath: /cxy-web-tool/src/components/keyword/components/Main/config.ts
  */
 import { ref } from "vue";
@@ -778,7 +778,7 @@ export const aiList = ref<any>([
   {
     url: "https://hailuoai.com/",
     name: "海螺AI",
-    icon: "https://hailuoai.com/assets/logo/favicon-dark.png",
+    icon: "https://hailuoai.com/assets/logo/favicon.png?v=1",
   },
   {
     url: "https://www.deepseek.com/",
@@ -1309,7 +1309,7 @@ export const collabOffice = ref<any>([
     content: "高效的中文ocr文字识别软件",
   },
   {
-    icon: "https://images.modao.cc/images/favicon.ico",
+    icon: "https://cdn-yunyin.modao.cc/modao-logo.svg",
     url: "https://modao.cc/brand",
     name: "墨刀",
     content: "在线产品设计协同一体化",

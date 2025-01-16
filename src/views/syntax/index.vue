@@ -3,20 +3,22 @@
  * @Description: 程序员盒子常用工具
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2024-10-24 15:37:19
+ * @LastEditTime: 2025-01-09 10:21:47
  * @FilePath: /cxy-web-tool/src/views/syntax/index.vue
 -->
 <template>
   <div class="CxySyntax">
+    <!-- <div class="gradient-bg"></div> -->
+
     <div id="navbar">
-      <div class="logo" @click="goHome">
+      <!-- <div class="logo" @click="goHome">
         <img
           src="http://www.alongweb.top/image/logo.svg"
           class="logo_img"
           style="width: 32px"
         />
         <div class="title">Web Box</div>
-      </div>
+      </div> -->
 
       <div
         v-for="(item, i) in treeList"
@@ -140,7 +142,7 @@ const initMasonry = () => {
     let minColumnHeight = Math.min(...columnHeights);
     let columnIndex = columnHeights.indexOf(minColumnHeight);
     const leftMargin = columnIndex * columnWidth;
-    const topMargin = minColumnHeight + 50;
+    const topMargin = minColumnHeight + 10;
     item.style.position = "absolute";
     item.style.left = `${leftMargin + 20}px`;
     item.style.top = `${topMargin}px`;
@@ -178,5 +180,5 @@ onMounted(() => {
 </script>
 
 <style lang="scss">
-@import "./index.scss";
+@import url("./index.scss");
 </style>

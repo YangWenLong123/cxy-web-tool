@@ -1,26 +1,33 @@
 .CxySyntax {
   width: 100vw;
-  height: 100vh;
+  flex: 1;
   overflow: hidden;
   overflow-y: auto;
   background: #000 url("http://cdn.alongweb.top/images/background.jpg") fixed
     100% 100%;
   display: flex;
-  flex-direction: column;
+  overflow: hidden;
+  overflow-y: auto;
+  // border: 1px #fff solid;
+  // flex-direction: column;
+  // position: relative;
+
   #navbar {
-    position: fixed;
-    background: #000;
+    // position: fixed;
+
+    width: 80px;
     background: rgba(0, 0, 0, 0.6);
-    height: 40px;
+    // height: 100vh;
     line-height: 40px;
     color: #999;
-    width: 100%;
     filter: alpha(opacity = 60);
     z-index: 100;
     box-sizing: border-box;
     padding: 0 32px;
     cursor: pointer;
     display: flex;
+    text-align: center;
+    flex-direction: column;
     align-items: center;
 
     .logo {
@@ -38,7 +45,7 @@
     .border-item {
       color: #999;
       cursor: pointer;
-      margin-right: 12px;
+      // margin-right: 12px;
       &:hover {
         color: #fff;
       }
@@ -51,10 +58,14 @@
     // border: 1px red solid;
     box-sizing: border-box;
     color: #fff;
-    height: calc(100vh);
+
+    width: calc(100vw - 80px);
+
     // margin-top: 40px;
     // padding-left: 20px;
     // position: relative;
+
+    // border: 1px red solid;
 
     .main {
       position: relative;

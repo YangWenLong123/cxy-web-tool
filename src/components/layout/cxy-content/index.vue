@@ -21,5 +21,5 @@ onMounted(() => {});
 </script>
 
 <style lang="scss">
-@import "./index.scss";
+@import url("./index.scss");
 </style>

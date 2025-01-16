@@ -3,7 +3,7 @@
  * @Description: 
  * @Date: 2024-10-21 10:56:20
  * @LastEditors: along
- * @LastEditTime: 2024-10-28 10:17:04
+ * @LastEditTime: 2025-01-15 11:09:35
  * @FilePath: /cxy-web-tool/src/views/platform/components/Menu/index.vue
 -->
 <template>
@@ -30,8 +30,9 @@
 import { ref, onMounted } from "vue";
 import { debounce } from "@/utils/index";
 
-const currentIndex = ref<number>(0);
+const emits = defineEmits(["change"]);
 
+const currentIndex = ref<number>(0);
 const isFixed = ref<boolean>(false);
 
 const menuList = ref<any>([
@@ -56,23 +57,18 @@ const menuList = ref<any>([
     id: "techCommunity",
   },
   {
-    icon: "icon-tuandui1",
-    name: "TypeScript",
-    id: "techType",
-  },
-  {
     icon: "icon-chuangyejiuye",
     name: "数据结构",
     id: "startup",
   },
   {
-    icon: "icon-a-5b5560fa46f35d0572b18d9c219238c01",
-    name: "Vue2",
-    id: "slacking",
+    icon: "icon-tuandui1",
+    name: "TypeScript",
+    id: "techType",
   },
   {
     icon: "icon-qiuzhi",
-    name: "Vue3",
+    name: "Vue",
     id: "worker",
   },
   {
@@ -90,15 +86,32 @@ const menuList = ref<any>([
     name: "小程序",
     id: "study",
   },
+  {
+    icon: "icon-xingnengyouhua",
+    name: "性能优化",
+    id: "study",
+  },
+  {
+    icon: "icon-09-jichusheshi",
+    name: "前端工程化",
+    id: "study",
+  },
+  {
+    icon: "icon-vuesax-outline-status",
+    name: "NestJs",
+    id: "study",
+  },
 ]);
 
 onMounted(() => {});
 
 const onChangeItem = (index: number, item: any) => {
   currentIndex.value = index;
+
+  emits("change", index);
 };
 </script>
 
 <style lang="scss" scoped>
-@import "./index.scss";
+@import url("./index.scss");
 </style>

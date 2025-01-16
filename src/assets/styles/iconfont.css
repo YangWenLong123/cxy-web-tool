@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 4114096 */
-  src: url('//at.alicdn.com/t/c/font_4114096_nx7wfhcj30g.woff2?t=1736229896920') format('woff2'),
-       url('//at.alicdn.com/t/c/font_4114096_nx7wfhcj30g.woff?t=1736229896920') format('woff'),
-       url('//at.alicdn.com/t/c/font_4114096_nx7wfhcj30g.ttf?t=1736229896920') format('truetype');
+  src: url('//at.alicdn.com/t/c/font_4114096_uhdg5c8br2.woff2?t=1736390636051') format('woff2'),
+       url('//at.alicdn.com/t/c/font_4114096_uhdg5c8br2.woff?t=1736390636051') format('woff'),
+       url('//at.alicdn.com/t/c/font_4114096_uhdg5c8br2.ttf?t=1736390636051') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,22 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-xingnengyouhua:before {
+  content: "\e6d1";
+}
+
+.icon-09-jichusheshi:before {
+  content: "\e70c";
+}
+
+.icon-vuesax-outline-status:before {
+  content: "\e677";
+}
+
+.icon-sousuo3:before {
+  content: "\e632";
 }
 
 .icon-signin:before {

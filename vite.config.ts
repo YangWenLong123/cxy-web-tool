@@ -3,7 +3,7 @@
  * @Autor: along
  * @Date: 2023-03-16 10:35:43
  * @LastEditors: along
- * @LastEditTime: 2023-07-09 11:21:28
+ * @LastEditTime: 2025-01-16 13:43:24
  */
 import { defineConfig, loadEnv, splitVendorChunkPlugin } from "vite";
 import vue from "@vitejs/plugin-vue";
@@ -13,6 +13,8 @@ import vueJsx from "@vitejs/plugin-vue-jsx";
 import svgLoader from "vite-svg-loader";
 import DefineOptions from "unplugin-vue-define-options/vite"; // 给标签式 setup 加 name
 import commpressPlugin from "vite-plugin-compression";
+// import AutoImport from "unplugin-auto-import/vite";
+// import { AntDesignVueResolver } from "unplugin-vue-components/resolvers";
 
 export default defineConfig((config) => {
   const { mode } = config;
@@ -24,6 +26,23 @@ export default defineConfig((config) => {
     base: "./",
     plugins: [
       vue(),
+
+      // AutoImport({
+      //   include: [/\.[tj]sx?$/, /\.vue$/, /\.vue\?vue/],
+      //   imports: ["vue", "pinia", "vue-router"],
+      //   // 调整自动引入的文件位置
+      //   dts: "./auto-import.d.ts",
+      //   // 解决自动引入eslint报错问题 需要在eslintrc的extend选项中引入
+      //   eslintrc: {
+      //     enabled: true,
+      //     // 配置文件的位置
+      //     filepath: "./.eslintrc-auto-import.json",
+      //     globalsPropValue: true,
+      //   },
+      //   // 自动导入element
+      //   resolvers: [AntDesignVueResolver()],
+      // }),
+
       DefineOptions(),
       // * vite 可以使用 jsx/tsx 语法
       vueJsx(),
@@ -50,6 +69,7 @@ export default defineConfig((config) => {
       preprocessorOptions: {
         scss: {
           javascriptEnabled: true,
+          silenceDeprecations: ["legacy-js-api"],
         },
       },
     },

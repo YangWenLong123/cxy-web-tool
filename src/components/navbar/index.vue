@@ -96,5 +96,5 @@ const opNextUrl = (record: any) => {
 </script>
 
 <style lang="scss" scoped>
-@import "./index.scss";
+@import url("./index.scss");
 </style>

@@ -3,7 +3,7 @@
  * @Description: 页面路由挂载
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2025-01-07 13:36:14
+ * @LastEditTime: 2025-01-09 10:06:52
  * @FilePath: /cxy-web-tool/src/router/modules/user.modules.ts
  */
 import type { RouteRecordRaw } from "vue-router";
@@ -53,11 +53,11 @@ const routes: RouteRecordRaw[] = [
     name: "Screenshot",
     component: () => import("@/views/screenshot/index.vue"),
   },
-  {
-    path: "/syntax",
-    name: "Syntax",
-    component: () => import("@/views/syntax/index.vue"),
-  },
+  // {
+  //   path: "/syntax",
+  //   name: "Syntax",
+  //   component: () => import("@/views/syntax/index.vue"),
+  // },
   {
     path: "/writingText",
     name: "WritingText",
