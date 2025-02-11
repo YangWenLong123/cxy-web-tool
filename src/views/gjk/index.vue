@@ -27,6 +27,10 @@ const handleSearch = (query: string) => {
     selectedCategory.value = "all";
   }
 };
+
+const getCategoryCount = (id) => {
+  return tools.filter((tool) => tool.category === id).length;
+};
 </script>
 
 <template>
@@ -40,7 +44,7 @@ const handleSearch = (query: string) => {
           :class="{ active: selectedCategory === 'all' }"
           @click="selectedCategory = 'all'"
         >
-          全部
+          全部{{ `(${tools.length})` }}
         </button>
         <button
           v-for="category in categories"
@@ -48,7 +52,7 @@ const handleSearch = (query: string) => {
           :class="{ active: selectedCategory === category.id }"
           @click="selectedCategory = category.id"
         >
-          {{ category.name }}
+          {{ category.name }}{{ `(${getCategoryCount(category.id)})` }}
         </button>
       </div>
 

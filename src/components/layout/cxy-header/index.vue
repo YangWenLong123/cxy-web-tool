@@ -3,7 +3,7 @@
  * @Description: 程序员盒子头部icon
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2025-01-16 17:43:34
+ * @LastEditTime: 2025-02-07 14:34:21
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-header/index.vue
 -->
 <template>
@@ -14,7 +14,7 @@
           <img src="http://www.alongweb.top/image/logo.svg" alt="" />
           <div class="left_title">
             <!-- <img src="@/assets/images/logo2.png" style="width: 500px" /> -->
-            程序员盒子
+            前端盒子
           </div>
         </div>
         <div class="right">
@@ -34,18 +34,43 @@
               <i class="iconfont" :class="record.icon"></i>
             </div>
           </div>
+
+          <div style="margin-left: 24px" @click="fangpao()">
+            <!-- <i
+              class="iconfont icon-chunjie-baozhu"
+              style="color: #ff0200; font-size: 28px; "
+            ></i> -->
+
+            <i
+              class="iconfont icon-xinniankuaile"
+              style="color: #ff0200; font-size: 28px; margin-right: 8px"
+            ></i>
+
+            <i
+              class="iconfont icon-baozhu"
+              style="color: #ff0200; font-size: 28px"
+            ></i>
+          </div>
           <!-- <div class="lines"></div>
           <div @click="onGitHub()">
             <i class="iconfont icon-github"></i>
           </div> -->
         </div>
       </div>
-      <div>
+      <div style="display: flex; align-items: center">
+        <a-badge :count="noticeCount">
+          <i
+            class="iconfont icon-tongzhi"
+            style="font-size: 26px; cursor: pointer"
+            @click="onNotice()"
+          ></i>
+        </a-badge>
+
         <!-- <img src="@/assets/images/photo.jpeg" alt="" class="touxiang" /> -->
         <template v-if="username">
           <a-dropdown>
             <a class="ant-dropdown-link">
-              <div class="flexRow">
+              <div class="flexRow" style="margin-left: 40px">
                 <img src="@/assets/images/pic.png" alt="" class="pic" />
                 <div style="color: #000">{{ username }}</div>
               </div>
@@ -60,24 +85,41 @@
             </template>
           </a-dropdown>
         </template>
-        <div v-else class="login" type="link" @click="onRegister()">登录</div>
+        <div
+          v-else
+          class="login"
+          type="link"
+          @click="onRegister()"
+          style="margin-left: 30px"
+        >
+          登录
+        </div>
       </div>
     </div>
   </div>
 
   <!-- 登录 -->
   <CxyLogin ref="cxyLoginRef" @refresh="getUserInfo()" />
+
+  <!-- 公告 -->
+  <Notice ref="noticeRef" />
 </template>
 
 <script lang="ts" setup>
-import { onMounted, reactive, watch, ref, nextTick } from "vue";
+import { onMounted, reactive, watch, ref, nextTick, toRefs } from "vue";
 import { usePopupStore } from "@/store/modules/popup";
 import router from "@/router";
 import { useRouter } from "vue-router";
 import CxyLogin from "@/components/login/index.vue";
 import { message } from "ant-design-vue";
+import { appCxyStore } from "@/store/modules/cxy";
+import Confetti from "@/utils/confetti";
+import Notice from "./notice.vue";
+
+const { noticeCount } = toRefs(appCxyStore());
 
 const cxyLoginRef = ref<InstanceType<typeof CxyLogin> | null>(null);
+const noticeRef = ref<InstanceType<typeof Notice> | null>(null);
 
 const username = ref<string>("");
 
@@ -116,22 +158,34 @@ const state = reactive({
     },
     {
       icon: "",
+      tooltip: "前端笔记",
+      type: "station",
+      link: "/bk",
+    },
+    {
+      icon: "",
       tooltip: "开发工具",
       type: "station",
       link: "/gjk",
     },
-    // {
-    //   icon: "",
-    //   tooltip: "语法速查表",
-    //   type: "station",
-    //   link: "/syntax",
-    // },
-    // {
-    //   icon: "",
-    //   tooltip: "摸鱼划水",
-    //   type: "station",
-    //   link: "/tc",
-    // },
+    {
+      icon: "",
+      tooltip: "语法速查",
+      type: "station",
+      link: "/syntax",
+    },
+    {
+      icon: "",
+      tooltip: "摸鱼划水",
+      type: "station",
+      link: "/tc",
+    },
+    {
+      icon: "",
+      tooltip: "盒子工具",
+      type: "station",
+      link: "/hegj",
+    },
     // {
     //   icon: "",
     //   tooltip: "面试题",
@@ -227,6 +281,11 @@ watch(
   { immediate: true }
 );
 
+const onNotice = () => {
+  appCxyStore().clearCount();
+  noticeRef.value?.preview();
+};
+
 const onGitHub = () => {
   window.location.href = "https://github.com/YangWenLong123";
 };
@@ -236,6 +295,7 @@ const opNextUrl = (record: any) => {
     window.location.href = record.link;
   } else if (record.type === "station") {
     router.push({ path: record.link });
+    appCxyStore().setReadingMode(false);
   }
 };
 
@@ -271,6 +331,10 @@ const onRegister = () => {
   // router.push({ path: "/login" });
 
   cxyLoginRef.value?.preview();
+};
+
+const fangpao = () => {
+  Confetti.init();
 };
 </script>
 

@@ -3,16 +3,26 @@
  * @Description:博客
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2025-01-16 14:33:32
+ * @LastEditTime: 2025-01-20 09:51:46
  * @FilePath: /cxy-web-tool/src/views/platform/components/Content/index.vue
 -->
 
 <script lang="ts" setup>
-import { onMounted, reactive, ref, computed } from "vue";
+import {
+  onMounted,
+  reactive,
+  ref,
+  computed,
+  defineEmits,
+  defineExpose,
+} from "vue";
 import { getPosts } from "@/api/posts";
 import moment from "moment";
 import CxyLogin from "@/components/login/index.vue";
 import { message } from "ant-design-vue";
+import { appCxyStore } from "@/store/modules/cxy";
+
+const emits = defineEmits(["set"]);
 
 const activeKey = ref<string>(0);
 const tabIndex = ref<string>("1");
@@ -52,8 +62,10 @@ const goLogin = () => {
 };
 
 const getPostData = (row) => {
-  const fullPath = window.location.origin + "/posts" + `?id=${row.id}`;
-  window.open(fullPath, "_blank");
+  appCxyStore().setReadingMode(true, row.id);
+  emits("set");
+  // const fullPath = window.location.origin + "/posts" + `?id=${row.id}`;
+  // window.open(fullPath, "_blank");
 };
 
 onMounted(() => {

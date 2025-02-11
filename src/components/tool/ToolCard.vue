@@ -16,7 +16,7 @@ defineProps<{
         </div>
         <h3>{{ tool.name }}</h3>
       </div>
-      <p>{{ tool.description }}</p>
+      <p class="description">{{ tool.description }}</p>
     </div>
     <div class="card-footer">
       <a
@@ -73,10 +73,10 @@ defineProps<{
 }
 
 .tool-icon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   background: #f8fafc;
-  width: 64px;
-  height: 64px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,5 +127,13 @@ p {
 .visit-button svg {
   width: 16px;
   height: 16px;
+}
+
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 </style>

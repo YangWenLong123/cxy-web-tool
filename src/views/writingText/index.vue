@@ -3,7 +3,7 @@
  * @Description: 写文章
  * @Date: 2024-11-13 09:05:02
  * @LastEditors: along
- * @LastEditTime: 2025-01-15 15:13:36
+ * @LastEditTime: 2025-01-17 14:22:38
  * @FilePath: /cxy-web-tool/src/views/writingText/index.vue
 -->
 <template>
@@ -174,6 +174,7 @@ const publishedArticleID = () => {
   });
 
   console.log("vditor", vditor.value.getHTML());
+  // console.log("vditor", vditor.value.getValue());
 };
 
 const customRequestMethod = (info: any) => {
@@ -204,6 +205,10 @@ const handleOk = () => {
         user_id: JSON.parse(localStorage.getItem("userInfo") || "{}")?.id,
       };
 
+      // console.log("data", vditor.value?.getValue());
+      // console.log("data", vditor.value?.getHTML());
+      // console.log("1", vditor.value?.exportJSON());
+
       createPosts(data).then(() => {
         message.success("发布成功");
         visible.value = false;
@@ -221,7 +226,7 @@ const handleOk = () => {
 onMounted(() => {
   vditor.value = new Vditor("vditor", {
     after: () => {
-      vditor.value!.setValue("");
+      vditor.value.setValue("");
     },
     mode: "sv", // sv, ir, wysiwyg
     height: "calc(100vh - 63px)",
@@ -272,6 +277,8 @@ onMounted(() => {
         style: "a11y-dark",
       },
     },
+    classes: { preview: "vditor-reset" },
+    outline: { enable: true },
 
     upload: {
       accept: ".png, .jpg, .jpeg, .gif, .bmp, .webp",

@@ -3,7 +3,7 @@
  * @Description: 图片列表
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2024-03-29 15:36:47
+ * @LastEditTime: 2025-01-20 09:52:07
  * @FilePath: /cxy-web-tool/src/views/upload/components/List/index.vue
 -->
 <template>
@@ -64,7 +64,7 @@
 
 <script lang="ts" setup>
 import { message } from "ant-design-vue";
-import { onMounted, ref, reactive } from "vue";
+import { onMounted, ref, reactive, defineExpose } from "vue";
 import { getImagesList } from "@/api/upload";
 import { v3ImgPreviewFn } from "v3-img-preview";
 import useClipboard from "vue-clipboard3";

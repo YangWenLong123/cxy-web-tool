@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2024-10-21 15:11:00
  * @LastEditors: along
- * @LastEditTime: 2025-01-09 09:11:27
+ * @LastEditTime: 2025-01-17 09:05:54
  * @FilePath: /cxy-web-tool/src/components/keyword/components/Main/config.ts
  */
 import { ref } from "vue";
@@ -1364,12 +1364,12 @@ export const study = ref<any>([
     name: "B站",
     content: "哔哩哔哩",
   },
-  {
-    icon: "https://www.yiibai.com/static/img/logo.png",
-    url: "https://www.yiibai.com/",
-    name: "易百教程",
-    content: "专注于IT教程和实例",
-  },
+  // {
+  //   icon: "https://www.yiibai.com/static/img/logo.png",
+  //   url: "https://www.yiibai.com/",
+  //   name: "易百教程",
+  //   content: "专注于IT教程和实例",
+  // },
   {
     icon: "https://www.w3school.com.cn/ui2019/logo-48-red.png",
     url: "https://www.w3school.com.cn/",

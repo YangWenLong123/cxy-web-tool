@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2025-01-13 13:39:47
  * @LastEditors: along
- * @LastEditTime: 2025-01-14 14:16:32
+ * @LastEditTime: 2025-01-23 17:18:06
  * @FilePath: /cxy-web-tool/src/views/gjk/data/dev.ts
  */
 export const devData = [
@@ -22,6 +22,15 @@ export const devData = [
     url: "https://www.cursor.com/",
     category: "dev",
     logo: "https://www.cursor.com/favicon.svg",
+  },
+  {
+    id: "2",
+    name: "Trae",
+    description:
+      "Trae 是一个自适应的 AI IDE，它可以改变您的工作方式，与您协作以更快地运行。",
+    url: "https://www.trae.ai/",
+    category: "dev",
+    logo: "https://lf-cdn.trae.ai/obj/trae-ai-us/trae_website_prod/favicon.ico",
   },
   {
     id: "3",

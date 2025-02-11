@@ -1,0 +1,92 @@
+.CxyHzgj {
+  flex: 1;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+
+  .search {
+    width: 620px;
+    margin-top: 48px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 6px;
+  }
+
+  .config {
+    width: 610px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    color: #fff;
+
+    .config-items {
+      cursor: pointer;
+      &:active {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .main {
+    flex: 1;
+    width: 1200px;
+    margin-top: 32px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    .items {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      margin-left: 39px;
+      i {
+        font-size: 48px;
+      }
+
+      .title {
+        color: #fff;
+      }
+
+      .logo {
+        width: 48px;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .no-results {
+    text-align: center;
+    padding: 4rem 0;
+    color: #fff;
+    width: 100%;
+  }
+
+  .no-results-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .no-results h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 0 0.5rem;
+  }
+
+  .no-results p {
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+
+.custom-class {
+  .ant-drawer-body {
+    padding: 0;
+  }
+}

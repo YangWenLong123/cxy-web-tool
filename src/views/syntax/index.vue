@@ -3,7 +3,7 @@
  * @Description: 程序员盒子常用工具
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2025-01-09 10:21:47
+ * @LastEditTime: 2025-01-17 17:37:27
  * @FilePath: /cxy-web-tool/src/views/syntax/index.vue
 -->
 <template>
@@ -20,14 +20,22 @@
         <div class="title">Web Box</div>
       </div> -->
 
-      <div
-        v-for="(item, i) in treeList"
-        :key="i"
-        class="border-item"
-        :style="{ color: i === currentIndex ? '#fff' : '#999' }"
-        @click="onChangeItem(i)"
-      >
-        {{ item.title }}
+      <!-- <a-input
+        v-model:value="keyword"
+        style="width: 600px; margin-top: 32px; margin-bottom: 20px"
+        size="large"
+      /> -->
+
+      <div style="display: flex; align-items: center; justify-content: center">
+        <div
+          v-for="(item, i) in treeList"
+          :key="i"
+          class="category-item"
+          :class="{ actives: selectedCategory === item.title }"
+          @click="onChangeItem(item, i)"
+        >
+          {{ item.icon }} {{ item.title }}
+        </div>
       </div>
     </div>
 
@@ -75,6 +83,9 @@ import { CSS } from "./config/css";
 import { NodeJs } from "./config/NodeJs";
 import { Python } from "./config/Python";
 
+const keyword = ref("");
+const selectedCategory = ref("JavaScript");
+
 const currentIndex = ref<number>(0);
 
 const backgroundList = ref<Array>([
@@ -97,26 +108,32 @@ const treeList = ref([
   {
     title: "JavaScript",
     children: [...javascript],
+    icon: "🐶",
   },
   {
     title: "Jquery",
     children: [...jquery],
+    icon: "🐱",
   },
   {
     title: "HTML",
     children: [...HTML],
+    icon: "🐷",
   },
   {
     title: "CSS",
     children: [...CSS],
+    icon: "🐑",
   },
   {
     title: "NodeJs",
     children: [...NodeJs],
+    icon: "🐮",
   },
   {
     title: "Python",
     children: [...Python],
+    icon: "🐯",
   },
 ]);
 
@@ -144,7 +161,7 @@ const initMasonry = () => {
     const leftMargin = columnIndex * columnWidth;
     const topMargin = minColumnHeight + 10;
     item.style.position = "absolute";
-    item.style.left = `${leftMargin + 20}px`;
+    item.style.left = `${leftMargin + 50}px`;
     item.style.top = `${topMargin}px`;
     columnHeights[columnIndex] += item.offsetHeight + 10;
   });
@@ -152,7 +169,8 @@ const initMasonry = () => {
   getItemHeight();
 };
 
-const onChangeItem = (i) => {
+const onChangeItem = (item, i) => {
+  selectedCategory.value = item.title;
   currentIndex.value = i;
 
   nextTick(() => {

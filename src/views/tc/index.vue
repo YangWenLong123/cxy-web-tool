@@ -2,9 +2,14 @@
 import { ref, computed } from "vue";
 import { contentData, categories } from "./content";
 import type { ContentItem, Category } from "./types";
+import News from "./news.vue";
 
 const searchQuery = ref("");
-const selectedCategory = ref("");
+const selectedCategory = ref("news");
+
+const visible = ref<boolean>(false);
+const title = ref<string>("");
+const url = ref<string>("");
 
 const filteredContent = computed(() => {
   let filtered = contentData;
@@ -29,6 +34,13 @@ const filteredContent = computed(() => {
 const selectCategory = (categoryId: string) => {
   selectedCategory.value =
     selectedCategory.value === categoryId ? "" : categoryId;
+};
+
+const previewContent = (item: ContentItem) => {
+  console.log("Previewing content:", item);
+  title.value = item.title;
+  url.value = item.url;
+  visible.value = true;
 };
 </script>
 
@@ -60,28 +72,65 @@ const selectCategory = (categoryId: string) => {
       </div>
     </header>
 
-    <!-- <main class="container">
-      <div class="content-grid">
-        <div
-          v-for="item in filteredContent"
-          :key="item.id"
-          class="content-card"
-        >
-          <h3 class="content-titles">{{ item.title }}</h3>
-          <p class="content-description">{{ item.description }}</p>
-          <div class="content-meta">
-            <span>{{
-              categories.find((c) => c.id === item.category)?.name
-            }}</span>
-            <span>{{ item.timestamp }}</span>
+    <main class="container">
+      <template v-if="['news'].includes(selectedCategory)">
+        <News v-if="selectedCategory === 'news'" />
+      </template>
+      <template v-else>
+        <div class="content-grid" v-if="filteredContent.length">
+          <div
+            v-for="item in filteredContent"
+            :key="item.id"
+            class="content-card"
+            @click="previewContent(item)"
+          >
+            <h3 class="content-titles">{{ item.title }}</h3>
+            <p class="content-description">{{ item.description }}</p>
+            <div class="content-meta">
+              <span>{{
+                categories.find((c) => c.id === item.category)?.name
+              }}</span>
+              <span>{{ item.timestamp }}</span>
+            </div>
           </div>
         </div>
-      </div>
-    </main> -->
+
+        <div v-if="filteredContent.length === 0" class="no-results">
+          <div class="no-results-icon">🔍</div>
+          <h3>未找到匹配的数据</h3>
+          <p>试试其他关键词或者浏览其他分类</p>
+        </div>
+      </template>
+    </main>
   </div>
+
+  <a-drawer
+    v-model:visible="visible"
+    class="custom-class"
+    :width="'100%'"
+    style="color: red"
+    :title="title"
+    :keyboard="false"
+    :destroyOnClose="true"
+    :maskClosable="false"
+    placement="right"
+  >
+    <iframe
+      v-if="url"
+      :src="url"
+      frameborder="0"
+      width="100%"
+      height="99%"
+    ></iframe>
+  </a-drawer>
 </template>
 
 <style lang="scss">
+.custom-class {
+  .ant-drawer-body {
+    padding: 0;
+  }
+}
 :root {
   --primary-color: #6a8a82;
   --secondary-color: #ffffff;
@@ -137,6 +186,7 @@ body {
   gap: 1rem;
   flex-wrap: wrap;
   margin: 1rem 0;
+  justify-content: center;
 }
 
 .category-item {
@@ -164,6 +214,7 @@ body {
   border-radius: 8px;
   padding: 1rem;
   transition: transform 0.3s;
+  cursor: pointer;
 }
 
 .content-card:hover {
@@ -192,5 +243,27 @@ body {
 
 .actives {
   background-color: var(--hover-color);
+}
+
+.no-results {
+  text-align: center;
+  padding: 4rem 0;
+  color: #64748b;
+}
+
+.no-results-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.no-results h3 {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin: 0 0 0.5rem;
+}
+
+.no-results p {
+  font-size: 1rem;
+  margin: 0;
 }
 </style>

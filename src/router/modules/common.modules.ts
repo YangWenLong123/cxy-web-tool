@@ -3,7 +3,7 @@
  * @Description: 路由配置
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2025-01-16 14:33:49
+ * @LastEditTime: 2025-02-06 16:13:06
  * @FilePath: /cxy-web-tool/src/router/modules/common.modules.ts
  */
 import type { RouteRecordRaw } from "vue-router";
@@ -100,6 +100,19 @@ const routes: RouteRecordRaw[] = [
         name: "dm",
         component: () => import("@/views/dm/index.vue"),
       },
+
+      {
+        path: "/hegj",
+        name: "hegj",
+        component: () => import("@/views/hegj/index.vue"),
+      },
+
+      {
+        path: "/bk",
+        name: "bk",
+        component: () => import("@/views/bk/index.vue"),
+      },
+
       {
         path: "/category/:categoryId",
         component: QuestionList,
