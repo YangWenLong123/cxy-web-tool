@@ -3,7 +3,7 @@
  * @Description: 
  * @Date: 2025-01-22 17:33:00
  * @LastEditors: along
- * @LastEditTime: 2025-02-10 14:03:46
+ * @LastEditTime: 2025-02-17 16:41:18
  * @FilePath: /cxy-web-tool/src/views/hegj/index.vue
 -->
 <script lang="ts" setup>
@@ -64,7 +64,7 @@ const contentData = ref([
   },
   {
     id: 5,
-    title: "调色板",
+    title: "Color Palette",
     description: "调色板工具",
     url: "http://43.143.65.230/07/index.html",
     logo: "http://cdn.alongweb.top/bg/tsb.png",

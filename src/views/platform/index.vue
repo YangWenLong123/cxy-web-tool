@@ -3,21 +3,9 @@
  * @Description:博客
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2025-01-17 10:28:13
+ * @LastEditTime: 2025-02-12 15:30:42
  * @FilePath: /cxy-web-tool/src/views/platform/index.vue
 -->
-<template>
-  <div class="CxyBoKe">
-    <div style="display: flex" v-show="!readingMode">
-      <CxyMenu ref="cxyMenuRef" @change="changeIndex" />
-      <CxyMain ref="cxyMainRef" @set="setPostId" />
-      <CxySide />
-    </div>
-    <div v-show="readingMode">
-      <PostsReading ref="postsReadingRef" :id="postId" />
-    </div>
-  </div>
-</template>
 
 <script lang="ts" setup>
 import { ref, onMounted, reactive, nextTick } from "vue";
@@ -27,6 +15,8 @@ import CxySide from "./components/Side/index.vue";
 import { appCxyStore } from "@/store/modules/cxy";
 import { storeToRefs } from "pinia";
 import PostsReading from "@/views/posts/index.vue";
+
+const spinning = ref(false);
 
 const { readingMode } = storeToRefs(appCxyStore());
 
@@ -43,8 +33,35 @@ const setPostId = () => {
   });
 };
 
+const showloading = () => {
+  spinning.value = true;
+};
+
+const hideloading = () => {
+  spinning.value = false;
+};
+
 onMounted(() => {});
 </script>
+
+<template>
+  <div class="CxyBoKe">
+    <a-spin :spinning="spinning">
+      <div style="display: flex" v-show="!readingMode">
+        <CxyMenu ref="cxyMenuRef" @change="changeIndex" />
+        <CxyMain ref="cxyMainRef" @set="setPostId" @showloading="showloading" />
+        <CxySide />
+      </div>
+      <div v-show="readingMode">
+        <PostsReading
+          ref="postsReadingRef"
+          :id="postId"
+          @hideloading="hideloading"
+        />
+      </div>
+    </a-spin>
+  </div>
+</template>
 
 <style lang="scss">
 @import url("./index.scss");

@@ -3,7 +3,7 @@
  * @Description: 
  * @Date: 2024-10-21 10:56:20
  * @LastEditors: along
- * @LastEditTime: 2024-10-24 13:04:20
+ * @LastEditTime: 2025-02-17 13:29:46
  * @FilePath: /cxy-web-tool/src/components/keyword/components/Menu/index.vue
 -->
 <template>
@@ -35,6 +35,31 @@ const currentIndex = ref<number>(0);
 const isFixed = ref<boolean>(false);
 
 const menuList = ref<any>([
+  {
+    icon: "icon-zonghe",
+    name: "程序员盒子",
+    id: "itemBox",
+  },
+  {
+    icon: "icon-zonghe",
+    name: "程序员箱子",
+    id: "itemBox",
+  },
+  {
+    icon: "icon-zonghe",
+    name: "盒子",
+    id: "itemBox",
+  },
+  {
+    icon: "icon-zonghe",
+    name: "箱子",
+    id: "itemBox",
+  },
+  {
+    icon: "icon-zonghe",
+    name: "程序员箱子",
+    id: "itemBox",
+  },
   {
     icon: "icon-zonghe",
     name: "综合",

@@ -3,6 +3,7 @@ import { ref, computed } from "vue";
 import { contentData, categories } from "./content";
 import type { ContentItem, Category } from "./types";
 import News from "./news.vue";
+import News2 from "./news2.vue";
 
 const searchQuery = ref("");
 const selectedCategory = ref("news");
@@ -72,33 +73,39 @@ const previewContent = (item: ContentItem) => {
       </div>
     </header>
 
-    <main class="container">
+    <main>
       <template v-if="['news'].includes(selectedCategory)">
         <News v-if="selectedCategory === 'news'" />
       </template>
+
+      <template v-if="['tech'].includes(selectedCategory)">
+        <News2 v-if="selectedCategory === 'tech'" />
+      </template>
       <template v-else>
-        <div class="content-grid" v-if="filteredContent.length">
-          <div
-            v-for="item in filteredContent"
-            :key="item.id"
-            class="content-card"
-            @click="previewContent(item)"
-          >
-            <h3 class="content-titles">{{ item.title }}</h3>
-            <p class="content-description">{{ item.description }}</p>
-            <div class="content-meta">
-              <span>{{
-                categories.find((c) => c.id === item.category)?.name
-              }}</span>
-              <span>{{ item.timestamp }}</span>
+        <div class="container">
+          <div class="content-grid" v-if="filteredContent.length">
+            <div
+              v-for="item in filteredContent"
+              :key="item.id"
+              class="content-card"
+              @click="previewContent(item)"
+            >
+              <h3 class="content-titles">{{ item.title }}</h3>
+              <p class="content-description">{{ item.description }}</p>
+              <div class="content-meta">
+                <span>{{
+                  categories.find((c) => c.id === item.category)?.name
+                }}</span>
+                <span>{{ item.timestamp }}</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div v-if="filteredContent.length === 0" class="no-results">
-          <div class="no-results-icon">🔍</div>
-          <h3>未找到匹配的数据</h3>
-          <p>试试其他关键词或者浏览其他分类</p>
+          <div v-if="filteredContent.length === 0" class="no-results">
+            <div class="no-results-icon">🔍</div>
+            <h3>未找到匹配的数据</h3>
+            <p>试试其他关键词或者浏览其他分类</p>
+          </div>
         </div>
       </template>
     </main>
@@ -126,6 +133,10 @@ const previewContent = (item: ContentItem) => {
 </template>
 
 <style lang="scss">
+.appTc {
+  height: 100vh;
+  overflow-x: hidden;
+}
 .custom-class {
   .ant-drawer-body {
     padding: 0;

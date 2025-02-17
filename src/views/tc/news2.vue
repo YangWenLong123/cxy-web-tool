@@ -1,14 +1,13 @@
 <script lang="ts" setup>
 import { ref, onMounted } from "vue";
-import { weibo, juejin, toutiao, baidu, zhihu } from "@/api/news";
-import { message } from "ant-design-vue";
+import { juejin, sifou, bokeyuan, gitee } from "@/api/news";
 
 const isH5 = ref(window.innerWidth < 768);
 
 const newsList = ref<any[]>([]);
-const zhihuList = ref<any[]>([]);
-const touTiaoList = ref<any[]>([]);
-const baiDuList = ref<any[]>([]);
+const newsList2 = ref<any[]>([]);
+const newsList3 = ref<any[]>([]);
+const newsList4 = ref<any[]>([]);
 
 const spinning = ref(true);
 const spinning2 = ref(true);
@@ -16,69 +15,60 @@ const spinning3 = ref(true);
 const spinning4 = ref(true);
 
 const getNewsList = async (type: any) => {
-  if (type === "weibo" || !type) {
-    const re = await weibo({});
+  if (type === "juejin" || !type) {
+    const re = await juejin({});
     newsList.value = re ?? [];
     spinning.value = false;
   }
 
-  if (type === "zhihu" || !type) {
-    const re = await zhihu({});
-    zhihuList.value = re;
+  if (type === "sifou" || !type) {
+    const re = await sifou({});
+    newsList2.value = re ?? [];
     spinning2.value = false;
   }
 
-  if (type === "toutiao" || !type) {
-    const re = await toutiao({});
-    touTiaoList.value = re;
+  if (type === "bokeyuan" || !type) {
+    const re = await bokeyuan({});
+    newsList3.value = re ?? [];
     spinning3.value = false;
   }
 
-  if (type === "baidu" || !type) {
-    const re = await baidu({});
-    baiDuList.value = re;
+  if (type === "gitee" || !type) {
+    const re = await gitee({});
+    newsList4.value = re ?? [];
     spinning4.value = false;
   }
 };
 
 const getModeForUsageLocation = (item) => {
-  if (item.type === "weibo") {
-    window.open(
-      `https://s.weibo.com/weibo?q=%23${encodeURI(item.note)}%23&band_rank=${
-        item.rank
-      }&Refer=top`,
-      "_blank"
-    );
-  } else if (["zhihu", "toutiao", "baidu"].includes(item.type)) {
-    window.open(item.href);
-  }
+  window.open(item.href);
 };
 
 const refrsh = (type) => {
   switch (type) {
-    case "weibo":
+    case "juejin":
       spinning.value = true;
       getNewsList(type);
       break;
-    case "zhihu":
+    case "sifou":
       spinning2.value = true;
       getNewsList(type);
       break;
-    case "toutiao":
+    case "bokeyuan":
       spinning3.value = true;
       getNewsList(type);
       break;
-    case "baidu":
+    case "gitee":
       spinning4.value = true;
       getNewsList(type);
       break;
   }
 };
 
-getNewsList("weibo");
-getNewsList("zhihu");
-getNewsList("toutiao");
-getNewsList("baidu");
+getNewsList("juejin");
+getNewsList("sifou");
+getNewsList("bokeyuan");
+getNewsList("gitee");
 </script>
 
 <template>
@@ -95,16 +85,16 @@ getNewsList("baidu");
         <div></div>
         <div style="color: rgb(48, 49, 51)">
           <img
-            src="@/assets/images/weibo.png"
+            src="@/assets/images/juejin.png"
             alt=""
             style="width: 22px; margin-right: 6px"
           />
-          <span>微博热搜榜</span>
+          <span>掘金热搜榜</span>
         </div>
         <i
           style="color: rgb(48, 49, 51)"
           class="iconfont icon-shuaxin"
-          @click="refrsh('weibo')"
+          @click="refrsh('juejin')"
         ></i>
       </div>
 
@@ -112,74 +102,6 @@ getNewsList("baidu");
         <div class="wb_content">
           <div
             v-for="(item, index) in newsList"
-            :key="index"
-            class="wb_item"
-            @click="getModeForUsageLocation(item)"
-          >
-            <div class="flex">
-              <div
-                class="number"
-                :style="{
-                  color:
-                    index === 0
-                      ? '#fadb14'
-                      : index == 1
-                      ? '#a9a9a9'
-                      : index == 2
-                      ? '#d48806'
-                      : '#7a7a7a',
-                }"
-              >
-                {{ index + 1 }}
-              </div>
-              <div class="note" style="color: #495060">{{ item.note }}</div>
-            </div>
-
-            <div class="flex">
-              <div
-                v-if="item.flag_desc"
-                style="margin-right: 4px; color: #7a7a7a"
-              >
-                {{ item.flag_desc }}
-              </div>
-              <div class="hot-text" style="color: #7a7a7a">
-                {{ (item.num / 10000).toFixed(2) }}万
-              </div>
-            </div>
-          </div>
-        </div>
-      </a-spin>
-    </div>
-
-    <div
-      class="wb"
-      :style="{
-        width: isH5 ? '100%' : '24%',
-        marginLeft: isH5 ? '0' : '15px',
-        marginBottom: isH5 ? '15px' : '0',
-      }"
-    >
-      <div class="wb_head flex">
-        <div></div>
-        <div style="color: rgb(48, 49, 51)">
-          <img
-            src="@/assets/images/zhihu.png"
-            alt=""
-            style="width: 22px; margin-right: 6px"
-          />
-          <span>知乎热搜榜</span>
-        </div>
-        <i
-          style="color: rgb(48, 49, 51)"
-          class="iconfont icon-shuaxin"
-          @click="refrsh('zhihu')"
-        ></i>
-      </div>
-
-      <a-spin :spinning="spinning2" tip="正在努力的爬取数据...">
-        <div class="wb_content">
-          <div
-            v-for="(item, index) in zhihuList"
             :key="index"
             class="wb_item"
             @click="getModeForUsageLocation(item)"
@@ -225,23 +147,23 @@ getNewsList("baidu");
         <div></div>
         <div style="color: rgb(48, 49, 51)">
           <img
-            src="@/assets/images/toutiao.png"
+            src="@/assets/images/sifou.png"
             alt=""
             style="width: 22px; margin-right: 6px"
           />
-          <span>头条热搜榜</span>
+          <span>思否热搜榜</span>
         </div>
         <i
           style="color: rgb(48, 49, 51)"
           class="iconfont icon-shuaxin"
-          @click="refrsh('toutiao')"
+          @click="refrsh('sifou')"
         ></i>
       </div>
 
-      <a-spin :spinning="spinning3" tip="正在努力的爬取数据...">
+      <a-spin :spinning="spinning2" tip="正在努力的爬取数据...">
         <div class="wb_content">
           <div
-            v-for="(item, index) in touTiaoList"
+            v-for="(item, index) in newsList2"
             :key="index"
             class="wb_item"
             @click="getModeForUsageLocation(item)"
@@ -265,7 +187,11 @@ getNewsList("baidu");
               <div class="note" style="color: #495060">{{ item.note }}</div>
             </div>
 
-            <div class="flex"></div>
+            <div class="flex" v-if="item.num">
+              <div class="hot-text" style="color: #7a7a7a">
+                {{ item.num }}热度
+              </div>
+            </div>
           </div>
         </div>
       </a-spin>
@@ -283,23 +209,23 @@ getNewsList("baidu");
         <div></div>
         <div style="color: rgb(48, 49, 51)">
           <img
-            src="@/assets/images/baidu.png"
+            src="@/assets/images/bokeyuan.png"
             alt=""
             style="width: 22px; margin-right: 6px"
           />
-          <span>百度热搜榜</span>
+          <span>博客园热搜榜</span>
         </div>
         <i
           style="color: rgb(48, 49, 51)"
           class="iconfont icon-shuaxin"
-          @click="refrsh('baidu')"
+          @click="refrsh('bokeyuan')"
         ></i>
       </div>
 
-      <a-spin :spinning="spinning4" tip="正在努力的爬取数据...">
+      <a-spin :spinning="spinning3" tip="正在努力的爬取数据...">
         <div class="wb_content">
           <div
-            v-for="(item, index) in baiDuList"
+            v-for="(item, index) in newsList3"
             :key="index"
             class="wb_item"
             @click="getModeForUsageLocation(item)"
@@ -323,7 +249,73 @@ getNewsList("baidu");
               <div class="note" style="color: #495060">{{ item.note }}</div>
             </div>
 
-            <div class="flex"></div>
+            <div class="flex" v-if="item.num">
+              <div class="hot-text" style="color: #7a7a7a">
+                {{ item.num }}热度
+              </div>
+            </div>
+          </div>
+        </div>
+      </a-spin>
+    </div>
+
+    <div
+      class="wb"
+      :style="{
+        width: isH5 ? '100%' : '24%',
+        marginLeft: isH5 ? '0' : '15px',
+        marginBottom: isH5 ? '15px' : '0',
+      }"
+    >
+      <div class="wb_head flex">
+        <div></div>
+        <div style="color: rgb(48, 49, 51)">
+          <img
+            src="@/assets/images/gitee.png"
+            alt=""
+            style="width: 22px; margin-right: 6px"
+          />
+          <span>gitee热搜榜</span>
+        </div>
+        <i
+          style="color: rgb(48, 49, 51)"
+          class="iconfont icon-shuaxin"
+          @click="refrsh('gitee')"
+        ></i>
+      </div>
+
+      <a-spin :spinning="spinning4" tip="正在努力的爬取数据...">
+        <div class="wb_content">
+          <div
+            v-for="(item, index) in newsList4"
+            :key="index"
+            class="wb_item"
+            @click="getModeForUsageLocation(item)"
+          >
+            <div class="flex">
+              <div
+                class="number"
+                :style="{
+                  color:
+                    index === 0
+                      ? '#fadb14'
+                      : index == 1
+                      ? '#a9a9a9'
+                      : index == 2
+                      ? '#d48806'
+                      : '#7a7a7a',
+                }"
+              >
+                {{ index + 1 }}
+              </div>
+              <div class="note" style="color: #495060">{{ item.note }}</div>
+            </div>
+
+            <div class="flex" v-if="item.num">
+              <div class="hot-text" style="color: #7a7a7a">
+                {{ item.num }}热度
+              </div>
+            </div>
           </div>
         </div>
       </a-spin>

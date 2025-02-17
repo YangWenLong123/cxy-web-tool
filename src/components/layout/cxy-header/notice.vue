@@ -3,7 +3,7 @@
  * @Description: 
  * @Date: 2025-01-23 09:47:33
  * @LastEditors: along
- * @LastEditTime: 2025-01-23 10:25:25
+ * @LastEditTime: 2025-02-12 11:35:45
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-header/notice.vue
 -->
 <script lang="ts" setup>
@@ -66,6 +66,12 @@ defineExpose({
       <a-timeline-item>
         <a-card>
           <div>2024-01-23 - 新增新年快乐烟花功能</div>
+        </a-card>
+      </a-timeline-item>
+
+      <a-timeline-item>
+        <a-card>
+          <div>2024-02-12 - 新增微博热搜、优化博客预览</div>
         </a-card>
       </a-timeline-item>
 

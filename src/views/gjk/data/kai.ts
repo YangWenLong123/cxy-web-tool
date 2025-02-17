@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2025-01-13 13:39:47
  * @LastEditors: along
- * @LastEditTime: 2025-02-11 14:37:36
+ * @LastEditTime: 2025-02-17 17:01:52
  * @FilePath: /cxy-web-tool/src/views/gjk/data/kai.ts
  */
 export const kaiData = [
@@ -15,14 +15,6 @@ export const kaiData = [
     url: "https://github.com/apps/desktop",
     category: "kaifa",
     logo: "https://github.com/fluidicon.png",
-  },
-  {
-    id: "2",
-    name: "uTools",
-    description: "呼之即来，即用即走，打造你的个人效率助理",
-    url: "https://www.u-tools.cn/index.html",
-    category: "kaifa",
-    logo: "https://res.u-tools.cn/website5/static/assets/favicon.png",
   },
   {
     id: "2",

@@ -3,7 +3,7 @@
  * @Description: 
  * @Date: 2025-01-16 14:30:45
  * @LastEditors: along
- * @LastEditTime: 2025-01-20 09:51:59
+ * @LastEditTime: 2025-02-12 15:29:47
  * @FilePath: /cxy-web-tool/src/views/posts/index.vue
 -->
 <script lang="ts" setup>
@@ -14,6 +14,8 @@ import { storeToRefs } from "pinia";
 import { isMorningOrAfternoon } from "@/utils/index";
 
 const { postId } = storeToRefs(appCxyStore());
+
+const emits = defineEmits(["hideloading"]);
 
 // import "highlight.js/styles/monokai-sublime.css";
 import "highlight.js/styles/a11y-dark.css";
@@ -33,11 +35,14 @@ const getData = () => {
       blocks.forEach((block) => {
         his.highlightAll(block);
       });
+
+      emits("hideloading");
     });
   });
 };
 
 const onArticleContent = () => {
+  postInfo.value = "";
   appCxyStore().setReadingMode(false);
 };
 
@@ -55,7 +60,7 @@ defineExpose({
     <div
       id="vditor"
       language="javascript"
-      class="postWrap vditor-reset"
+      class="postWrap vditor-reset markdown-body"
       v-html="postInfo.content"
     ></div>
     <!--  -->
@@ -72,7 +77,7 @@ defineExpose({
 <style lang="scss">
 .postMain {
   width: 1200px;
-  margin: 1% auto;
+  margin: 0 auto;
   display: flex;
 
   .postWrap {
@@ -91,7 +96,7 @@ defineExpose({
     padding: 20px;
     height: 90px;
     position: fixed;
-    top: 84px;
+    top: 70px;
     right: calc((100vw - 1200px) / 2);
     width: 256px;
     display: flex;
@@ -145,6 +150,10 @@ defineExpose({
     max-width: 800px;
     margin-left: 50%;
     transform: translateX(-50%);
+  }
+
+  pre code {
+    background-color: rgb(43, 43, 43) !important;
   }
 }
 </style>

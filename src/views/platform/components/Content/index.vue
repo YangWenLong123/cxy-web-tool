@@ -3,7 +3,7 @@
  * @Description:博客
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2025-01-20 09:51:46
+ * @LastEditTime: 2025-02-12 15:33:39
  * @FilePath: /cxy-web-tool/src/views/platform/components/Content/index.vue
 -->
 
@@ -22,7 +22,7 @@ import CxyLogin from "@/components/login/index.vue";
 import { message } from "ant-design-vue";
 import { appCxyStore } from "@/store/modules/cxy";
 
-const emits = defineEmits(["set"]);
+const emits = defineEmits(["set", "showloading"]);
 
 const activeKey = ref<string>(0);
 const tabIndex = ref<string>("1");
@@ -62,6 +62,7 @@ const goLogin = () => {
 };
 
 const getPostData = (row) => {
+  emits("showloading");
   appCxyStore().setReadingMode(true, row.id);
   emits("set");
   // const fullPath = window.location.origin + "/posts" + `?id=${row.id}`;
@@ -104,7 +105,7 @@ defineExpose({
             <div class="info">
               <div class="auth">{{ item.author }}</div>
               <div class="create_time">
-                {{ moment(item.create_time).format("YYY-MM-DD HH:mm:ss") }}
+                {{ moment(item.create_time).format("YYYY-MM-DD HH:mm:ss") }}
               </div>
             </div>
           </div>

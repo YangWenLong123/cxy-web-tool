@@ -3,16 +3,24 @@
  * @Description: axios配置
  * @Date: 2023-06-10 21:26:46
  * @LastEditors: along
- * @LastEditTime: 2025-01-15 10:31:08
+ * @LastEditTime: 2025-02-17 09:20:02
  * @FilePath: /cxy-web-tool/src/utils/request.ts
  */
 import { message } from "ant-design-vue";
 import axios from "axios";
+// import { setupCache } from "axios-cache-interceptor";
 
 console.log(import.meta.env);
+
 const request = axios.create({
   baseURL: import.meta.env.VITE_APP_BASE_API,
+  timeout: 500000,
 });
+
+// const request = setupCache(instance, {
+//   ttl: 60 * 60 * 1000, // 缓存时间为 1 小时（单位：毫秒）
+//   methods: ["get"], // 只缓存 GET 请求
+// });
 
 // 添加请求拦截器
 request.interceptors.request.use(

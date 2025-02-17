@@ -3,7 +3,7 @@
  * @Description: 程序员盒子头部icon
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2025-02-07 14:34:21
+ * @LastEditTime: 2025-02-17 13:27:35
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-header/index.vue
 -->
 <template>
@@ -12,10 +12,22 @@
       <div class="flex">
         <div class="left" @click="onGoHome()">
           <img src="http://www.alongweb.top/image/logo.svg" alt="" />
-          <div class="left_title">
+          <h1 class="left_title" style="margin: 0; display: none">
             <!-- <img src="@/assets/images/logo2.png" style="width: 500px" /> -->
-            前端盒子
-          </div>
+            程序员盒子
+          </h1>
+          <h2 class="left_title" style="margin: 0; display: none">
+            <!-- <img src="@/assets/images/logo2.png" style="width: 500px" /> -->
+            程序员盒子
+          </h2>
+          <h3 class="left_title" style="margin: 0; display: none">
+            <!-- <img src="@/assets/images/logo2.png" style="width: 500px" /> -->
+            程序员盒子
+          </h3>
+          <h4 class="left_title" style="margin-bottom: 0">
+            <!-- <img src="@/assets/images/logo2.png" style="width: 500px" /> -->
+            程序员箱子
+          </h4>
         </div>
         <div class="right">
           <div
@@ -25,12 +37,13 @@
             @click="opNextUrl(record)"
           >
             <div class="item">
-              <div
+              <h3
                 class="item_text"
                 :class="path === record.link ? 'active' : ''"
+                style="margin-bottom: 0px; font-weight: 400"
               >
                 {{ record.tooltip }}
-              </div>
+              </h3>
               <i class="iconfont" :class="record.icon"></i>
             </div>
           </div>
@@ -58,7 +71,7 @@
         </div>
       </div>
       <div style="display: flex; align-items: center">
-        <a-badge :count="noticeCount">
+        <a-badge :count="noticeCount2">
           <i
             class="iconfont icon-tongzhi"
             style="font-size: 26px; cursor: pointer"
@@ -116,7 +129,7 @@ import { appCxyStore } from "@/store/modules/cxy";
 import Confetti from "@/utils/confetti";
 import Notice from "./notice.vue";
 
-const { noticeCount } = toRefs(appCxyStore());
+const { noticeCount2 } = toRefs(appCxyStore());
 
 const cxyLoginRef = ref<InstanceType<typeof CxyLogin> | null>(null);
 const noticeRef = ref<InstanceType<typeof Notice> | null>(null);
@@ -158,7 +171,7 @@ const state = reactive({
     },
     {
       icon: "",
-      tooltip: "前端笔记",
+      tooltip: "技术笔记",
       type: "station",
       link: "/bk",
     },
