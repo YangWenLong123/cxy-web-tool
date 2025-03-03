@@ -28,7 +28,7 @@ defineExpose({
   <a-drawer
     v-model:visible="visible"
     :width="720"
-    title="程序员盒子公告"
+    title="程序员箱子公告"
     placement="right"
     class="noticeDeawer"
   >
@@ -36,7 +36,7 @@ defineExpose({
       <a-timeline-item>
         <a-card>
           <p class="ant-typography-title">
-            欢迎来到程序员盒子！🎉
+            欢迎来到程序员箱子！🎉
             这里是专为开发者打造的一站式服务平台，汇聚了海量的优质开发工具、前沿技术资讯、高效在线工具箱以及丰富的社区资源。无论你是初入编程领域的新人，还是经验丰富的技术大牛，都能在这里找到属于你的宝藏。
           </p>
 
@@ -53,7 +53,7 @@ defineExpose({
 
       <a-timeline-item>
         <a-card>
-          <div>2024-01-22 - 程序员盒子V1.0版本正式发布</div>
+          <div>2024-01-22 - 程序员箱子V1.0版本正式发布</div>
           <div>1、首页</div>
           <div>2、博客</div>
           <div>3、开发工具</div>

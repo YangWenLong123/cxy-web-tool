@@ -95,7 +95,7 @@ defineExpose({
     @cancel="close"
   >
     <div class="loginBox">
-      <div class="title">程序员盒子{{ type === 1 ? "登录" : "注册" }}</div>
+      <div class="title">程序员箱子{{ type === 1 ? "登录" : "注册" }}</div>
 
       <a-form
         :model="formState"

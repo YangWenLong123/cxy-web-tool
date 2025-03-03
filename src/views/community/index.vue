@@ -1,6 +1,6 @@
 <!--
  * @Author: along
- * @Description: 程序员盒子技术社区
+ * @Description: 程序员箱子技术社区
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
  * @LastEditTime: 2024-07-25 14:25:30

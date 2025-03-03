@@ -3,7 +3,7 @@
  * @Autor: along
  * @Date: 2023-03-16 10:35:43
  * @LastEditors: along
- * @LastEditTime: 2025-02-26 11:21:09
+ * @LastEditTime: 2025-03-03 14:59:05
  */
 import { defineConfig, loadEnv, splitVendorChunkPlugin } from "vite";
 import vue from "@vitejs/plugin-vue";
@@ -13,6 +13,7 @@ import vueJsx from "@vitejs/plugin-vue-jsx";
 import svgLoader from "vite-svg-loader";
 import DefineOptions from "unplugin-vue-define-options/vite"; // 给标签式 setup 加 name
 import commpressPlugin from "vite-plugin-compression";
+
 // import AutoImport from "unplugin-auto-import/vite";
 // import { AntDesignVueResolver } from "unplugin-vue-components/resolvers";
 

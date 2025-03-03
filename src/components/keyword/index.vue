@@ -1,6 +1,6 @@
 <!--
  * @Author: along
- * @Description: 程序员盒子搜索组件
+ * @Description: 程序员箱子搜索组件
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
  * @LastEditTime: 2024-10-22 10:06:18
@@ -50,7 +50,7 @@
         </div>
         <a-input
           v-model:value="state.value"
-          placeholder="程序员盒子，内容搜索、更快、更方便"
+          placeholder="程序员箱子，内容搜索、更快、更方便"
           @pressEnter="searchKeyword(state.value)"
           @change="changeValue()"
           id="cxyInput"

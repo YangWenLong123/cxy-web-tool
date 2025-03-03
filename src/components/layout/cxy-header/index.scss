@@ -141,3 +141,19 @@
     }
   }
 }
+
+.blackHeader {
+  background-color: #242424;
+  border-bottom: 1px #313535 solid !important;
+  h4,
+  h3,
+  a,
+  div,
+  i {
+    color: hsla(0, 0%, 100%, 0.85) !important;
+  }
+
+  .active {
+    color: #12a272 !important;
+  }
+}

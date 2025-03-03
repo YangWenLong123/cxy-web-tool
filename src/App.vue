@@ -1,6 +1,6 @@
 <!--
  * @Author: along
- * @Description: 程序员盒子网站页面总入口
+ * @Description: 程序员箱子网站页面总入口
  * @Date: 2023-05-31 10:31:46
  * @LastEditors: along
  * @LastEditTime: 2025-03-03 09:50:04

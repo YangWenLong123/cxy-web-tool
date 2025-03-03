@@ -1,13 +1,16 @@
 <!--
  * @Author: along
- * @Description: 程序员盒子头部icon
+ * @Description: 程序员箱子头部icon
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2025-03-03 10:07:38
+ * @LastEditTime: 2025-03-03 14:27:03
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-header/index.vue
 -->
 <template>
-  <div class="cxyHeaderComponents_top">
+  <div
+    class="cxyHeaderComponents_top"
+    :class="[path === '/dm' ? 'blackHeader' : '']"
+  >
     <div class="cxyHeaderComponents">
       <div class="flex">
         <div class="left" @click="onGoHome()">
@@ -35,6 +38,27 @@
         </div>
       </div>
       <div style="display: flex; align-items: center">
+        <a-dropdown>
+          <a
+            class="ant-dropdown-link"
+            @click.prevent
+            style="margin-right: 24px; color: #333"
+          >
+            友链
+            <i class="iconfont icon-xialajiantou"></i>
+          </a>
+          <template #overlay>
+            <a-menu @click="onTrigger">
+              <a-menu-item key="1">
+                <a href="javascript:;">程序员盒子</a>
+              </a-menu-item>
+              <a-menu-item key="2">
+                <a href="javascript:;">字里行间</a>
+              </a-menu-item>
+            </a-menu>
+          </template>
+        </a-dropdown>
+
         <a-badge :count="noticeCount3">
           <i
             class="iconfont icon-tongzhi"
@@ -132,35 +156,43 @@ const state = reactive({
       type: "station",
       link: "/platform",
     },
+    // {
+    //   icon: "",
+    //   tooltip: "技术笔记",
+    //   type: "station",
+    //   link: "/bk",
+    // },
+    // {
+    //   icon: "",
+    //   tooltip: "开发工具",
+    //   type: "station",
+    //   link: "/gjk",
+    // },
+    // {
+    //   icon: "",
+    //   tooltip: "语法速查",
+    //   type: "station",
+    //   link: "/syntax",
+    // },
+
     {
       icon: "",
-      tooltip: "技术笔记",
+      tooltip: "工具",
       type: "station",
-      link: "/bk",
+      link: "/hegj",
     },
+
     {
       icon: "",
-      tooltip: "开发工具",
-      type: "station",
-      link: "/gjk",
-    },
-    {
-      icon: "",
-      tooltip: "语法速查",
-      type: "station",
-      link: "/syntax",
-    },
-    {
-      icon: "",
-      tooltip: "热搜新闻",
+      tooltip: "热搜榜",
       type: "station",
       link: "/tc",
     },
     {
       icon: "",
-      tooltip: "盒子工具",
+      tooltip: "代码小抄",
       type: "station",
-      link: "/hegj",
+      link: "/dm",
     },
     // {
     //   icon: "",
@@ -180,13 +212,6 @@ const state = reactive({
     //   tooltip: "插件库",
     //   type: "station",
     //   link: "/chrome",
-    // },
-
-    // {
-    //   icon: "",
-    //   tooltip: "代码小抄",
-    //   type: "station",
-    //   link: "/dm",
     // },
 
     // {
@@ -237,6 +262,14 @@ const state = reactive({
     // },
   ],
 });
+
+const onTrigger = (e) => {
+  if (e.key === "1") {
+    window.open("http://boke.alongweb.top/");
+  } else if (e.key === "2") {
+    window.open("http://nook.alongweb.top/");
+  }
+};
 
 onMounted(() => {
   nextTick(() => {

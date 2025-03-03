@@ -38,7 +38,7 @@ const isFixed = ref<boolean>(false);
 const menuList = ref<any>([
   {
     icon: "icon-zonghe",
-    name: "程序员盒子",
+    name: "程序员箱子",
     id: "hide",
   },
   {

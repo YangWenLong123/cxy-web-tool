@@ -130,6 +130,12 @@ devDependencies:
   moment:
     specifier: ^2.30.1
     version: 2.30.1
+  monaco-editor:
+    specifier: 0.31.0
+    version: 0.31.0
+  monaco-editor-webpack-plugin:
+    specifier: 7.1.0
+    version: 7.1.0(monaco-editor@0.31.0)(webpack@5.97.1)
   nprogress:
     specifier: ^0.2.0
     version: 0.2.0
@@ -4935,6 +4941,15 @@ packages:
       json5: 1.0.2
     dev: true
 
+  /loader-utils@2.0.4:
+    resolution: {integrity: sha512-xXqpXoINfFhgua9xiqD8fPFHgkoq1mmmpE92WlDbm9rNRd/EbRb+Gqf908T2DMfuHjjJlksiK2RbHVOdD/MqSw==}
+    engines: {node: '>=8.9.0'}
+    dependencies:
+      big.js: 5.2.2
+      emojis-list: 3.0.0
+      json5: 2.2.3
+    dev: true
+
   /local-pkg@0.5.1:
     resolution: {integrity: sha512-9rrA30MRRP3gBD3HTGnC6cDFpaE1kVDWxWgqWJUN0RvDNAo+Nz/9GxB+nHOH0ifbVFy0hSA1V6vFDvnx54lTEQ==}
     engines: {node: '>=14'}
@@ -5295,6 +5310,21 @@ packages:
 
   /moment@2.30.1:
     resolution: {integrity: sha512-uEmtNhbDOrWPFS+hdjFCBfy9f2YoyzRpwcl+DqpC6taX21FzsTLQVbMV/W7PzNSX6x/bhC1zA3c2UQ5NzH6how==}
+    dev: true
+
+  /monaco-editor-webpack-plugin@7.1.0(monaco-editor@0.31.0)(webpack@5.97.1):
+    resolution: {integrity: sha512-ZjnGINHN963JQkFqjjcBtn1XBtUATDZBMgNQhDQwd78w2ukRhFXAPNgWuacaQiDZsUr4h1rWv5Mv6eriKuOSzA==}
+    peerDependencies:
+      monaco-editor: '>= 0.31.0'
+      webpack: ^4.5.0 || 5.x
+    dependencies:
+      loader-utils: 2.0.4
+      monaco-editor: 0.31.0
+      webpack: 5.97.1
+    dev: true
+
+  /monaco-editor@0.31.0:
+    resolution: {integrity: sha512-H3QmysEwxxY8oxmFhIFcY9JkuwilUDa6txdAxb797cVr7XFZX27a3SDwcGJmTlV9iGPwdh132r3KKCS5aNL4Gg==}
     dev: true
 
   /ms@2.0.0:

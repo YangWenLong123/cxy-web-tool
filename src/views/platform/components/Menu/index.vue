@@ -3,12 +3,12 @@
  * @Description: 
  * @Date: 2024-10-21 10:56:20
  * @LastEditors: along
- * @LastEditTime: 2025-02-28 10:05:09
+ * @LastEditTime: 2025-03-03 10:24:09
  * @FilePath: /cxy-web-tool/src/views/platform/components/Menu/index.vue
 -->
 <template>
   <div
-    class="CxyHomeMenuComponents"
+    class="CxyHomeMenuComponents2"
     :style="{ height: 45 * menuList.length + 16 + 'px' }"
   >
     <div
