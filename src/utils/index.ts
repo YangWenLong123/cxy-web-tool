@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2024-10-21 09:19:58
  * @LastEditors: along
- * @LastEditTime: 2024-10-28 10:26:28
+ * @LastEditTime: 2025-03-03 09:41:33
  * @FilePath: /cxy-web-tool/src/utils/index.ts
  */
 export const getCurrentDateTime = () => {
@@ -62,4 +62,49 @@ export const isMorningOrAfternoon = () => {
   } else {
     return "上午";
   }
+};
+
+export const moveTarget = (id, pos) => {
+  const circle = document.getElementById(id);
+  let isDragging = false;
+  let offsetX, offsetY;
+
+  // 设置默认位置
+  const setDefaultPosition = ({ x, y }) => {
+    circle.style.right = `${x}px`;
+    circle.style.bottom = `${y}vh`;
+  };
+
+  // 初始化默认位置
+  setDefaultPosition(pos);
+
+  // 鼠标按下事件
+  circle.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    offsetX = e.clientX - circle.offsetLeft;
+    offsetY = e.clientY - circle.offsetTop;
+  });
+
+  // 鼠标移动事件
+  document.addEventListener("mousemove", (e) => {
+    if (isDragging) {
+      let x = e.clientX - offsetX;
+      let y = e.clientY - offsetY;
+
+      // 限制圆形不超出屏幕
+      const maxX = window.innerWidth - circle.offsetWidth;
+      const maxY = window.innerHeight - circle.offsetHeight;
+
+      x = Math.max(0, Math.min(x, maxX));
+      y = Math.max(0, Math.min(y, maxY));
+
+      circle.style.left = `${x}px`;
+      circle.style.top = `${y}px`;
+    }
+  });
+
+  // 鼠标松开事件
+  document.addEventListener("mouseup", () => {
+    isDragging = false;
+  });
 };

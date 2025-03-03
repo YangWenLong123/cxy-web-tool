@@ -47,9 +47,8 @@ const previewContent = (item: ContentItem) => {
 
 <template>
   <div class="appTc">
-    <header class="headers">
+    <!-- <header class="headers">
       <div class="container">
-        <!-- <h1>摸鱼划水娱乐站</h1> -->
         <div class="search-container">
           <a-input
             type="text"
@@ -71,17 +70,17 @@ const previewContent = (item: ContentItem) => {
           </div>
         </div>
       </div>
-    </header>
+    </header> -->
 
     <main>
-      <template v-if="['news'].includes(selectedCategory)">
-        <News v-if="selectedCategory === 'news'" />
-      </template>
+      <!-- <template v-if="['news'].includes(selectedCategory)"> -->
+      <News2 />
+      <!-- </template> -->
 
-      <template v-if="['tech'].includes(selectedCategory)">
-        <News2 v-if="selectedCategory === 'tech'" />
-      </template>
-      <template v-else>
+      <!-- <template v-else-if="['tech'].includes(selectedCategory)"> -->
+      <News />
+      <!-- </template> -->
+      <!-- <template v-else>
         <div class="container">
           <div class="content-grid" v-if="filteredContent.length">
             <div
@@ -107,7 +106,7 @@ const previewContent = (item: ContentItem) => {
             <p>试试其他关键词或者浏览其他分类</p>
           </div>
         </div>
-      </template>
+      </template> -->
     </main>
   </div>
 

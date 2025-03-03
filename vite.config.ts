@@ -3,7 +3,7 @@
  * @Autor: along
  * @Date: 2023-03-16 10:35:43
  * @LastEditors: along
- * @LastEditTime: 2025-01-16 13:43:24
+ * @LastEditTime: 2025-02-26 11:21:09
  */
 import { defineConfig, loadEnv, splitVendorChunkPlugin } from "vite";
 import vue from "@vitejs/plugin-vue";

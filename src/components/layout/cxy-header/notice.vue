@@ -3,7 +3,7 @@
  * @Description: 
  * @Date: 2025-01-23 09:47:33
  * @LastEditors: along
- * @LastEditTime: 2025-02-12 11:35:45
+ * @LastEditTime: 2025-02-28 13:59:51
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-header/notice.vue
 -->
 <script lang="ts" setup>
@@ -72,6 +72,15 @@ defineExpose({
       <a-timeline-item>
         <a-card>
           <div>2024-02-12 - 新增微博热搜、优化博客预览</div>
+        </a-card>
+      </a-timeline-item>
+
+      <a-timeline-item>
+        <a-card>
+          <div>
+            2024-02-28 -
+            上线UV、PV统计功能，摸鱼划水模块调整为热搜新闻，博客默认支持查看全部,无需登录
+          </div>
         </a-card>
       </a-timeline-item>
 

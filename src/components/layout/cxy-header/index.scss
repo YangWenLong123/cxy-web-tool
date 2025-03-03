@@ -3,6 +3,16 @@
   display: flex;
   justify-content: center;
   border-bottom: 1px #eee solid;
+  position: relative;
+
+  .totle {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+  }
 }
 .cxyHeaderComponents {
   box-sizing: border-box;

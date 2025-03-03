@@ -3,7 +3,7 @@
  * @Description: 
  * @Date: 2025-01-16 14:30:45
  * @LastEditors: along
- * @LastEditTime: 2025-02-12 15:29:47
+ * @LastEditTime: 2025-02-28 15:26:38
  * @FilePath: /cxy-web-tool/src/views/posts/index.vue
 -->
 <script lang="ts" setup>
@@ -12,6 +12,7 @@ import { getByPosts } from "@/api/posts";
 import { appCxyStore } from "@/store/modules/cxy";
 import { storeToRefs } from "pinia";
 import { isMorningOrAfternoon } from "@/utils/index";
+import { message } from "ant-design-vue";
 
 const { postId } = storeToRefs(appCxyStore());
 
@@ -34,6 +35,32 @@ const getData = () => {
       let blocks = document.querySelectorAll("pre code");
       blocks.forEach((block) => {
         his.highlightAll(block);
+      });
+
+      document.querySelectorAll("pre").forEach((block) => {
+        const btn = document.createElement("button");
+        btn.className = "copy-btn";
+        btn.innerText = "复制";
+        block.appendChild(btn);
+
+        btn.addEventListener("click", () => {
+          const code = block.querySelector("code");
+
+          let str = code.innerText;
+          let oInput = document.createElement("input");
+
+          oInput.value = str;
+          document.body.appendChild(oInput);
+          oInput.select();
+          document.execCommand("Copy");
+          oInput.style.display = "none";
+          // message.success("复制成功");
+          // btn.innerText = "复制成功";
+
+          message.success("复制成功");
+
+          setTimeout(() => (btn.innerText = "复制"), 2000);
+        });
       });
 
       emits("hideloading");
@@ -75,6 +102,16 @@ defineExpose({
 </template>
 
 <style lang="scss">
+.copy-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 0 4px;
+}
+pre {
+  position: relative;
+}
+
 .postMain {
   width: 1200px;
   margin: 0 auto;
@@ -152,8 +189,13 @@ defineExpose({
     transform: translateX(-50%);
   }
 
-  pre code {
+  pre {
+    // padding: 0 1rem !important;
     background-color: rgb(43, 43, 43) !important;
+
+    code {
+      padding: 0 !important;
+    }
   }
 }
 </style>

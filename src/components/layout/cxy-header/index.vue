@@ -3,7 +3,7 @@
  * @Description: 程序员盒子头部icon
  * @Date: 2023-05-30 21:31:24
  * @LastEditors: along
- * @LastEditTime: 2025-02-17 13:27:35
+ * @LastEditTime: 2025-03-03 10:07:38
  * @FilePath: /cxy-web-tool/src/components/layout/cxy-header/index.vue
 -->
 <template>
@@ -12,22 +12,7 @@
       <div class="flex">
         <div class="left" @click="onGoHome()">
           <img src="http://www.alongweb.top/image/logo.svg" alt="" />
-          <h1 class="left_title" style="margin: 0; display: none">
-            <!-- <img src="@/assets/images/logo2.png" style="width: 500px" /> -->
-            程序员盒子
-          </h1>
-          <h2 class="left_title" style="margin: 0; display: none">
-            <!-- <img src="@/assets/images/logo2.png" style="width: 500px" /> -->
-            程序员盒子
-          </h2>
-          <h3 class="left_title" style="margin: 0; display: none">
-            <!-- <img src="@/assets/images/logo2.png" style="width: 500px" /> -->
-            程序员盒子
-          </h3>
-          <h4 class="left_title" style="margin-bottom: 0">
-            <!-- <img src="@/assets/images/logo2.png" style="width: 500px" /> -->
-            程序员箱子
-          </h4>
+          <h4 class="left_title" style="margin-bottom: 0">程序员箱子</h4>
         </div>
         <div class="right">
           <div
@@ -47,31 +32,10 @@
               <i class="iconfont" :class="record.icon"></i>
             </div>
           </div>
-
-          <div style="margin-left: 24px" @click="fangpao()">
-            <!-- <i
-              class="iconfont icon-chunjie-baozhu"
-              style="color: #ff0200; font-size: 28px; "
-            ></i> -->
-
-            <i
-              class="iconfont icon-xinniankuaile"
-              style="color: #ff0200; font-size: 28px; margin-right: 8px"
-            ></i>
-
-            <i
-              class="iconfont icon-baozhu"
-              style="color: #ff0200; font-size: 28px"
-            ></i>
-          </div>
-          <!-- <div class="lines"></div>
-          <div @click="onGitHub()">
-            <i class="iconfont icon-github"></i>
-          </div> -->
         </div>
       </div>
       <div style="display: flex; align-items: center">
-        <a-badge :count="noticeCount2">
+        <a-badge :count="noticeCount3">
           <i
             class="iconfont icon-tongzhi"
             style="font-size: 26px; cursor: pointer"
@@ -79,7 +43,6 @@
           ></i>
         </a-badge>
 
-        <!-- <img src="@/assets/images/photo.jpeg" alt="" class="touxiang" /> -->
         <template v-if="username">
           <a-dropdown>
             <a class="ant-dropdown-link">
@@ -129,7 +92,7 @@ import { appCxyStore } from "@/store/modules/cxy";
 import Confetti from "@/utils/confetti";
 import Notice from "./notice.vue";
 
-const { noticeCount2 } = toRefs(appCxyStore());
+const { noticeCount3 } = toRefs(appCxyStore());
 
 const cxyLoginRef = ref<InstanceType<typeof CxyLogin> | null>(null);
 const noticeRef = ref<InstanceType<typeof Notice> | null>(null);
@@ -189,7 +152,7 @@ const state = reactive({
     },
     {
       icon: "",
-      tooltip: "摸鱼划水",
+      tooltip: "热搜新闻",
       type: "station",
       link: "/tc",
     },
@@ -341,13 +304,7 @@ const onkeydown = (e) => {
 };
 
 const onRegister = () => {
-  // router.push({ path: "/login" });
-
   cxyLoginRef.value?.preview();
-};
-
-const fangpao = () => {
-  Confetti.init();
 };
 </script>
 

@@ -1,10 +1,12 @@
 .CxyPlatformMain {
   width: 720px;
+  // width: 904px;
   margin: 0 20px;
   background-color: #fff;
   overflow: hidden;
   overflow-y: auto;
   border-radius: 6px;
+  // height: calc(100vh - 100px);
 
   .goLogin {
     margin-top: 100px;

@@ -3,7 +3,7 @@
  * @Description: cxy
  * @Date: 2023-06-16 16:02:41
  * @LastEditors: along
- * @LastEditTime: 2025-02-12 13:05:32
+ * @LastEditTime: 2025-02-28 14:00:42
  * @FilePath: /cxy-web-tool/src/store/modules/cxy.ts
  */
 import { defineStore } from "pinia";
@@ -13,7 +13,7 @@ export const appCxyStore = defineStore({
     collapse: false,
     readingMode: false,
     postId: "",
-    noticeCount2: 1,
+    noticeCount3: 1,
   }),
   actions: {
     setCollapse(value: boolean) {
@@ -26,7 +26,7 @@ export const appCxyStore = defineStore({
     },
 
     clearCount() {
-      this.noticeCount2 = 0;
+      this.noticeCount3 = 0;
     },
   },
   persist: true,

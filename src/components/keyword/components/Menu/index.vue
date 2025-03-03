@@ -3,7 +3,7 @@
  * @Description: 
  * @Date: 2024-10-21 10:56:20
  * @LastEditors: along
- * @LastEditTime: 2025-02-17 13:29:46
+ * @LastEditTime: 2025-02-17 17:42:28
  * @FilePath: /cxy-web-tool/src/components/keyword/components/Menu/index.vue
 -->
 <template>
@@ -17,6 +17,7 @@
       :key="item.name"
       :class="currentIndex === index ? 'active' : ''"
       @click="onChangeItem(index, item)"
+      :style="{ display: item.id === 'hide' ? 'none' : '' }"
     >
       <i class="iconfont" :class="item.icon"></i>
       <div class="name">{{ item.name }}</div>
@@ -38,32 +39,32 @@ const menuList = ref<any>([
   {
     icon: "icon-zonghe",
     name: "程序员盒子",
-    id: "itemBox",
+    id: "hide",
   },
   {
     icon: "icon-zonghe",
     name: "程序员箱子",
-    id: "itemBox",
+    id: "hide",
   },
   {
     icon: "icon-zonghe",
     name: "盒子",
-    id: "itemBox",
+    id: "hide",
   },
   {
     icon: "icon-zonghe",
     name: "箱子",
-    id: "itemBox",
+    id: "hide",
   },
   {
     icon: "icon-zonghe",
     name: "程序员箱子",
-    id: "itemBox",
+    id: "hide",
   },
   {
     icon: "icon-zonghe",
     name: "综合",
-    id: "itemBox",
+    id: "hide",
   },
   {
     icon: "icon-shiyongshouce",
